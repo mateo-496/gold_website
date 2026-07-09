@@ -1,0 +1,30 @@
+{
+  "name": "Germania",
+  "flag": "🇩🇪",
+  "intro": "La Germania offre una delle uscite fiscali più interessanti d'Europa: dopo un anno di detenzione, la plusvalenza sull'oro fisico è totalmente esente da imposta.",
+  "stat1Label": "Soglia di dichiarazione",
+  "stat1Value": "€ 10.000",
+  "stat2Label": "Tassazione dopo 1 anno",
+  "stat2Value": "0%",
+  "overview": "L'oro da investimento è esente da IVA in Germania (§25c UStG). Per la tassazione alla rivendita, l'articolo §23 EStG prevede un'esenzione totale della plusvalenza se l'oro è stato detenuto per più di un anno. Sotto l'anno, la plusvalenza è tassata all'aliquota marginale, con una franchigia annuale modesta.",
+  "exportPoints": [
+    "Dichiarazione obbligatoria oltre 10.000 € in contanti alla frontiera (regola UE)",
+    "Nessuna autorizzazione specifica per l'oro da investimento ad uso privato",
+    "IVA esente sull'oro da investimento (§25c UStG)"
+  ],
+  "reventePoints": [
+    "Detenzione oltre un anno: plusvalenza totalmente esente (§23 EStG)",
+    "Detenzione sotto un anno: plusvalenza tassata all'aliquota marginale",
+    "Conservare la data di acquisto come prova del periodo di detenzione"
+  ],
+  "faqs": [
+    {
+      "q": "Quando la mia plusvalenza diventa esente da imposta?",
+      "a": "Dopo un periodo di detenzione di un anno, ai sensi del §23 EStG."
+    },
+    {
+      "q": "Devo pagare l'IVA all'acquisto?",
+      "a": "No, l'oro da investimento è esente da IVA ai sensi del §25c UStG."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "United States",
+  "flag": "🇺🇸",
+  "intro": "In the United States, physical gold is classified as a collectible, resulting in a federal tax rate on the gain of up to 28%, distinct from usual stock rates.",
+  "stat1Label": "Declaration threshold",
+  "stat1Value": "$10,000",
+  "stat2Label": "Max. federal tax",
+  "stat2Value": "28%",
+  "overview": "There is no federal VAT in the United States, but some states apply a sales tax depending on the type of transaction. Physical gold is classified as a \"collectible\" by the IRS: the long-term gain (holding period over one year) is taxed up to 28% at the federal level, versus a generally lower rate for stocks. Taxation also varies by state of residence.",
+  "exportPoints": [
+    "Declaration mandatory (FinCEN Form 105) above $10,000 in cash",
+    "No specific export authorization for gold for private use",
+    "Check your state's sales tax rules"
+  ],
+  "reventePoints": [
+    "Short/long-term distinction based on holding period (1 year)",
+    "Maximum federal rate of 28% on long-term gains (collectible)",
+    "Taxation varies by state of residence"
+  ],
+  "faqs": [
+    {
+      "q": "Is physical gold treated like a stock for tax purposes?",
+      "a": "No, the IRS classifies it as a collectible, with a maximum federal rate of 28% on long-term gain."
+    },
+    {
+      "q": "Is there a federal VAT on gold in the US?",
+      "a": "No, but some states apply a sales tax depending on the transaction."
+    }
+  ]
+}

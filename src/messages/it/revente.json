@@ -1,0 +1,37 @@
+{
+  "heading": "Rivendi il tuo oro",
+  "intro": "Il momento, il luogo e il modo in cui rivendi il tuo oro determinano ciò che resta dopo le tasse. Ecco una panoramica delle regole di rivendita nei principali mercati che copriamo.",
+  "headers": {
+    "country": "Paese",
+    "threshold": "Periodo di detenzione / soglia",
+    "keyPoint": "Punto chiave",
+    "more": "Scopri di più"
+  },
+  "countries": {
+    "switzerland": {
+      "name": "Svizzera",
+      "threshold": "Nessun periodo minimo di detenzione",
+      "keyPoint": "Plusvalenza esente da imposta per i privati su beni mobili privati"
+    },
+    "france": {
+      "name": "Francia",
+      "threshold": "Nessun periodo minimo, prova d'acquisto consigliata",
+      "keyPoint": "Imposta forfettaria dell'11,5% sul prezzo di vendita, salvo prova d'acquisto"
+    },
+    "germany": {
+      "name": "Germania",
+      "threshold": "1 anno di detenzione",
+      "keyPoint": "Plusvalenza totalmente esente dopo un anno di detenzione (§23 EStG)"
+    },
+    "italy": {
+      "name": "Italia",
+      "threshold": "Nessun periodo minimo di detenzione",
+      "keyPoint": "Plusvalenza tassata come reddito diverso, salvo regime di risparmio gestito"
+    },
+    "usa": {
+      "name": "Stati Uniti",
+      "threshold": "Distinzione breve/lungo termine (1 anno)",
+      "keyPoint": "Plusvalenza tassata fino al 28% a livello federale (oggetto da collezione)"
+    }
+  }
+}

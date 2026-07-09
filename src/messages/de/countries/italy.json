@@ -1,0 +1,30 @@
+{
+  "name": "Italien",
+  "flag": "🇮🇹",
+  "intro": "Italien befreit Anlagegold von der Mehrwertsteuer, wendet jedoch ein verschärftes Meldesystem an und besteuert den Gewinn ohne verwaltetes Sparregime als sonstiges Einkommen.",
+  "stat1Label": "Meldeschwelle",
+  "stat1Value": "EUR 10.000",
+  "stat2Label": "Besteuerung des Gewinns",
+  "stat2Value": "Sonstiges Einkommen",
+  "overview": "Anlagegold (Barren und zertifizierte Münzen) ist in Italien mehrwertsteuerbefreit. Der Wiederverkauf durch eine Privatperson wird grundsätzlich als sonstiges steuerpflichtiges Einkommen behandelt, es sei denn, die Transaktion erfolgt über ein verwaltetes Sparregime mit günstigerer Behandlung. Die Meldepflicht für Transaktionen mit Edelmetallen ist strenger als anderswo im Euroraum.",
+  "exportPoints": [
+    "Meldepflicht ab EUR 10.000 in bar an der Grenze (EU-Regel)",
+    "Verschärfte Meldepflichten für Transaktionen mit physischem Gold",
+    "Alle Transaktionsbelege aufbewahren"
+  ],
+  "reventePoints": [
+    "Gewinn als sonstiges Einkommen besteuert, außer bei verwaltetem Sparregime",
+    "Keine Mindesthaltedauer",
+    "Über einen zertifizierten Händler abwickeln, um die Meldung zu vereinfachen"
+  ],
+  "faqs": [
+    {
+      "q": "Muss ich Mehrwertsteuer auf Anlagegold in Italien zahlen?",
+      "a": "Nein, Anlagegold ist mehrwertsteuerbefreit."
+    },
+    {
+      "q": "Wie wird der Gewinn besteuert?",
+      "a": "In der Regel als sonstiges Einkommen, sofern die Transaktion nicht über ein verwaltetes Sparregime mit anderer Behandlung erfolgt."
+    }
+  ]
+}

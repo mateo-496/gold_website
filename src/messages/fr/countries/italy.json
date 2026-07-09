@@ -1,0 +1,30 @@
+{
+  "name": "Italie",
+  "flag": "🇮🇹",
+  "intro": "L'Italie exonère l'or d'investissement de TVA, mais applique un régime de déclaration renforcé et impose la plus-value comme revenu divers en l'absence de régime géré.",
+  "stat1Label": "Seuil de déclaration",
+  "stat1Value": "10 000 €",
+  "stat2Label": "Imposition de la plus-value",
+  "stat2Value": "Revenu divers",
+  "overview": "L'or d'investissement (lingots et pièces certifiées) est exonéré de TVA en Italie. La revente par un particulier est en principe traitée comme un revenu divers imposable, sauf si l'opération transite par un régime d'épargne géré offrant un traitement plus favorable. Le régime de déclaration pour les transactions sur métaux précieux est plus strict qu'ailleurs en zone euro.",
+  "exportPoints": [
+    "Déclaration obligatoire au-delà de 10 000 € en espèces à la frontière (règle UE)",
+    "Obligations de déclaration renforcées pour les transactions sur or physique",
+    "Conservez tous les justificatifs de transaction"
+  ],
+  "reventePoints": [
+    "Plus-value imposée comme revenu divers, sauf régime d'épargne géré",
+    "Aucune durée minimale de détention",
+    "Passez par un négociant certifié pour simplifier la déclaration"
+  ],
+  "faqs": [
+    {
+      "q": "Dois-je payer la TVA sur l'or d'investissement en Italie ?",
+      "a": "Non, l'or d'investissement est exonéré de TVA."
+    },
+    {
+      "q": "Comment la plus-value est-elle imposée ?",
+      "a": "En règle générale comme un revenu divers, sauf si la transaction passe par un régime d'épargne géré offrant un traitement différent."
+    }
+  ]
+}

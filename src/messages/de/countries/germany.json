@@ -1,0 +1,30 @@
+{
+  "name": "Deutschland",
+  "flag": "🇩🇪",
+  "intro": "Deutschland bietet einen der attraktivsten steuerlichen Ausstiege Europas: Nach einjähriger Haltedauer ist der Gewinn aus physischem Gold vollständig steuerfrei.",
+  "stat1Label": "Meldeschwelle",
+  "stat1Value": "EUR 10.000",
+  "stat2Label": "Besteuerung nach 1 Jahr",
+  "stat2Value": "0 %",
+  "overview": "Anlagegold ist in Deutschland mehrwertsteuerbefreit (§25c UStG). Für die Besteuerung beim Wiederverkauf sieht §23 EStG eine vollständige Befreiung des Gewinns vor, sofern das Gold länger als ein Jahr gehalten wurde. Bei einer Haltedauer unter einem Jahr wird der Gewinn zum persönlichen Steuersatz besteuert, mit einer geringfügigen jährlichen Freigrenze.",
+  "exportPoints": [
+    "Meldepflicht ab EUR 10.000 in bar an der Grenze (EU-Regel)",
+    "Keine spezielle Genehmigung für Anlagegold zum privaten Gebrauch",
+    "Mehrwertsteuerbefreit auf Anlagegold (§25c UStG)"
+  ],
+  "reventePoints": [
+    "Haltedauer über einem Jahr: Gewinn vollständig steuerfrei (§23 EStG)",
+    "Haltedauer unter einem Jahr: Gewinn wird zum persönlichen Steuersatz besteuert",
+    "Kaufdatum als Nachweis der Haltedauer aufbewahren"
+  ],
+  "faqs": [
+    {
+      "q": "Wann wird mein Gewinn steuerfrei?",
+      "a": "Nach einer Haltedauer von einem Jahr gemäß §23 EStG."
+    },
+    {
+      "q": "Muss ich beim Kauf Mehrwertsteuer zahlen?",
+      "a": "Nein, Anlagegold ist gemäß §25c UStG mehrwertsteuerbefreit."
+    }
+  ]
+}

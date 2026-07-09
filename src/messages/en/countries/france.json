@@ -1,0 +1,30 @@
+{
+  "name": "France",
+  "flag": "🇫🇷",
+  "intro": "In France, reselling physical gold is subject to a flat tax, unless you keep proof of purchase supporting the actual cost price.",
+  "stat1Label": "Declaration threshold",
+  "stat1Value": "€10,000",
+  "stat2Label": "Tax on resale",
+  "stat2Value": "11.5% (default)",
+  "overview": "Investment gold is VAT-exempt in France under EU directive. On resale, the default regime applies an 11.5% flat tax on the sale price. If you can prove the price and date of acquisition, you can opt for the capital gains regime on movable property, potentially more favorable after several years of holding.",
+  "exportPoints": [
+    "Declaration mandatory above €10,000 in cash at the border (EU rule)",
+    "No specific authorization for investment gold for private use",
+    "Recodification of CGI Art. 298 sexdecies A takes effect September 2026"
+  ],
+  "reventePoints": [
+    "Without proof: 11.5% flat tax on the sale price",
+    "With proof: option for the capital gains regime, with a holding-period allowance",
+    "Always keep your purchase invoices"
+  ],
+  "faqs": [
+    {
+      "q": "What happens if I don't have a purchase invoice?",
+      "a": "The default 11.5% flat tax on the sale price applies automatically."
+    },
+    {
+      "q": "Can I avoid the flat tax?",
+      "a": "Yes, by opting for the capital gains regime on movable property if you have proof of purchase, which can be more favorable depending on the holding period."
+    }
+  ]
+}

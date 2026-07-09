@@ -1,0 +1,30 @@
+{
+  "name": "Germany",
+  "flag": "🇩🇪",
+  "intro": "Germany offers one of Europe's most attractive tax exits: after a one-year holding period, the gain on physical gold is fully tax-exempt.",
+  "stat1Label": "Declaration threshold",
+  "stat1Value": "€10,000",
+  "stat2Label": "Tax after 1 year",
+  "stat2Value": "0%",
+  "overview": "Investment gold is VAT-exempt in Germany (§25c UStG). For resale taxation, §23 EStG provides full exemption of the gain once the gold has been held for more than one year. Below one year, the gain is taxed at the marginal rate, with a modest annual allowance.",
+  "exportPoints": [
+    "Declaration mandatory above €10,000 in cash at the border (EU rule)",
+    "No specific authorization for investment gold for private use",
+    "VAT-exempt on investment gold (§25c UStG)"
+  ],
+  "reventePoints": [
+    "Holding period over one year: gain fully tax-exempt (§23 EStG)",
+    "Holding period under one year: gain taxed at marginal rate",
+    "Keep the purchase date as proof of holding period"
+  ],
+  "faqs": [
+    {
+      "q": "When does my gain become tax-free?",
+      "a": "After a one-year holding period, under §23 EStG."
+    },
+    {
+      "q": "Do I pay VAT on purchase?",
+      "a": "No, investment gold is VAT-exempt under §25c UStG."
+    }
+  ]
+}

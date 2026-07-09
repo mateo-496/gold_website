@@ -1,0 +1,30 @@
+{
+  "name": "Suisse",
+  "flag": "🇨🇭",
+  "intro": "La Suisse offre l'un des cadres les plus favorables d'Europe pour l'achat, la détention et la revente d'or physique, avec une exonération de TVA sur l'or d'investissement et aucune imposition sur les gains en capital privés.",
+  "stat1Label": "Seuil de déclaration",
+  "stat1Value": "Aucun",
+  "stat2Label": "Imposition à la revente",
+  "stat2Value": "0 % (particuliers)",
+  "overview": "L'or d'investissement (barres et pièces certifiées à un titre minimal) est exonéré de TVA en Suisse depuis 2000, confirmé par l'art. 23 al. 12 LTVA depuis le 1er janvier 2025. Les gains en capital réalisés par des particuliers sur des biens mobiliers privés, dont l'or physique, ne sont pas imposés au niveau fédéral.",
+  "exportPoints": [
+    "Aucune autorisation d'exportation requise pour l'or d'investissement à usage privé",
+    "Contrôles douaniers standards à la sortie du territoire",
+    "Vérifiez les seuils de déclaration du pays de destination"
+  ],
+  "reventePoints": [
+    "Aucune durée minimale de détention",
+    "Gain en capital exonéré pour les particuliers",
+    "Conservez vos justificatifs d'achat pour faciliter la revente"
+  ],
+  "faqs": [
+    {
+      "q": "Dois-je payer la TVA sur l'or d'investissement en Suisse ?",
+      "a": "Non, l'or d'investissement est exonéré de TVA en vertu de l'art. 23 al. 12 LTVA."
+    },
+    {
+      "q": "La plus-value à la revente est-elle imposée ?",
+      "a": "Pour un particulier détenant l'or à titre privé, non : les gains en capital sur biens mobiliers privés ne sont pas imposés au niveau fédéral."
+    }
+  ]
+}

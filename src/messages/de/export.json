@@ -1,0 +1,37 @@
+{
+  "heading": "Ihr Gold exportieren",
+  "intro": "Jedes Land hat eigene Regeln für Meldepflichten, Besteuerung und Mehrwertsteuer auf Anlagegold. Hier ein Überblick über die wichtigsten Märkte, die wir abdecken.",
+  "headers": {
+    "country": "Land",
+    "threshold": "Meldeschwelle",
+    "keyPoint": "Wichtigster Punkt",
+    "more": "Mehr erfahren"
+  },
+  "countries": {
+    "switzerland": {
+      "name": "Schweiz",
+      "threshold": "Keine Meldeschwelle bei der Ausfuhr",
+      "keyPoint": "Mehrwertsteuerbefreiung für Anlagegold (Art. 23 Abs. 12 MWSTG)"
+    },
+    "france": {
+      "name": "Frankreich",
+      "threshold": "EUR 10.000 in bar (EU-Meldepflicht)",
+      "keyPoint": "Pauschalsteuer von 11,5 % beim Wiederverkauf, außer bei aufbewahrtem Kaufnachweis"
+    },
+    "germany": {
+      "name": "Deutschland",
+      "threshold": "EUR 10.000 in bar (EU-Meldepflicht)",
+      "keyPoint": "Steuerfreier Gewinn nach einjähriger Haltedauer (§23 EStG)"
+    },
+    "italy": {
+      "name": "Italien",
+      "threshold": "EUR 10.000 in bar (EU-Meldepflicht)",
+      "keyPoint": "Mehrwertsteuerbefreit auf Anlagegold, verschärfte Meldepflichten"
+    },
+    "usa": {
+      "name": "USA",
+      "threshold": "USD 10.000 in bar (FinCEN-Meldung)",
+      "keyPoint": "Keine Bundes-Mehrwertsteuer; Kapitalertragsteuer variiert je nach Bundesstaat"
+    }
+  }
+}

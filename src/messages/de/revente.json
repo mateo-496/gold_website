@@ -1,0 +1,37 @@
+{
+  "heading": "Ihr Gold verkaufen",
+  "intro": "Zeitpunkt, Ort und Art des Wiederverkaufs bestimmen, was nach Steuern übrig bleibt. Hier ein Überblick über die Wiederverkaufsregeln in den wichtigsten Märkten, die wir abdecken.",
+  "headers": {
+    "country": "Land",
+    "threshold": "Haltedauer / Schwelle",
+    "keyPoint": "Wichtigster Punkt",
+    "more": "Mehr erfahren"
+  },
+  "countries": {
+    "switzerland": {
+      "name": "Schweiz",
+      "threshold": "Keine Mindesthaltedauer",
+      "keyPoint": "Kapitalgewinn für Privatpersonen auf privates bewegliches Vermögen steuerfrei"
+    },
+    "france": {
+      "name": "Frankreich",
+      "threshold": "Keine Mindesthaltedauer, Kaufnachweis empfohlen",
+      "keyPoint": "Pauschalsteuer von 11,5 % auf den Verkaufspreis, außer bei Kaufnachweis"
+    },
+    "germany": {
+      "name": "Deutschland",
+      "threshold": "1 Jahr Haltedauer",
+      "keyPoint": "Vollständig steuerfreier Gewinn nach einjähriger Haltedauer (§23 EStG)"
+    },
+    "italy": {
+      "name": "Italien",
+      "threshold": "Keine Mindesthaltedauer",
+      "keyPoint": "Gewinn als sonstiges Einkommen besteuert, außer bei verwaltetem Sparregime"
+    },
+    "usa": {
+      "name": "USA",
+      "threshold": "Unterscheidung kurz-/langfristig (1 Jahr)",
+      "keyPoint": "Bundessteuer auf Gewinn bis zu 28 % (Sammlerstück)"
+    }
+  }
+}

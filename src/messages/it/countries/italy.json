@@ -1,0 +1,30 @@
+{
+  "name": "Italia",
+  "flag": "🇮🇹",
+  "intro": "L'Italia esenta l'oro da investimento dall'IVA, ma applica un regime dichiarativo rafforzato e tassa la plusvalenza come reddito diverso in assenza di regime gestito.",
+  "stat1Label": "Soglia di dichiarazione",
+  "stat1Value": "€ 10.000",
+  "stat2Label": "Tassazione della plusvalenza",
+  "stat2Value": "Reddito diverso",
+  "overview": "L'oro da investimento (lingotti e monete certificate) è esente da IVA in Italia. La rivendita da parte di un privato è in linea di principio trattata come reddito diverso imponibile, salvo che l'operazione transiti per un regime di risparmio gestito che offra un trattamento più favorevole. Il regime dichiarativo per le transazioni su metalli preziosi è più rigoroso rispetto ad altri paesi dell'area euro.",
+  "exportPoints": [
+    "Dichiarazione obbligatoria oltre 10.000 € in contanti alla frontiera (regola UE)",
+    "Obblighi dichiarativi rafforzati per le transazioni su oro fisico",
+    "Conservare tutte le prove delle transazioni"
+  ],
+  "reventePoints": [
+    "Plusvalenza tassata come reddito diverso, salvo regime di risparmio gestito",
+    "Nessun periodo minimo di detenzione",
+    "Passare per un commerciante certificato per semplificare la dichiarazione"
+  ],
+  "faqs": [
+    {
+      "q": "Devo pagare l'IVA sull'oro da investimento in Italia?",
+      "a": "No, l'oro da investimento è esente da IVA."
+    },
+    {
+      "q": "Come viene tassata la plusvalenza?",
+      "a": "Generalmente come reddito diverso, salvo che la transazione passi per un regime di risparmio gestito con trattamento diverso."
+    }
+  ]
+}

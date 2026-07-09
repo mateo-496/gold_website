@@ -1,0 +1,30 @@
+{
+  "name": "Italy",
+  "flag": "🇮🇹",
+  "intro": "Italy exempts investment gold from VAT, but applies a stricter declaration regime and taxes the gain as miscellaneous income absent a managed savings regime.",
+  "stat1Label": "Declaration threshold",
+  "stat1Value": "€10,000",
+  "stat2Label": "Tax on gain",
+  "stat2Value": "Miscellaneous income",
+  "overview": "Investment gold (bars and certified coins) is VAT-exempt in Italy. Resale by an individual is generally treated as taxable miscellaneous income, unless the transaction goes through a managed savings regime offering more favorable treatment. The declaration regime for precious metals transactions is stricter than elsewhere in the eurozone.",
+  "exportPoints": [
+    "Declaration mandatory above €10,000 in cash at the border (EU rule)",
+    "Stricter reporting obligations for physical gold transactions",
+    "Keep all transaction records"
+  ],
+  "reventePoints": [
+    "Gain taxed as miscellaneous income, unless under a managed savings regime",
+    "No minimum holding period",
+    "Go through a certified dealer to simplify reporting"
+  ],
+  "faqs": [
+    {
+      "q": "Do I pay VAT on investment gold in Italy?",
+      "a": "No, investment gold is VAT-exempt."
+    },
+    {
+      "q": "How is the gain taxed?",
+      "a": "Generally as miscellaneous income, unless the transaction goes through a managed savings regime with different treatment."
+    }
+  ]
+}

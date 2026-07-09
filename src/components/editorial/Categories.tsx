@@ -1,32 +1,49 @@
-const ITEMS = [
-    {
-        title: "Achat",
-        text: "Comparez les meilleurs prix chez des négociants certifiés, en toute transparence."
-    },
-    {
-        title: "Export",
-        text: "Naviguez les frontières et la fiscalité sans mauvaise surprise."
-    },
-    {
-        title: "Revente",
-        achat: "Revendez au bon moment et au bon endroit"
-    }
-]
+import Link from "next/link";
+import { useTranslations } from "next-intl";
+
+const KEYS = ["achat", "export", "revente"] as const;
+const HREF: Record<(typeof KEYS)[number], string> = {
+  achat: "/achat",
+  export: "/export",
+  revente: "/revente",
+};
+
+function DropTitle({ title, href }: { title: string; href: string }) {
+  const first = title[0];
+  const rest = title.slice(1);
+  return (
+    <Link href={href}>
+      <h3 className="font-serif italic text-6xl md:text-7xl leading-none hover:opacity-70 transition-opacity">
+        <span className="text-red-600">{first}</span>
+        <span className="text-neutral-900">{rest}</span>
+      </h3>
+    </Link>
+  );
+}
 
 export function Categories() {
-    return (
-        <section className="bg-white px-6 py-32 max-w-5xl mx-auto">
-        <h2 className="font-serif text-4xl md:text-5xl mb-20 max-w-2xl leading-tight">
-            Ce qui nous distingue <em className="italic">fait toute la différence</em>
+  const t = useTranslations("categories");
+
+  return (
+    <section className="w-full bg-[#f5f5f5] px-6 py-32">
+      <div className="max-w-3xl mx-auto">
+        <h2 className="font-serif text-4xl md:text-5xl mb-24 leading-tight">
+          {t("heading")}{" "}
+          <em className="italic text-red-600">{t("headingAccent")}</em>
         </h2>
-        <div className="space-y-10">
-            {ITEMS.map((item) => (
-            <div key={item.title} className="grid md:grid-cols-[200px_1fr] gap-6">
-                <h3 className="font-serif font-semibold text-xl">{item.title}</h3>
-                <p className="text-neutral-600 leading-relaxed max-w-xl">{item.text}</p>
+
+        <div className="space-y-20">
+          {KEYS.map((key) => (
+            <div key={key}>
+              <DropTitle title={t(`${key}.title`)} href={HREF[key]} />
+              <div className="border-t border-neutral-300 mt-6 mb-6" />
+              <p className="text-neutral-600 leading-relaxed max-w-xl">
+                {t(`${key}.text`)}
+              </p>
             </div>
-            ))}
+          ))}
         </div>
-        </section>
-    );
+      </div>
+    </section>
+  );
 }

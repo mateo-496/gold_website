@@ -1,0 +1,30 @@
+{
+  "name": "Switzerland",
+  "flag": "🇨🇭",
+  "intro": "Switzerland offers one of Europe's most favorable frameworks for buying, holding, and reselling physical gold, with VAT exemption on investment gold and no tax on private capital gains.",
+  "stat1Label": "Declaration threshold",
+  "stat1Value": "None",
+  "stat2Label": "Tax on resale",
+  "stat2Value": "0% (individuals)",
+  "overview": "Investment gold (bars and certified coins of minimum fineness) has been VAT-exempt in Switzerland since 2000, confirmed by Art. 23 para. 12 of the VAT Act as of January 1, 2025. Capital gains realized by individuals on private movable assets, including physical gold, are not taxed at the federal level.",
+  "exportPoints": [
+    "No export authorization required for investment gold for private use",
+    "Standard customs checks when leaving the territory",
+    "Check the declaration thresholds of the destination country"
+  ],
+  "reventePoints": [
+    "No minimum holding period",
+    "Capital gain tax-exempt for individuals",
+    "Keep proof of purchase to facilitate resale"
+  ],
+  "faqs": [
+    {
+      "q": "Do I pay VAT on investment gold in Switzerland?",
+      "a": "No, investment gold is VAT-exempt under Art. 23 para. 12 of the VAT Act."
+    },
+    {
+      "q": "Is the gain on resale taxed?",
+      "a": "For an individual holding gold privately, no: capital gains on private movable assets are not taxed at the federal level."
+    }
+  ]
+}

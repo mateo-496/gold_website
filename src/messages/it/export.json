@@ -1,0 +1,37 @@
+{
+  "heading": "Esporta il tuo oro",
+  "intro": "Ogni paese applica proprie regole di dichiarazione, tassazione e IVA sull'oro da investimento. Ecco una panoramica dei principali mercati che copriamo.",
+  "headers": {
+    "country": "Paese",
+    "threshold": "Soglia di dichiarazione",
+    "keyPoint": "Punto chiave",
+    "more": "Scopri di più"
+  },
+  "countries": {
+    "switzerland": {
+      "name": "Svizzera",
+      "threshold": "Nessuna soglia di dichiarazione all'esportazione",
+      "keyPoint": "Esenzione IVA per l'oro da investimento (art. 23 cpv. 12 LIVA)"
+    },
+    "france": {
+      "name": "Francia",
+      "threshold": "EUR 10.000 in contanti (obbligo dichiarativo UE)",
+      "keyPoint": "Imposta forfettaria dell'11,5% alla rivendita, salvo prova d'acquisto conservata"
+    },
+    "germany": {
+      "name": "Germania",
+      "threshold": "EUR 10.000 in contanti (obbligo dichiarativo UE)",
+      "keyPoint": "Esenzione plusvalenza dopo un anno di detenzione (§23 EStG)"
+    },
+    "italy": {
+      "name": "Italia",
+      "threshold": "EUR 10.000 in contanti (obbligo dichiarativo UE)",
+      "keyPoint": "IVA esente sull'oro da investimento, regime dichiarativo rafforzato"
+    },
+    "usa": {
+      "name": "Stati Uniti",
+      "threshold": "USD 10.000 in contanti (dichiarazione FinCEN)",
+      "keyPoint": "Nessuna IVA federale; tassazione sulla plusvalenza variabile per Stato"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Allemagne",
+  "flag": "🇩🇪",
+  "intro": "L'Allemagne offre l'une des sorties fiscales les plus intéressantes d'Europe : après un an de détention, la plus-value sur l'or physique est totalement exonérée d'impôt.",
+  "stat1Label": "Seuil de déclaration",
+  "stat1Value": "10 000 €",
+  "stat2Label": "Imposition après 1 an",
+  "stat2Value": "0 %",
+  "overview": "L'or d'investissement est exonéré de TVA en Allemagne (§25c UStG). Pour la fiscalité sur la revente, l'article §23 EStG prévoit une exonération totale de la plus-value dès lors que l'or a été détenu plus d'un an. En dessous d'un an, la plus-value est imposée au taux marginal, avec une franchise annuelle modeste.",
+  "exportPoints": [
+    "Déclaration obligatoire au-delà de 10 000 € en espèces à la frontière (règle UE)",
+    "Aucune autorisation spécifique pour l'or d'investissement à usage privé",
+    "TVA exonérée sur l'or d'investissement (§25c UStG)"
+  ],
+  "reventePoints": [
+    "Détention de plus d'un an : plus-value totalement exonérée (§23 EStG)",
+    "Détention de moins d'un an : plus-value imposée au taux marginal",
+    "Conservez la date d'achat comme preuve de la durée de détention"
+  ],
+  "faqs": [
+    {
+      "q": "Quand ma plus-value devient-elle exonérée d'impôt ?",
+      "a": "Après une durée de détention d'un an, conformément au §23 EStG."
+    },
+    {
+      "q": "Dois-je payer la TVA à l'achat ?",
+      "a": "Non, l'or d'investissement est exonéré de TVA en vertu du §25c UStG."
+    }
+  ]
+}

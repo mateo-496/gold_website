@@ -1,0 +1,37 @@
+{
+  "heading": "Revendre votre or",
+  "intro": "Le moment, le lieu et la manière dont vous revendez votre or déterminent ce qu'il vous en reste après impôt. Voici un aperçu des règles de revente dans les principaux marchés que nous couvrons.",
+  "headers": {
+    "country": "Pays",
+    "threshold": "Durée de détention / seuil",
+    "keyPoint": "Point clé",
+    "more": "En savoir plus"
+  },
+  "countries": {
+    "switzerland": {
+      "name": "Suisse",
+      "threshold": "Aucune durée minimale de détention",
+      "keyPoint": "Gain en capital exonéré d'impôt pour les particuliers sur les biens mobiliers privés"
+    },
+    "france": {
+      "name": "France",
+      "threshold": "Aucune durée minimale, mais justificatif d'achat recommandé",
+      "keyPoint": "Taxe forfaitaire de 11,5 % sur le prix de vente, sauf preuve d'achat conservée"
+    },
+    "germany": {
+      "name": "Allemagne",
+      "threshold": "1 an de détention",
+      "keyPoint": "Plus-value totalement exonérée après un an de détention (§23 EStG)"
+    },
+    "italy": {
+      "name": "Italie",
+      "threshold": "Aucune durée minimale de détention",
+      "keyPoint": "Plus-value imposée comme revenu divers, sauf régime d'épargne géré"
+    },
+    "usa": {
+      "name": "États-Unis",
+      "threshold": "Distinction court terme / long terme (1 an)",
+      "keyPoint": "Plus-value imposée jusqu'à 28 % au niveau fédéral (bien de collection)"
+    }
+  }
+}

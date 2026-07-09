@@ -1,0 +1,30 @@
+{
+  "name": "Stati Uniti",
+  "flag": "🇺🇸",
+  "intro": "Negli Stati Uniti, l'oro fisico è classificato come oggetto da collezione, il che comporta un'aliquota fiscale federale sulla plusvalenza fino al 28%, distinta dalle aliquote abituali sulle azioni.",
+  "stat1Label": "Soglia di dichiarazione",
+  "stat1Value": "$ 10.000",
+  "stat2Label": "Tassazione federale max.",
+  "stat2Value": "28%",
+  "overview": "Non esiste un'IVA federale negli Stati Uniti, ma alcuni Stati applicano un'imposta sulle vendite a seconda del tipo di transazione. L'oro fisico è classificato come «collectible» dall'IRS: la plusvalenza a lungo termine (detenzione oltre un anno) è tassata fino al 28% a livello federale, contro un'aliquota generalmente più bassa per le azioni. La tassazione varia anche in base allo Stato di residenza.",
+  "exportPoints": [
+    "Dichiarazione obbligatoria (modulo FinCEN 105) oltre 10.000 $ in contanti",
+    "Nessuna autorizzazione all'esportazione specifica per l'oro ad uso privato",
+    "Verificare le regole sull'imposta sulle vendite del proprio Stato"
+  ],
+  "reventePoints": [
+    "Distinzione breve/lungo termine in base alla durata di detenzione (1 anno)",
+    "Aliquota federale massima del 28% sulle plusvalenze a lungo termine (oggetto da collezione)",
+    "La tassazione varia in base allo Stato di residenza"
+  ],
+  "faqs": [
+    {
+      "q": "L'oro fisico è trattato come un'azione ai fini fiscali?",
+      "a": "No, l'IRS lo classifica come oggetto da collezione, con un'aliquota federale massima del 28% sulla plusvalenza a lungo termine."
+    },
+    {
+      "q": "Esiste un'IVA federale sull'oro negli Stati Uniti?",
+      "a": "No, ma alcuni Stati applicano un'imposta sulle vendite a seconda della transazione."
+    }
+  ]
+}

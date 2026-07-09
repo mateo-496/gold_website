@@ -1,0 +1,30 @@
+{
+  "name": "Frankreich",
+  "flag": "🇫🇷",
+  "intro": "In Frankreich unterliegt der Wiederverkauf von physischem Gold einer Pauschalsteuer, es sei denn, Sie bewahren einen Kaufnachweis auf, der den tatsächlichen Anschaffungspreis belegt.",
+  "stat1Label": "Meldeschwelle",
+  "stat1Value": "EUR 10.000",
+  "stat2Label": "Steuer beim Verkauf",
+  "stat2Value": "11,5 % (Standard)",
+  "overview": "Anlagegold ist in Frankreich gemäß EU-Richtlinie mehrwertsteuerbefreit. Beim Wiederverkauf gilt standardmäßig eine Pauschalsteuer von 11,5 % auf den Verkaufspreis. Mit Nachweis von Preis und Erwerbsdatum kann die Kapitalgewinnbesteuerung auf bewegliche Güter gewählt werden, die bei längerer Haltedauer vorteilhafter sein kann.",
+  "exportPoints": [
+    "Meldepflicht ab EUR 10.000 in bar an der Grenze (EU-Regel)",
+    "Keine spezielle Genehmigung für Anlagegold zum privaten Gebrauch",
+    "Neukodifizierung von Art. 298 sexdecies A CGI tritt im September 2026 in Kraft"
+  ],
+  "reventePoints": [
+    "Ohne Nachweis: Pauschalsteuer von 11,5 % auf den Verkaufspreis",
+    "Mit Nachweis: Option für Kapitalgewinnbesteuerung mit Freibetrag nach Haltedauer",
+    "Kaufbelege stets aufbewahren"
+  ],
+  "faqs": [
+    {
+      "q": "Was passiert, wenn ich keinen Kaufbeleg habe?",
+      "a": "Die Standard-Pauschalsteuer von 11,5 % auf den Verkaufspreis gilt automatisch."
+    },
+    {
+      "q": "Kann ich die Pauschalsteuer vermeiden?",
+      "a": "Ja, durch die Wahl der Kapitalgewinnbesteuerung auf bewegliche Güter, sofern ein Kaufnachweis vorliegt, was je nach Haltedauer vorteilhafter sein kann."
+    }
+  ]
+}

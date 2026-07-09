@@ -1,0 +1,30 @@
+{
+  "name": "Francia",
+  "flag": "🇫🇷",
+  "intro": "In Francia, la rivendita di oro fisico è soggetta a un'imposta forfettaria, salvo che si conservi una prova d'acquisto che giustifichi il prezzo di costo reale.",
+  "stat1Label": "Soglia di dichiarazione",
+  "stat1Value": "€ 10.000",
+  "stat2Label": "Imposta alla rivendita",
+  "stat2Value": "11,5% (predefinita)",
+  "overview": "L'oro da investimento è esente da IVA in Francia, in conformità con la direttiva europea. Alla rivendita, il regime predefinito applica un'imposta forfettaria dell'11,5% sul prezzo di vendita. Se è possibile giustificare prezzo e data di acquisizione, si può optare per il regime delle plusvalenze su beni mobili, potenzialmente più vantaggioso dopo diversi anni di detenzione.",
+  "exportPoints": [
+    "Dichiarazione obbligatoria oltre 10.000 € in contanti alla frontiera (regola UE)",
+    "Nessuna autorizzazione specifica per l'oro da investimento ad uso privato",
+    "La ricodifica dell'art. 298 sexdecies A del CGI entra in vigore a settembre 2026"
+  ],
+  "reventePoints": [
+    "Senza prova d'acquisto: imposta forfettaria dell'11,5% sul prezzo di vendita",
+    "Con prova d'acquisto: opzione per il regime delle plusvalenze, con abbattimento per durata di detenzione",
+    "Conservare sempre le fatture d'acquisto"
+  ],
+  "faqs": [
+    {
+      "q": "Cosa succede se non ho una fattura d'acquisto?",
+      "a": "Si applica automaticamente il regime predefinito dell'imposta forfettaria dell'11,5% sul prezzo di vendita."
+    },
+    {
+      "q": "Posso evitare l'imposta forfettaria?",
+      "a": "Sì, optando per il regime delle plusvalenze su beni mobili se si dispone di una prova d'acquisto, il che può essere più vantaggioso a seconda della durata di detenzione."
+    }
+  ]
+}

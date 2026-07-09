@@ -1,0 +1,30 @@
+{
+  "name": "France",
+  "flag": "🇫🇷",
+  "intro": "En France, la revente d'or physique est soumise à une taxe forfaitaire, sauf si vous conservez une preuve d'achat justifiant le prix de revient réel.",
+  "stat1Label": "Seuil de déclaration",
+  "stat1Value": "10 000 €",
+  "stat2Label": "Taxe à la revente",
+  "stat2Value": "11,5 % (par défaut)",
+  "overview": "L'or d'investissement est exonéré de TVA en France, conformément à la directive européenne. À la revente, le régime par défaut applique une taxe forfaitaire de 11,5 % sur le prix de vente. Si vous pouvez justifier du prix et de la date d'acquisition, vous pouvez opter pour le régime des plus-values sur biens meubles, potentiellement plus avantageux après plusieurs années de détention.",
+  "exportPoints": [
+    "Déclaration obligatoire au-delà de 10 000 € en espèces à la frontière (règle UE)",
+    "Aucune autorisation spécifique pour l'or d'investissement à usage privé",
+    "La recodification de l'art. 298 sexdecies A du CGI entre en vigueur en septembre 2026"
+  ],
+  "reventePoints": [
+    "Sans justificatif : taxe forfaitaire de 11,5 % sur le prix de vente",
+    "Avec justificatif : option pour le régime des plus-values, avec abattement pour durée de détention",
+    "Conservez systématiquement vos factures d'achat"
+  ],
+  "faqs": [
+    {
+      "q": "Que se passe-t-il si je n'ai pas de facture d'achat ?",
+      "a": "Le régime par défaut de la taxe forfaitaire de 11,5 % sur le prix de vente s'applique automatiquement."
+    },
+    {
+      "q": "Puis-je éviter la taxe forfaitaire ?",
+      "a": "Oui, en optant pour le régime des plus-values sur biens meubles si vous disposez d'un justificatif d'achat, ce qui peut être plus avantageux selon la durée de détention."
+    }
+  ]
+}

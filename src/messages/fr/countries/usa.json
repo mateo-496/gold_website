@@ -1,0 +1,30 @@
+{
+  "name": "États-Unis",
+  "flag": "🇺🇸",
+  "intro": "Aux États-Unis, l'or physique est classé comme bien de collection, ce qui entraîne un taux d'imposition fédéral sur la plus-value pouvant atteindre 28 %, distinct des taux habituels sur les actions.",
+  "stat1Label": "Seuil de déclaration",
+  "stat1Value": "10 000 $",
+  "stat2Label": "Imposition fédérale max.",
+  "stat2Value": "28 %",
+  "overview": "Il n'existe pas de TVA fédérale aux États-Unis, mais certains États appliquent une taxe sur les ventes selon le type de transaction. L'or physique est classifié comme « collectible » par l'IRS : la plus-value à long terme (détention de plus d'un an) est imposée jusqu'à 28 % au niveau fédéral, contre un taux généralement plus bas pour les actions. La fiscalité varie aussi selon l'État de résidence.",
+  "exportPoints": [
+    "Déclaration obligatoire (formulaire FinCEN 105) au-delà de 10 000 $ en espèces",
+    "Aucune autorisation d'exportation spécifique pour l'or à usage privé",
+    "Vérifiez les règles de taxe sur les ventes de votre État"
+  ],
+  "reventePoints": [
+    "Distinction court terme / long terme selon la durée de détention (1 an)",
+    "Taux fédéral maximal de 28 % sur les gains à long terme (bien de collection)",
+    "La fiscalité varie selon l'État de résidence"
+  ],
+  "faqs": [
+    {
+      "q": "L'or physique est-il traité comme une action pour l'imposition ?",
+      "a": "Non, l'IRS le classe comme bien de collection, avec un taux fédéral maximal de 28 % sur la plus-value à long terme."
+    },
+    {
+      "q": "Existe-t-il une TVA fédérale sur l'or aux États-Unis ?",
+      "a": "Non, mais certains États appliquent une taxe sur les ventes selon la transaction."
+    }
+  ]
+}
