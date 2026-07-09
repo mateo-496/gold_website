@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main>
       <Hero /> 
-      {/* <GoldPriceChart /> */}
+      <GoldPriceChart />
       <Categories />
     </main>
   );
