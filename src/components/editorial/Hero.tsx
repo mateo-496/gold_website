@@ -6,7 +6,9 @@ import { COUNTRIES } from "@/i18n/routing";
 
 export function Hero() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [menuMounted, setMenuMounted] = useState(false);
   const [paysOpen, setPaysOpen] = useState(false);
+  const [navFading, setNavFading] = useState(false);
   const locale = useLocale();
   const tNav = useTranslations("nav");
   const tCategories = useTranslations("categories");
@@ -18,9 +20,42 @@ export function Hero() {
     { key: "revente", label: tCategories("revente.title"), href: `/${locale}/revente` },
   ];
 
+  const toggleMenu = () => {
+    if (menuOpen) {
+      // start fade-out, unmount once the animation finishes
+      setMenuOpen(false);
+      setTimeout(() => {
+        setMenuMounted(false);
+        setPaysOpen(false);
+      }, 700);
+    } else {
+      setMenuMounted(true);
+      setMenuOpen(true);
+    }
+  };
+
   const closeAll = () => {
     setMenuOpen(false);
-    setPaysOpen(false);
+    setTimeout(() => {
+      setMenuMounted(false);
+      setPaysOpen(false);
+    }, 700);
+  };
+
+  const switchToPays = () => {
+    setNavFading(true);
+    setTimeout(() => {
+      setPaysOpen(true);
+      setNavFading(false);
+    }, 350);
+  };
+
+  const switchToMain = () => {
+    setNavFading(true);
+    setTimeout(() => {
+      setPaysOpen(false);
+      setNavFading(false);
+    }, 350);
   };
 
   return (
@@ -34,7 +69,7 @@ export function Hero() {
 
       {/* Hamburger menu - transparent, top left */}
       <button
-        onClick={() => setMenuOpen(!menuOpen)}
+        onClick={toggleMenu}
         aria-label="Open menu"
         aria-expanded={menuOpen}
         className="absolute top-8 left-8 z-30 flex flex-col gap-1.5 w-8"
@@ -57,10 +92,14 @@ export function Hero() {
       </button>
 
       {/* Overlay menu */}
-      {menuOpen && (
-        <div className="absolute inset-0 z-20 bg-black/90 flex items-center justify-center animate-menuFadeIn">
+      {menuMounted && (
+        <div
+          className={`absolute inset-0 z-20 bg-black/90 flex items-center justify-center ${
+            menuOpen ? "animate-menuFadeIn" : "animate-menuFadeOut"
+          }`}
+        >
           {!paysOpen ? (
-            <nav className="flex flex-col items-center gap-8">
+            <nav className={`flex flex-col items-center gap-8 ${navFading ? "animate-navFadeOut" : "animate-navFadeIn"}`}>
               {links.map((link) => (
                 <Link
                   key={link.key}
@@ -72,18 +111,18 @@ export function Hero() {
                 </Link>
               ))}
               <button
-                onClick={() => setPaysOpen(true)}
+                onClick={switchToPays}
                 className="font-serif text-white text-3xl tracking-wide hover:opacity-70 transition-opacity"
               >
                 {tNav("pays")}
               </button>
             </nav>
           ) : (
-            <nav className="flex flex-col items-center gap-8 animate-menuFadeIn">
+            <nav className={`flex flex-col items-center gap-8 ${navFading ? "animate-navFadeOut" : "animate-navFadeIn"}`}>
               <button
-                onClick={() => setPaysOpen(false)}
+                onClick={switchToMain}
                 aria-label="Back"
-                className="absolute top-8 right-8 text-white text-sm tracking-widest hover:opacity-70 transition-opacity"
+                className="absolute top-24 left-8 text-white text-sm tracking-widest hover:opacity-70 transition-opacity"
               >
                 {tNav("back") ?? "←"}
               </button>
@@ -107,6 +146,22 @@ export function Hero() {
         <h1 className="font-serif text-white text-[clamp(2.5rem,8vw,7rem)] tracking-wide">
           OrCompare
         </h1>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M6 9l6 6 6-6" />
+        </svg>
       </div>
     </section>
   );

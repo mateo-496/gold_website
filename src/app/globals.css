@@ -55,3 +55,11 @@ body {
 .animate-menuFadeOut {
   animation: menuFadeOut 0.7s ease-in;
 }
+
+.animate-navFadeIn {
+  animation: menuFadeIn 0.35s ease-out;
+}
+
+.animate-navFadeOut {
+  animation: menuFadeOut 0.35s ease-in;
+}

@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { LanguageSwitcher } from "@/components/editorial/LanguageSwitcher";
 import "../globals.css";
 
 const geistSans = localFont({
@@ -39,7 +40,10 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <LanguageSwitcher />
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
