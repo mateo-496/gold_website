@@ -59,7 +59,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-[100dvh] w-full overflow-hidden snap-start">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"

@@ -25,7 +25,7 @@ export function Categories() {
   const t = useTranslations("categories");
 
   return (
-    <section className="w-full bg-[#f5f5f5] px-6 py-32">
+    <section className="min-h-[100dvh] w-full bg-[#f5f5f5] px-6 py-32 flex flex-col justify-center snap-start">
       <div className="max-w-3xl mx-auto">
         <h2 className="font-serif text-4xl md:text-5xl mb-24 leading-tight">
           {t("heading")}{" "}
