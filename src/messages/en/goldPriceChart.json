@@ -1,0 +1,14 @@
+{
+  "title": "Precious Metals Benchmark",
+  "disclaimer": "Prices are sourced from Yahoo Finance and reflect COMEX futures contracts (GC=F, SI=F, PL=F), not spot metal prices. Values may differ from physical bullion premiums.",
+  "gold": "Gold",
+  "silver": "Silver",
+  "platinum": "Platinum",
+  "closed": "Closed",
+  "custom": "Custom",
+  "from": "From",
+  "to": "To",
+  "loading": "Loading…",
+  "error": "Couldn't load this range.",
+  "lockedTooltip": "At least one commodity must stay selected"
+}

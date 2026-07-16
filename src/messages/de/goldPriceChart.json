@@ -1,0 +1,14 @@
+{
+  "title": "Referenzkurse der Edelmetalle",
+  "disclaimer": "Die Kurse stammen von Yahoo Finance und beziehen sich auf COMEX-Futures-Kontrakte (GC=F, SI=F, PL=F), nicht auf Spotpreise. Sie können von den im physischen Markt üblichen Prämien abweichen.",
+  "gold": "Gold",
+  "silver": "Silber",
+  "platinum": "Platin",
+  "closed": "Markt geschlossen",
+  "custom": "Benutzerdefiniert",
+  "from": "Von",
+  "to": "Bis",
+  "loading": "Wird geladen…",
+  "error": "Dieser Zeitraum konnte nicht geladen werden.",
+  "lockedTooltip": "Mindestens ein Rohstoff muss ausgewählt bleiben"
+}

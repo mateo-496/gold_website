@@ -1,0 +1,14 @@
+{
+  "title": "Cours de référence des métaux précieux",
+  "disclaimer": "Les cours proviennent de Yahoo Finance et reflètent les contrats à terme du COMEX (GC=F, SI=F, PL=F), et non les prix au comptant (spot) des métaux. Ils peuvent différer des primes appliquées sur le marché physique.",
+  "gold": "Or",
+  "silver": "Argent",
+  "platinum": "Platine",
+  "closed": "Marché fermé",
+  "custom": "Personnalisé",
+  "from": "Du",
+  "to": "Au",
+  "loading": "Chargement…",
+  "error": "Impossible de charger cette période.",
+  "lockedTooltip": "Au moins une matière première doit rester sélectionnée"
+}

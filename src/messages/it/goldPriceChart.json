@@ -1,0 +1,14 @@
+{
+  "title": "Prezzi di riferimento dei metalli preziosi",
+  "disclaimer": "I prezzi provengono da Yahoo Finance e si riferiscono ai contratti futures del COMEX (GC=F, SI=F, PL=F), non ai prezzi spot dei metalli. Possono differire dai premi applicati sul mercato fisico.",
+  "gold": "Oro",
+  "silver": "Argento",
+  "platinum": "Platino",
+  "closed": "Mercato chiuso",
+  "custom": "Personalizzato",
+  "from": "Dal",
+  "to": "Al",
+  "loading": "Caricamento…",
+  "error": "Impossibile caricare questo periodo.",
+  "lockedTooltip": "Almeno una materia prima deve rimanere selezionata"
+}
