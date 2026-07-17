@@ -2,12 +2,12 @@ import { useTranslations } from "next-intl";
 import { CountryTable } from "@/components/editorial/CountryTable";
 import { PageHero } from "@/components/editorial/PageHero";
 
-const COUNTRY_FLAGS: Record<string, string> = {
-  switzerland: "🇨🇭",
-  france: "🇫🇷",
-  germany: "🇩🇪",
-  italy: "🇮🇹",
-  usa: "🇺🇸",
+const COUNTRY_EMBLEMS: Record<string, string> = {
+  switzerland: "/images/emblems/switzerland.png",
+  france: "/images/emblems/france.png",
+  germany: "/images/emblems/germany.png",
+  italy: "/images/emblems/italy.png",
+  usa: "/images/emblems/usa.png",
 };
 
 const COUNTRY_ORDER = ["switzerland", "france", "germany", "italy", "usa"] as const;
@@ -17,7 +17,7 @@ export default function ExportPage() {
 
   const rows = COUNTRY_ORDER.map((key) => ({
     key,
-    flag: COUNTRY_FLAGS[key],
+    emblem: COUNTRY_EMBLEMS[key],
     name: t(`countries.${key}.name`),
     threshold: t(`countries.${key}.threshold`),
     keyPoint: t(`countries.${key}.keyPoint`),

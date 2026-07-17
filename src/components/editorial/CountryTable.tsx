@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useLocale } from "next-intl";
 
 type CountryRow = {
   key: string;
-  flag: string;
+  emblem: string;
   name: string;
   threshold: string;
   keyPoint: string;
@@ -43,7 +44,13 @@ export function CountryTable({
           {rows.map((row) => (
             <tr key={row.key} className="border-b border-neutral-200 align-top">
               <td className="py-6 pr-6 whitespace-nowrap">
-                <span className="text-2xl mr-2">{row.flag}</span>
+                <Image
+                  src={row.emblem}
+                  alt=""
+                  width={28}
+                  height={28}
+                  className="inline-block mr-3 align-middle object-contain"
+                />
                 <span className="font-serif italic text-xl">{row.name}</span>
               </td>
               <td className="py-6 pr-6 text-neutral-600 max-w-xs">{row.threshold}</td>

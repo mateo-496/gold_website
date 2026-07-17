@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import type { CountryKey } from "@/i18n/routing";
@@ -34,8 +35,14 @@ export function CountryPage({ country }: { country: CountryKey }) {
 
       {/* Hero */}
       <section className="max-w-4xl mx-auto px-6 pt-6 pb-16">
-        <h1 className="font-serif text-5xl md:text-6xl leading-tight mb-6 text-neutral-900">
-          <span className="mr-3">{t("flag")}</span>
+        <h1 className="font-serif text-5xl md:text-6xl leading-tight mb-6 text-neutral-900 flex items-center">
+          <Image
+            src={`/images/emblems/${country}.png`}
+            alt=""
+            width={44}
+            height={44}
+            className="mr-4 object-contain"
+          />
           {t("name")}
         </h1>
         <p className="text-neutral-600 leading-relaxed max-w-2xl text-lg">
