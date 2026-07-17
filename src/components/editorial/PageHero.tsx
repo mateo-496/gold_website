@@ -31,7 +31,7 @@ export function PageHero({ imageSrc = "/images/backgrounds/mountain1.jpeg" }: Pa
         className="absolute inset-0 bg-black/25"
         style={{ clipPath: "polygon(0 0, 100% 0, 100% 62%, 50% 100%, 0 62%)" }}
       />
-      <div className="absolute top-6 left-6 md:top-8 md:left-10">
+      <div className="absolute top-4 left-4 md:top-8 md:left-10">
         <PageNav />
       </div>
     </section>

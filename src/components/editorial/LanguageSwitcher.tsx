@@ -25,12 +25,12 @@ export function LanguageSwitcher() {
   };
 
   return (
-    <div className="fixed top-8 right-8 z-40">
+    <div className="fixed top-4 right-4 md:top-8 md:right-8 z-40">
       <button
         onClick={() => setOpen(!open)}
         aria-label="Select language"
         aria-expanded={open}
-        className="flex items-center gap-1.5 text-white text-[16px] tracking-widest font-serif hover:opacity-70 transition-opacity"
+        className="flex items-center gap-1.5 text-white text-sm md:text-[16px] tracking-widest font-serif hover:opacity-70 transition-opacity"
         style={{ filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.7))" }}
       >
         {LABELS[locale]}
@@ -46,14 +46,14 @@ export function LanguageSwitcher() {
       </button>
 
       {open && (
-        <div className="absolute top-8 right-0 flex flex-col items-end gap-3 animate-menuFadeIn">
+        <div className="absolute top-6 md:top-8 right-0 flex flex-col items-end gap-2.5 md:gap-3 animate-menuFadeIn">
           {routing.locales
             .filter((l) => l !== locale)
             .map((l) => (
               <button
                 key={l}
                 onClick={() => switchTo(l)}
-                className="text-white text-sm tracking-widest font-serif hover:opacity-70 transition-opacity"
+                className="text-white text-xs md:text-sm tracking-widest font-serif hover:opacity-70 transition-opacity"
                 style={{ filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.7))" }}
               >
                 {LABELS[l]}

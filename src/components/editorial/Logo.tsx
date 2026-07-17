@@ -122,14 +122,14 @@ export function Logo() {
     <Link
       href={`/${locale}`}
       onClick={handleClick}
-      className={`fixed top-8 left-1/2 -translate-x-1/2 z-40 block transition-opacity ease-out ${
+      className={`fixed top-4 md:top-8 left-1/2 -translate-x-1/2 z-40 block transition-opacity ease-out ${
         hidden || pastTop || scrolling
           ? "duration-300 opacity-0 pointer-events-none"
           : "duration-700 opacity-100"
       }`}
       aria-label="OrCompare — home"
     >
-      <div className="relative h-16 aspect-[3/1]">
+      <div className="relative h-9 sm:h-11 md:h-16 aspect-[3/1]">
         <Image
           src={LOGO_DARK}
           alt="OrCompare"

@@ -10,9 +10,9 @@ const HREF: Record<(typeof KEYS)[number], string> = {
 };
 // Replace with your own imagery in /public/images/categories/
 const IMAGE: Record<(typeof KEYS)[number], string> = {
-  achat: "/images/categories/achat.jpg",
-  export: "/images/categories/export.jpg",
-  revente: "/images/categories/revente.jpg",
+  achat: "/images/categories/achat.png",
+  export: "/images/categories/export.png",
+  revente: "/images/categories/revente.png",
 };
 
 export function Categories() {
