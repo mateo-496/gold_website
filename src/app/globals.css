@@ -14,12 +14,9 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 .snap-container {
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 body {

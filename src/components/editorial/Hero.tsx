@@ -65,7 +65,7 @@ export function Hero() {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('/images/backgrounds/gold_marble2.png')" }}
       />
-      <div className="absolute inset-0 bg-black/35" />
+      <div className="absolute inset-0 bg-black/10" />
 
       {/* Hamburger menu - transparent, top left */}
       <button
@@ -144,7 +144,7 @@ export function Hero() {
       {/* Company name, centered */}
       <div className="relative z-10 h-full flex items-center justify-center">
         <h1 className="font-serif text-white text-[clamp(2.5rem,8vw,7rem)] tracking-wide">
-          GoldAlp.ch
+          Site
         </h1>
       </div>
 

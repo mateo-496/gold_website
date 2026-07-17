@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { CountryTable } from "@/components/editorial/CountryTable";
+import { PageHero } from "@/components/editorial/PageHero";
 
 const COUNTRY_FLAGS: Record<string, string> = {
   switzerland: "🇨🇭",
@@ -24,9 +25,11 @@ export default function RevantePage() {
 
   return (
     <main>
-      <section className="w-full bg-white px-6 py-32">
+      <PageHero breadcrumbLabel={t("breadcrumb")} />
+
+      <section className="w-full bg-white px-6 pt-16 pb-32">
         <div className="max-w-5xl mx-auto">
-          <h1 className="font-serif text-4xl md:text-5xl mb-6 leading-tight">
+          <h1 className="font-serif text-4xl md:text-5xl mb-6 leading-tight text-neutral-900">
             {t("heading")}
           </h1>
           <p className="text-neutral-600 leading-relaxed max-w-2xl mb-16">

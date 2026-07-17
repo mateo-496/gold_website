@@ -18,6 +18,7 @@ export function Logo() {
   const locale = useLocale();
   const [overDark, setOverDark] = useState(false);
   const [hidden, setHidden] = useState(false);
+  const [pastTop, setPastTop] = useState(false);
   const [scrolling, setScrolling] = useState(false);
 
   const segments = pathname.split("/").filter(Boolean);
@@ -26,14 +27,9 @@ export function Logo() {
     (routing.locales as readonly string[]).includes(segments[0]);
 
   useEffect(() => {
-    if (!isHome) {
-      setOverDark(false);
-      return;
-    }
-
-    // Sections can opt in with data-logo-bg="dark" (e.g. the hero image,
-    // the gold chart). While any of them is in view under the fixed logo,
-    // use the light mark; everywhere else, use the dark mark.
+    // Sections can opt in with data-logo-bg="dark" (e.g. the home hero image,
+    // the gold chart, or a page's V-shaped banner). While any of them is in
+    // view under the fixed logo, use the light mark; everywhere else, the dark mark.
     const targets = document.querySelectorAll('[data-logo-bg="dark"]');
     if (targets.length === 0) {
       setOverDark(false);
@@ -55,7 +51,7 @@ export function Logo() {
     );
     targets.forEach((target) => observer.observe(target));
     return () => observer.disconnect();
-  }, [isHome, pathname]);
+  }, [pathname]);
 
   useEffect(() => {
     // Elements can opt in with data-logo-hide="true" (e.g. the footer),
@@ -83,18 +79,37 @@ export function Logo() {
   }, [pathname]);
 
   useEffect(() => {
+    // Home is a single scrolling page: fade the logo out while actively
+    // scrolling and back in once it settles.
+    if (!isHome) {
+      setScrolling(false);
+      return;
+    }
     let timeout: ReturnType<typeof setTimeout>;
     const onScroll = () => {
       setScrolling(true);
       clearTimeout(timeout);
-      timeout = setTimeout(() => setScrolling(false), 100);
+      timeout = setTimeout(() => setScrolling(false), 250);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => {
       window.removeEventListener("scroll", onScroll);
       clearTimeout(timeout);
     };
-  }, []);
+  }, [isHome, pathname]);
+
+  useEffect(() => {
+    // Other pages: the logo only belongs at the very top; once the person
+    // starts scrolling, fade it out and keep it out (no flicker back in).
+    if (isHome) {
+      setPastTop(false);
+      return;
+    }
+    const onScroll = () => setPastTop(window.scrollY > 80);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [isHome, pathname]);
 
   const handleClick = (e: React.MouseEvent) => {
     if (isHome) {
@@ -108,7 +123,9 @@ export function Logo() {
       href={`/${locale}`}
       onClick={handleClick}
       className={`fixed top-8 left-1/2 -translate-x-1/2 z-40 block transition-opacity ease-out ${
-        hidden || scrolling ? "duration-100 opacity-0 pointer-events-none" : "duration-700 opacity-100"
+        hidden || pastTop || scrolling
+          ? "duration-300 opacity-0 pointer-events-none"
+          : "duration-700 opacity-100"
       }`}
       aria-label="OrCompare — home"
     >

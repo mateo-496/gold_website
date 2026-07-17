@@ -1,20 +1,18 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import Link from "next/link";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { CATEGORIES, type CategoryKey, productsForCategory } from "@/lib/dealers/products";
 import { offersForProduct } from "@/lib/dealers/mockOffers";
 import { formatChf, formatPercent, intrinsicValueChf, premium } from "@/lib/dealers/pricing";
 import type { Metal } from "@/lib/dealers/types";
+import { PageHero } from "@/components/editorial/PageHero";
 
 type SpotState = { gold: number | null; silver: number | null };
 type SortKey = "price" | "premium";
 
 export function AchatPage() {
-  const locale = useLocale();
   const t = useTranslations("achat");
-  const tNav = useTranslations("nav");
 
   const [category, setCategory] = useState<CategoryKey>("gold-bar");
   const products = useMemo(() => productsForCategory(category), [category]);
@@ -75,18 +73,11 @@ export function AchatPage() {
 
   return (
     <main className="bg-white">
-      {/* Breadcrumb */}
-      <div className="max-w-5xl mx-auto px-6 pt-10 text-sm text-neutral-500">
-        <Link href={`/${locale}`} className="hover:text-neutral-900 transition-colors">
-          {tNav("home")}
-        </Link>
-        <span className="mx-2">/</span>
-        <span className="text-neutral-900">{t("breadcrumb")}</span>
-      </div>
+      <PageHero breadcrumbLabel={t("breadcrumb")} />
 
       {/* Hero */}
-      <section className="max-w-5xl mx-auto px-6 pt-8 pb-16">
-        <h1 className="font-serif text-4xl md:text-5xl leading-tight mb-6">{t("heading")}</h1>
+      <section className="max-w-5xl mx-auto px-6 pt-6 pb-16">
+        <h1 className="font-serif text-4xl md:text-5xl leading-tight mb-6 text-neutral-900">{t("heading")}</h1>
         <p className="text-neutral-600 leading-relaxed max-w-2xl text-lg">{t("intro")}</p>
       </section>
 

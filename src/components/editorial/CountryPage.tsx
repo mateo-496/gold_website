@@ -4,13 +4,13 @@ import { useState } from "react";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import type { CountryKey } from "@/i18n/routing";
+import { PageHero } from "@/components/editorial/PageHero";
 
 type Faq = { q: string; a: string };
 
 export function CountryPage({ country }: { country: CountryKey }) {
   const locale = useLocale();
   const t = useTranslations(`countries.${country}`);
-  const tNav = useTranslations("nav");
   const tPage = useTranslations("countryPage");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -20,22 +20,21 @@ export function CountryPage({ country }: { country: CountryKey }) {
 
   return (
     <main className="bg-white">
-      {/* Breadcrumb */}
-      <div className="max-w-4xl mx-auto px-6 pt-10 text-sm text-neutral-500">
-        <Link href={`/${locale}`} className="hover:text-neutral-900 transition-colors">
-          {tNav("home")}
-        </Link>
-        <span className="mx-2">/</span>
-        <Link href={`/${locale}/export`} className="hover:text-neutral-900 transition-colors">
-          {tPage("breadcrumbExport")}
-        </Link>
-        <span className="mx-2">/</span>
-        <span className="text-neutral-900">{t("name")}</span>
-      </div>
+      <PageHero
+        breadcrumbLabel={
+          <>
+            <Link href={`/${locale}/export`} className="hover:text-white transition-colors underline">
+              {tPage("breadcrumbExport")}
+            </Link>
+            <span className="mx-2">/</span>
+            <span>{t("name")}</span>
+          </>
+        }
+      />
 
       {/* Hero */}
-      <section className="max-w-4xl mx-auto px-6 pt-8 pb-16">
-        <h1 className="font-serif text-5xl md:text-6xl leading-tight mb-6">
+      <section className="max-w-4xl mx-auto px-6 pt-6 pb-16">
+        <h1 className="font-serif text-5xl md:text-6xl leading-tight mb-6 text-neutral-900">
           <span className="mr-3">{t("flag")}</span>
           {t("name")}
         </h1>
