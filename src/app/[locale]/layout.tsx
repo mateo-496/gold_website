@@ -4,8 +4,10 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { LanguageSwitcher } from "@/components/editorial/LanguageSwitcher";
+import { Logo } from "@/components/editorial/Logo";
 import { Footer } from "@/components/editorial/Footer";
-import { Fraunces } from "next/font/google";
+import { ScrollSnapController } from "@/components/editorial/ScrollSnapController";
+import { Fraunces, IBM_Plex_Sans } from "next/font/google";
 import "../globals.css";
 
 const geistSans = localFont({
@@ -24,6 +26,13 @@ const fraunces = Fraunces({
   variable: "--font-serif",
   weight: ["300", "400", "500", "600"],
   style: ["normal", "italic"],
+  display: "swap",
+})
+
+const ibmPlexSans = IBM_Plex_Sans({
+  subsets: ["latin"],
+  variable: "--font-numeric",
+  weight: ["400", "500", "600"],
   display: "swap",
 })
 
@@ -48,9 +57,11 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${fraunces.variable} ${geistMono.variable} antialiased`}
+        className={`${fraunces.variable} ${geistMono.variable} ${ibmPlexSans.variable} antialiased`}
       >
         <NextIntlClientProvider>
+          <ScrollSnapController />
+          <Logo />
           <LanguageSwitcher />
           {children}
           <Footer />

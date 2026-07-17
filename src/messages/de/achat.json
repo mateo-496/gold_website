@@ -1,0 +1,23 @@
+{
+  "breadcrumb": "Kauf",
+  "heading": "Vergleichen, bevor Sie kaufen",
+  "intro": "Wählen Sie ein Produkt, um die Preise unserer erfassten Händler transparent zu vergleichen.",
+  "spotLabel": "Spotpreis",
+  "perGram": "pro Gramm",
+  "categories": {
+    "gold-bar": "Goldbarren",
+    "gold-coin": "Goldmünzen",
+    "silver-bar": "Silberbarren",
+    "silver-coin": "Silbermünzen"
+  },
+  "table": {
+    "dealer": "Händler",
+    "location": "Standort",
+    "price": "Preis",
+    "premium": "Aufschlag ggü. Spot",
+    "updated": "Aktualisiert"
+  },
+  "emptyState": "Für dieses Produkt werden derzeit keine Angebote erfasst.",
+  "disclaimer": "Die angezeigten Preise sind unverbindliche Angaben unserer Partnerhändler und können vom Endpreis abweichen. OrCompare verkauft selbst keine Edelmetalle.",
+  "sampleDataNotice": "Beispieldaten — die Live-Anbindung an unsere Partnerhändler wird derzeit umgesetzt."
+}

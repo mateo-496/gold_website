@@ -59,13 +59,13 @@ export function Hero() {
   };
 
   return (
-    <section className="relative h-[100dvh] w-full overflow-hidden snap-start">
+    <section data-logo-bg="dark" className="relative h-[100dvh] w-full overflow-hidden snap-start">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/gold_marble2.png')" }}
+        style={{ backgroundImage: "url('/images/backgrounds/gold_marble2.png')" }}
       />
-      <div className="absolute inset-0 bg-black/10" />
+      <div className="absolute inset-0 bg-black/35" />
 
       {/* Hamburger menu - transparent, top left */}
       <button
@@ -144,7 +144,7 @@ export function Hero() {
       {/* Company name, centered */}
       <div className="relative z-10 h-full flex items-center justify-center">
         <h1 className="font-serif text-white text-[clamp(2.5rem,8vw,7rem)] tracking-wide">
-          AlpGold.ch
+          GoldAlp.ch
         </h1>
       </div>
 

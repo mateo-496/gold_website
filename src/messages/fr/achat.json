@@ -1,0 +1,23 @@
+{
+  "breadcrumb": "Achat",
+  "heading": "Comparez avant d'acheter",
+  "intro": "Sélectionnez un produit pour comparer les prix pratiqués par les négociants que nous suivons, en toute transparence.",
+  "spotLabel": "Cours au comptant",
+  "perGram": "par gramme",
+  "categories": {
+    "gold-bar": "Lingots d'or",
+    "gold-coin": "Pièces d'or",
+    "silver-bar": "Lingots d'argent",
+    "silver-coin": "Pièces d'argent"
+  },
+  "table": {
+    "dealer": "Négociant",
+    "location": "Lieu",
+    "price": "Prix",
+    "premium": "Écart / spot",
+    "updated": "Mis à jour"
+  },
+  "emptyState": "Aucune offre suivie pour ce produit pour le moment.",
+  "disclaimer": "Les prix affichés sont fournis à titre indicatif par nos partenaires négociants et peuvent différer du prix final. OrCompare ne vend pas de métaux précieux.",
+  "sampleDataNotice": "Données de démonstration — l'intégration du flux temps réel avec nos négociants partenaires est en cours."
+}

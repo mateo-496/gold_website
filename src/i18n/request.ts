@@ -5,6 +5,7 @@ import { routing } from "./routing";
 // Namespace files (one per page/section)
 import frNav from "../messages/fr/nav.json";
 import frCategories from "../messages/fr/categories.json";
+import frAchat from "../messages/fr/achat.json";
 import frExport from "../messages/fr/export.json";
 import frRevente from "../messages/fr/revente.json";
 import frCountryPage from "../messages/fr/countryPage.json";
@@ -13,6 +14,7 @@ import frGoldPriceChart from "../messages/fr/goldPriceChart.json";
 
 import deNav from "../messages/de/nav.json";
 import deCategories from "../messages/de/categories.json";
+import deAchat from "../messages/de/achat.json";
 import deExport from "../messages/de/export.json";
 import deRevente from "../messages/de/revente.json";
 import deCountryPage from "../messages/de/countryPage.json";
@@ -21,6 +23,7 @@ import deGoldPriceChart from "../messages/de/goldPriceChart.json";
 
 import itNav from "../messages/it/nav.json";
 import itCategories from "../messages/it/categories.json";
+import itAchat from "../messages/it/achat.json";
 import itExport from "../messages/it/export.json";
 import itRevente from "../messages/it/revente.json";
 import itCountryPage from "../messages/it/countryPage.json";
@@ -29,6 +32,7 @@ import itGoldPriceChart from "../messages/it/goldPriceChart.json";
 
 import enNav from "../messages/en/nav.json";
 import enCategories from "../messages/en/categories.json";
+import enAchat from "../messages/en/achat.json";
 import enExport from "../messages/en/export.json";
 import enRevente from "../messages/en/revente.json";
 import enCountryPage from "../messages/en/countryPage.json";
@@ -64,6 +68,7 @@ const MESSAGES = {
   fr: {
     nav: frNav,
     categories: frCategories,
+    achat: frAchat,
     export: frExport,
     revente: frRevente,
     countryPage: frCountryPage,
@@ -80,6 +85,7 @@ const MESSAGES = {
   de: {
     nav: deNav,
     categories: deCategories,
+    achat: deAchat,
     export: deExport,
     revente: deRevente,
     countryPage: deCountryPage,
@@ -96,6 +102,7 @@ const MESSAGES = {
   it: {
     nav: itNav,
     categories: itCategories,
+    achat: itAchat,
     export: itExport,
     revente: itRevente,
     countryPage: itCountryPage,
@@ -112,6 +119,7 @@ const MESSAGES = {
   en: {
     nav: enNav,
     categories: enCategories,
+    achat: enAchat,
     export: enExport,
     revente: enRevente,
     countryPage: enCountryPage,

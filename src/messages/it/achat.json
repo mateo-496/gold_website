@@ -1,0 +1,23 @@
+{
+  "breadcrumb": "Acquisto",
+  "heading": "Confronta prima di acquistare",
+  "intro": "Seleziona un prodotto per confrontare i prezzi dei rivenditori che monitoriamo, in totale trasparenza.",
+  "spotLabel": "Prezzo spot",
+  "perGram": "al grammo",
+  "categories": {
+    "gold-bar": "Lingotti d'oro",
+    "gold-coin": "Monete d'oro",
+    "silver-bar": "Lingotti d'argento",
+    "silver-coin": "Monete d'argento"
+  },
+  "table": {
+    "dealer": "Rivenditore",
+    "location": "Luogo",
+    "price": "Prezzo",
+    "premium": "Premio su spot",
+    "updated": "Aggiornato"
+  },
+  "emptyState": "Nessuna offerta monitorata per questo prodotto al momento.",
+  "disclaimer": "I prezzi mostrati sono indicativi, forniti dai rivenditori partner, e possono differire dal prezzo finale. OrCompare non vende metalli preziosi.",
+  "sampleDataNotice": "Dati di esempio — l'integrazione in tempo reale con i nostri rivenditori partner è in corso."
+}

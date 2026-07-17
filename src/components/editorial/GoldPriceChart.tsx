@@ -123,11 +123,11 @@ function MetalCard({
       </div>
 
       <div className="flex items-baseline gap-2">
-        <span className="font-mono text-3xl leading-none" style={{ color: meta.color }}>
+        <span className="font-numeric text-3xl leading-none" style={{ color: meta.color }}>
           ${current.price.toLocaleString("en-US", { maximumFractionDigits: 2 })}
         </span>
         {change !== null && (
-          <span className={`font-mono text-base ${change >= 0 ? "text-emerald-600" : "text-red-600"}`}>
+          <span className={`font-numeric text-base ${change >= 0 ? "text-emerald-500" : "text-red-500"}`}>
             {change >= 0 ? "+" : ""}
             {change.toFixed(2)}%
           </span>
@@ -231,7 +231,7 @@ export function GoldPriceChart() {
   }, [data, activeKeys, isMultiMetal]);
 
   return (
-    <section className="min-h-[100dvh] flex flex-col px-6 py-16 lg:px-12 snap-start">
+    <section data-logo-bg="dark" className="min-h-[100dvh] flex flex-col px-6 py-16 lg:px-12 snap-start">
       <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-2 shrink-0">
         <div>
           <div className="flex items-center gap-2 mb-4">
@@ -316,11 +316,11 @@ export function GoldPriceChart() {
             <div className={`absolute inset-0 pt-10 flex justify-center transition-opacity duration-150 ${loading ? "opacity-40" : "opacity-100"}`}>
               <ResponsiveContainer width="92%" height="100%">
                 <LineChart data={chartData} margin={{ top: 8, right: 16, bottom: 12, left: 8 }}>
-                  <XAxis dataKey="time" minTickGap={40} stroke="#4a4a4a" tick={{ fill: "#8a8a8a", fontSize: 16 }} tickMargin={12}/>
+                  <XAxis dataKey="time" minTickGap={40} stroke="#4a4a4a" tick={{ fill: "#8a8a8a", fontSize: 16, fontFamily: "var(--font-numeric)"}} tickMargin={12}/>
                   <YAxis
                     domain={["auto", "auto"]}
                     stroke="#4a4a4a"
-                    tick={{ fill: "#8a8a8a", fontSize: 20 }}
+                    tick={{ fill: "#8a8a8a", fontSize: 20, fontFamily: "var(--font-numeric)" }}
                     tickMargin={10}
                     width={88}
                     tickFormatter={(v: number) =>

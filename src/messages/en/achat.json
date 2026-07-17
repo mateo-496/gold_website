@@ -1,0 +1,23 @@
+{
+  "breadcrumb": "Purchase",
+  "heading": "Compare before you buy",
+  "intro": "Select a product to compare prices across the dealers we track, in full transparency.",
+  "spotLabel": "Spot price",
+  "perGram": "per gram",
+  "categories": {
+    "gold-bar": "Gold Bars",
+    "gold-coin": "Gold Coins",
+    "silver-bar": "Silver Bars",
+    "silver-coin": "Silver Coins"
+  },
+  "table": {
+    "dealer": "Dealer",
+    "location": "Location",
+    "price": "Price",
+    "premium": "Premium vs spot",
+    "updated": "Updated"
+  },
+  "emptyState": "No offers tracked for this product yet.",
+  "disclaimer": "Prices shown are indicative, provided by partner dealers, and may differ from the final price. OrCompare does not sell precious metals.",
+  "sampleDataNotice": "Sample data — live integration with our partner dealers is in progress."
+}

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 const KEYS = ["achat", "export", "revente"] as const;
@@ -7,40 +8,49 @@ const HREF: Record<(typeof KEYS)[number], string> = {
   export: "/export",
   revente: "/revente",
 };
-
-function DropTitle({ title, href }: { title: string; href: string }) {
-  const first = title[0];
-  const rest = title.slice(1);
-  return (
-    <Link href={href}>
-      <h3 className="font-serif italic text-6xl md:text-7xl leading-none hover:opacity-70 transition-opacity">
-        <span className="text-red-600">{first}</span>
-        <span className="text-neutral-900">{rest}</span>
-      </h3>
-    </Link>
-  );
-}
+// Replace with your own imagery in /public/images/categories/
+const IMAGE: Record<(typeof KEYS)[number], string> = {
+  achat: "/images/categories/achat.jpg",
+  export: "/images/categories/export.jpg",
+  revente: "/images/categories/revente.jpg",
+};
 
 export function Categories() {
   const t = useTranslations("categories");
 
   return (
     <section className="min-h-[100dvh] w-full bg-[#f5f5f5] px-6 py-32 flex flex-col justify-center snap-start">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="font-serif text-4xl md:text-5xl mb-24 leading-tight">
-          {t("heading")}{" "}
+      <div className="max-w-6xl mx-auto w-full">
+        <h2 className="font-serif text-4xl md:text-5xl mb-16 md:mb-20 leading-tight">
+          <span className="text-neutral-900">{t("heading")}</span>{" "}
           <em className="italic text-red-600">{t("headingAccent")}</em>
         </h2>
 
-        <div className="space-y-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-16">
           {KEYS.map((key) => (
-            <div key={key}>
-              <DropTitle title={t(`${key}.title`)} href={HREF[key]} />
-              <div className="border-t border-neutral-300 mt-6 mb-6" />
-              <p className="text-neutral-600 leading-relaxed max-w-xl">
+            <Link key={key} href={HREF[key]} className="group block">
+              <div className="relative aspect-square w-full overflow-hidden mb-8 bg-neutral-200">
+                <Image
+                  src={IMAGE[key]}
+                  alt={t(`${key}.title`)}
+                  fill
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+              <h3 className="font-serif text-3xl md:text-4xl leading-none mb-4 text-neutral-900">
+                {t(`${key}.title`)}
+              </h3>
+              <p className="text-neutral-600 leading-relaxed mb-6">
                 {t(`${key}.text`)}
               </p>
-            </div>
+              <span className="inline-flex items-center gap-2 text-xs tracking-[0.15em] uppercase text-neutral-900 group-hover:text-red-600 transition-colors">
+                {t(`${key}.title`)}
+                <span aria-hidden className="transition-transform group-hover:translate-x-1">
+                  →
+                </span>
+              </span>
+            </Link>
           ))}
         </div>
       </div>
