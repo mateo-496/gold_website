@@ -1,7 +1,7 @@
 import type { DealerOffer } from "./types";
 
 /**
- * Placeholder data only. This will be replaced by the OrCompare scraping
+ * Placeholder data only. This will be replaced by the GoldAlp scraping
  * API once it exists (see `prime_history` in the Supabase schema plan).
  * Dealer names below are fictional — they are NOT real quoted prices from
  * real dealers, and should not be presented to users as such until backed

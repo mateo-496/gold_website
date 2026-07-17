@@ -231,7 +231,7 @@ export function GoldPriceChart() {
   }, [data, activeKeys, isMultiMetal]);
 
   return (
-    <section data-logo-bg="dark" className="min-h-[100dvh] flex flex-col px-6 py-16 lg:px-12 snap-start">
+    <section data-logo-bg="dark" className="min-h-[100dvh] flex flex-col px-6 pt-24 pb-16 md:pt-32 lg:px-12 snap-start">
       <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-2 shrink-0">
         <div>
           <div className="flex items-center gap-2 mb-4">
@@ -315,8 +315,15 @@ export function GoldPriceChart() {
           <>
             <div className={`absolute inset-0 pt-10 flex justify-center transition-opacity duration-150 ${loading ? "opacity-40" : "opacity-100"}`}>
               <ResponsiveContainer width="92%" height="100%">
-                <LineChart data={chartData} margin={{ top: 8, right: 16, bottom: 12, left: 8 }}>
-                  <XAxis dataKey="time" minTickGap={40} stroke="#4a4a4a" tick={{ fill: "#8a8a8a", fontSize: 16, fontFamily: "var(--font-numeric)"}} tickMargin={12}/>
+                <LineChart data={chartData} margin={{ top: 8, right: 24, bottom: 12, left: 8 }}>
+                  <XAxis
+                    dataKey="time"
+                    minTickGap={40}
+                    stroke="#4a4a4a"
+                    tick={{ fill: "#8a8a8a", fontSize: 16, fontFamily: "var(--font-numeric)"}}
+                    tickMargin={12}
+                    padding={{ left: 10, right: 30 }}
+                  />
                   <YAxis
                     domain={["auto", "auto"]}
                     stroke="#4a4a4a"

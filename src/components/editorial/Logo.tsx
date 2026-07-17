@@ -127,19 +127,19 @@ export function Logo() {
           ? "duration-300 opacity-0 pointer-events-none"
           : "duration-700 opacity-100"
       }`}
-      aria-label="OrCompare — home"
+      aria-label="GoldAlp — home"
     >
       <div className="relative h-9 sm:h-11 md:h-16 aspect-[3/1]">
         <Image
           src={LOGO_DARK}
-          alt="OrCompare"
+          alt="GoldAlp"
           fill
           priority
           className={`object-contain transition-opacity duration-500 ${overDark ? "opacity-0" : "opacity-100"}`}
         />
         <Image
           src={LOGO_LIGHT}
-          alt="OrCompare"
+          alt="GoldAlp"
           fill
           priority
           className={`object-contain transition-opacity duration-500 ${overDark ? "opacity-100" : "opacity-0"}`}

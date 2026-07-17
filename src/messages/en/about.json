@@ -1,7 +1,7 @@
 {
   "breadcrumb": "About",
-  "heading": "About OrCompare",
-  "intro": "OrCompare is an independent comparator for physical gold and silver, built for buyers who want clarity on price, provenance, and cross-border rules before they transact.",
+  "heading": "About GoldAlp",
+  "intro": "GoldAlp is an independent comparator for physical gold and silver, built for buyers who want clarity on price, provenance, and cross-border rules before they transact.",
   "sections": {
     "mission": {
       "title": "Our mission",
@@ -16,5 +16,5 @@
       "text": "We currently track Switzerland, France, Germany, Italy, and the United States, with content available in French, German, Italian, and English."
     }
   },
-  "disclaimer": "OrCompare provides comparative and informational content only. It is not a substitute for advice from a licensed financial, tax, or legal professional."
+  "disclaimer": "GoldAlp provides comparative and informational content only. It is not a substitute for advice from a licensed financial, tax, or legal professional."
 }

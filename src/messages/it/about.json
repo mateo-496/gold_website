@@ -1,7 +1,7 @@
 {
   "breadcrumb": "Chi siamo",
-  "heading": "Chi è OrCompare",
-  "intro": "OrCompare è un comparatore indipendente per oro e argento fisici, pensato per acquirenti che vogliono chiarezza su prezzo, provenienza e norme transfrontaliere prima di transare.",
+  "heading": "Chi è GoldAlp",
+  "intro": "GoldAlp è un comparatore indipendente per oro e argento fisici, pensato per acquirenti che vogliono chiarezza su prezzo, provenienza e norme transfrontaliere prima di transare.",
   "sections": {
     "mission": {
       "title": "La nostra missione",
@@ -16,5 +16,5 @@
       "text": "Attualmente copriamo Svizzera, Francia, Germania, Italia e Stati Uniti, con contenuti disponibili in francese, tedesco, italiano e inglese."
     }
   },
-  "disclaimer": "OrCompare fornisce contenuti comparativi e informativi soltanto e non sostituisce la consulenza di un professionista finanziario, fiscale o legale abilitato."
+  "disclaimer": "GoldAlp fornisce contenuti comparativi e informativi soltanto e non sostituisce la consulenza di un professionista finanziario, fiscale o legale abilitato."
 }

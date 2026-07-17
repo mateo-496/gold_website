@@ -12,6 +12,7 @@ import frCountryPage from "../messages/fr/countryPage.json";
 import frFooter from "../messages/fr/footer.json";
 import frGoldPriceChart from "../messages/fr/goldPriceChart.json";
 import frAbout from "../messages/fr/about.json";
+import frAboutTeaser from "../messages/fr/aboutTeaser.json";
 
 import deNav from "../messages/de/nav.json";
 import deCategories from "../messages/de/categories.json";
@@ -22,6 +23,7 @@ import deCountryPage from "../messages/de/countryPage.json";
 import deFooter from "../messages/de/footer.json";
 import deGoldPriceChart from "../messages/de/goldPriceChart.json";
 import deAbout from "../messages/de/about.json";
+import deAboutTeaser from "../messages/de/aboutTeaser.json";
 
 import itNav from "../messages/it/nav.json";
 import itCategories from "../messages/it/categories.json";
@@ -32,6 +34,7 @@ import itCountryPage from "../messages/it/countryPage.json";
 import itFooter from "../messages/it/footer.json";
 import itGoldPriceChart from "../messages/it/goldPriceChart.json";
 import itAbout from "../messages/it/about.json";
+import itAboutTeaser from "../messages/it/aboutTeaser.json";
 
 import enNav from "../messages/en/nav.json";
 import enCategories from "../messages/en/categories.json";
@@ -42,6 +45,7 @@ import enCountryPage from "../messages/en/countryPage.json";
 import enFooter from "../messages/en/footer.json";
 import enGoldPriceChart from "../messages/en/goldPriceChart.json";
 import enAbout from "../messages/en/about.json";
+import enAboutTeaser from "../messages/en/aboutTeaser.json";
 
 // Country profile files
 import frSwitzerland from "../messages/fr/countries/switzerland.json";
@@ -79,6 +83,7 @@ const MESSAGES = {
     footer: frFooter,
     goldPriceChart: frGoldPriceChart,
     about: frAbout,
+    aboutTeaser: frAboutTeaser,
     countries: {
       switzerland: frSwitzerland,
       france: frFrance,
@@ -97,6 +102,7 @@ const MESSAGES = {
     footer: deFooter,
     goldPriceChart: deGoldPriceChart,
     about: deAbout,
+    aboutTeaser: deAboutTeaser,
     countries: {
       switzerland: deSwitzerland,
       france: deFrance,
@@ -115,6 +121,7 @@ const MESSAGES = {
     footer: itFooter,
     goldPriceChart: itGoldPriceChart,
     about: itAbout,
+    aboutTeaser: itAboutTeaser,
     countries: {
       switzerland: itSwitzerland,
       france: itFrance,
@@ -133,6 +140,7 @@ const MESSAGES = {
     footer: enFooter,
     goldPriceChart: enGoldPriceChart,
     about: enAbout,
+    aboutTeaser: enAboutTeaser,
     countries: {
       switzerland: enSwitzerland,
       france: enFrance,
