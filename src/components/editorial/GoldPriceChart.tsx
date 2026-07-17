@@ -44,6 +44,31 @@ const monthAgoISO = () => {
   d.setMonth(d.getMonth() - 1);
   return d.toISOString().slice(0, 10);
 };
+const startForRange = (r: Exclude<Range, "CUSTOM">): string => {
+  if (r === "1D") return todayISO();
+  const d = new Date();
+  switch (r) {
+    case "1W":
+      d.setDate(d.getDate() - 7);
+      break;
+    case "1M":
+      d.setMonth(d.getMonth() - 1);
+      break;
+    case "3M":
+      d.setMonth(d.getMonth() - 3);
+      break;
+    case "6M":
+      d.setMonth(d.getMonth() - 6);
+      break;
+    case "1Y":
+      d.setFullYear(d.getFullYear() - 1);
+      break;
+    case "5Y":
+      d.setFullYear(d.getFullYear() - 5);
+      break;
+  }
+  return d.toISOString().slice(0, 10);
+};
 
 function computeChange(data: PricePoint[], field: keyof Omit<PricePoint, "time">): number | null {
   const values = data.map((p) => p[field]).filter((v): v is number => typeof v === "number");
@@ -57,21 +82,38 @@ function MetalCard({
   closedLabel,
   current,
   change,
+  active,
+  onToggle,
+  locked,
+  lockedTooltip,
 }: {
   metalKey: MetalKey;
   label: string;
   closedLabel: string;
   current: CurrentPrice | null;
   change: number | null;
+  active: boolean;
+  onToggle: () => void;
+  locked: boolean;
+  lockedTooltip: string;
 }) {
   const meta = METAL_META[metalKey];
   if (current?.price == null) return null;
 
   return (
-    <div className="flex flex-col gap-1.5 pr-8 border-r border-neutral-800 last:border-r-0 last:pr-0">
+    <button
+      type="button"
+      onClick={onToggle}
+      aria-pressed={active}
+      title={locked ? lockedTooltip : undefined}
+      className={`flex flex-col gap-1.5 text-left px-4 py-2.5 rounded-xl border transition-colors ${
+        active ? "" : "border-neutral-800 hover:border-neutral-600"
+      } ${locked ? "cursor-not-allowed" : "cursor-pointer"}`}
+      style={active ? { borderColor: meta.color } : undefined}
+    >
       <div className="flex items-center gap-2">
-        <span className="text-[11px] uppercase tracking-[0.15em] text-neutral-500">{label}</span>
-        <span className="text-[11px] tracking-wide text-neutral-600">{meta.symbol}</span>
+        <span className="text-[14px] uppercase tracking-[0.15em] text-neutral-500">{label}</span>
+        <span className="text-[13px] tracking-wide text-neutral-600">{meta.symbol}</span>
         {current.isLive && (
           <span className="relative flex h-1.5 w-1.5">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75" />
@@ -81,11 +123,11 @@ function MetalCard({
       </div>
 
       <div className="flex items-baseline gap-2">
-        <span className="font-mono text-2xl leading-none" style={{ color: meta.color }}>
+        <span className="font-mono text-3xl leading-none" style={{ color: meta.color }}>
           ${current.price.toLocaleString("en-US", { maximumFractionDigits: 2 })}
         </span>
         {change !== null && (
-          <span className={`font-mono text-xs ${change >= 0 ? "text-emerald-600" : "text-red-600"}`}>
+          <span className={`font-mono text-base ${change >= 0 ? "text-emerald-600" : "text-red-600"}`}>
             {change >= 0 ? "+" : ""}
             {change.toFixed(2)}%
           </span>
@@ -104,7 +146,7 @@ function MetalCard({
             })}`}
         </span>
       )}
-    </div>
+    </button>
   );
 }
 
@@ -124,6 +166,13 @@ export function GoldPriceChart() {
     });
   const [customStart, setCustomStart] = useState(monthAgoISO());
   const [customEnd, setCustomEnd] = useState(todayISO());
+  const handleRangeClick = (r: Range) => {
+    if (r === "CUSTOM" && range !== "CUSTOM") {
+      setCustomStart(startForRange(range));
+      setCustomEnd(todayISO());
+    }
+    setRange(r);
+  };
   const [data, setData] = useState<PricePoint[]>([]);
   const [current, setCurrent] = useState<CurrentBoth | null>(null);
   const [loading, setLoading] = useState(true);
@@ -186,7 +235,7 @@ export function GoldPriceChart() {
       <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-2 shrink-0">
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <h2 className="font-serif text-3xl">{t("title")}</h2>
+            <h2 className="font-serif text-5xl">{t("title")}</h2>
             <div className="relative group">
               <button
                 type="button"
@@ -201,101 +250,79 @@ export function GoldPriceChart() {
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-8">
-            {METAL_KEYS.map((k) => (
-              <MetalCard
-                key={k}
-                metalKey={k}
-                label={t(k)}
-                closedLabel={t("closed")}
-                current={current?.[k] ?? null}
-                change={computeChange(data, METAL_FIELD[k])}
-              />
-            ))}
-          </div>
-        </div>
-
-        <div className="flex flex-col items-start lg:items-end gap-3 w-full lg:w-auto lg:ml-auto">
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-3">
             {METAL_KEYS.map((k) => {
               const isOnlyOne = visible[k] && activeKeys.length === 1;
               return (
-                <button
+                <MetalCard
                   key={k}
-                  onClick={() => toggleMetal(k)}
-                  aria-pressed={visible[k]}
-                  title={isOnlyOne ? t("lockedTooltip") : undefined}
-                  className={`px-3.5 py-1.5 text-xs sm:text-sm tracking-wide rounded-full border transition-colors ${
-                    visible[k]
-                      ? "border-transparent text-white"
-                      : "border-neutral-700 text-neutral-500 hover:text-neutral-200 hover:border-neutral-500"
-                  } ${isOnlyOne ? "cursor-not-allowed" : ""}`}
-                  style={visible[k] ? { backgroundColor: METAL_META[k].color } : undefined}
-                >
-                  {t(k)}
-                </button>
+                  metalKey={k}
+                  label={t(k)}
+                  closedLabel={t("closed")}
+                  current={current?.[k] ?? null}
+                  change={computeChange(data, METAL_FIELD[k])}
+                  active={visible[k]}
+                  onToggle={() => toggleMetal(k)}
+                  locked={isOnlyOne}
+                  lockedTooltip={t("lockedTooltip")}
+                />
               );
             })}
-          </div>
-
-          <div className="flex flex-wrap gap-1.5">
-            {RANGES.map((r) => (
-              <button
-                key={r}
-                onClick={() => setRange(r)}
-                className={`px-3 py-1.5 text-xs sm:text-sm tracking-wide rounded-full transition-colors ${
-                  range === r
-                    ? "bg-[--color-gold] text-white"
-                    : "text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800"
-                }`}
-              >
-                {r === "CUSTOM" ? t("custom") : r}
-              </button>
-            ))}
           </div>
         </div>
       </div>
 
-      {range === "CUSTOM" && (
-        <div className="flex flex-wrap items-center gap-3 mb-6 mt-4 text-sm shrink-0">
-          <label className="flex items-center gap-2 text-neutral-500">
-            {t("from")}
-            <input
-              type="date"
-              value={customStart}
-              max={customEnd}
-              onChange={(e) => setCustomStart(e.target.value)}
-              className="border border-neutral-200 rounded-md px-2 py-1"
-            />
-          </label>
-          <label className="flex items-center gap-2 text-neutral-500">
-            {t("to")}
-            <input
-              type="date"
-              value={customEnd}
-              min={customStart}
-              max={todayISO()}
-              onChange={(e) => setCustomEnd(e.target.value)}
-              className="border border-neutral-200 rounded-md px-2 py-1"
-            />
-          </label>
-        </div>
-      )}
-
       <div className="mt-6 relative flex-1" style={{ minHeight: CHART_MIN_HEIGHT }}>
+        <div className="absolute top-0 right-0 z-10 flex flex-wrap items-center justify-end gap-1.5 max-w-full">
+          {range === "CUSTOM" && (
+            <div className="flex flex-wrap items-center gap-1.5 text-xs text-neutral-500 mr-1">
+              <input
+                type="date"
+                value={customStart}
+                max={customEnd}
+                onChange={(e) => setCustomStart(e.target.value)}
+                className="bg-transparent border border-neutral-700 rounded-full px-2.5 py-1 text-neutral-300 [color-scheme:dark] focus:outline-none focus:border-neutral-500"
+              />
+              <span className="text-neutral-700">—</span>
+              <input
+                type="date"
+                value={customEnd}
+                min={customStart}
+                max={todayISO()}
+                onChange={(e) => setCustomEnd(e.target.value)}
+                className="bg-transparent border border-neutral-700 rounded-full px-2.5 py-1 text-neutral-300 [color-scheme:dark] focus:outline-none focus:border-neutral-500"
+              />
+            </div>
+          )}
+          {RANGES.map((r) => (
+            <button
+              key={r}
+              onClick={() => handleRangeClick(r)}
+              className={`px-3 py-1.5 text-xs sm:text-sm tracking-wide rounded-full transition-colors ${
+                range === r
+                  ? "bg-[--color-gold] text-white"
+                  : "text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800"
+              }`}
+            >
+              {r === "CUSTOM" ? t("custom") : r}
+            </button>
+          ))}
+        </div>
+
         {error ? (
           <p className="text-sm text-red-700">{error}</p>
         ) : (
           <>
-            <div className={`absolute inset-0 transition-opacity duration-150 ${loading ? "opacity-40" : "opacity-100"}`}>
-              <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={chartData}>
-                  <XAxis dataKey="time" minTickGap={40} stroke="#4a4a4a" tick={{ fill: "#8a8a8a", fontSize: 12 }} />
+            <div className={`absolute inset-0 pt-10 flex justify-center transition-opacity duration-150 ${loading ? "opacity-40" : "opacity-100"}`}>
+              <ResponsiveContainer width="92%" height="100%">
+                <LineChart data={chartData} margin={{ top: 8, right: 16, bottom: 12, left: 8 }}>
+                  <XAxis dataKey="time" minTickGap={40} stroke="#4a4a4a" tick={{ fill: "#8a8a8a", fontSize: 16 }} tickMargin={12}/>
                   <YAxis
                     domain={["auto", "auto"]}
                     stroke="#4a4a4a"
-                    tick={{ fill: "#8a8a8a", fontSize: 12 }}
-                    width={64}
+                    tick={{ fill: "#8a8a8a", fontSize: 20 }}
+                    tickMargin={10}
+                    width={88}
                     tickFormatter={(v: number) =>
                       isMultiMetal ? `${v > 0 ? "+" : ""}${v.toFixed(1)}%` : `$${v.toLocaleString()}`
                     }

@@ -68,10 +68,12 @@ export async function GET(req: NextRequest) {
       const period1 = Math.floor(new Date(start).getTime() / 1000);
       const period2 = Math.floor(new Date(end).getTime() / 1000) + 86400; // include end day
       const spanDays = (period2 - period1) / 86400;
-      // Yahoo caps intraday history, so pick a sane interval for the span
-      if (spanDays <= 7) {
-        interval = "1h";
-      } else if (spanDays <= 60) {
+      // Mirror the RANGE_CONFIG buckets (1D/1W -> 15m, 1M/3M/6M -> 1d, 1Y/5Y -> 1wk).
+      // Threshold is 8 not 7 because period2 always adds +1 day to include the end
+      // date, so a 7-calendar-day custom span (matching the 1W preset) computes to 8.
+      if (spanDays <= 8) {
+        interval = "15m";
+      } else if (spanDays <= 186) {
         interval = "1d";
       } else {
         interval = "1wk";

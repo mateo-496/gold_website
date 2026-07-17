@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { LanguageSwitcher } from "@/components/editorial/LanguageSwitcher";
 import { Footer } from "@/components/editorial/Footer";
+import { Fraunces } from "next/font/google";
 import "../globals.css";
 
 const geistSans = localFont({
@@ -17,6 +18,14 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  weight: ["300", "400", "500", "600"],
+  style: ["normal", "italic"],
+  display: "swap",
+})
 
 export const metadata: Metadata = {
   title: "OrCompare",
@@ -39,7 +48,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${fraunces.variable} ${geistMono.variable} antialiased`}
       >
         <NextIntlClientProvider>
           <LanguageSwitcher />

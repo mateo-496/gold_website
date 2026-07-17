@@ -30,7 +30,8 @@ export function LanguageSwitcher() {
         onClick={() => setOpen(!open)}
         aria-label="Select language"
         aria-expanded={open}
-        className="flex items-center gap-1.5 text-white text-sm tracking-widest font-serif hover:opacity-70 transition-opacity mix-blend-difference"
+        className="flex items-center gap-1.5 text-white text-sm tracking-widest font-serif hover:opacity-70 transition-opacity"
+        style={{ filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.7))" }}
       >
         {LABELS[locale]}
         <svg
@@ -52,7 +53,8 @@ export function LanguageSwitcher() {
               <button
                 key={l}
                 onClick={() => switchTo(l)}
-                className="text-white text-sm tracking-widest font-serif hover:opacity-70 transition-opacity mix-blend-difference"
+                className="text-white text-sm tracking-widest font-serif hover:opacity-70 transition-opacity"
+                style={{ filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.7))" }}
               >
                 {LABELS[l]}
               </button>
