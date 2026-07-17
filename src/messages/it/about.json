@@ -1,0 +1,20 @@
+{
+  "breadcrumb": "Chi siamo",
+  "heading": "Chi è OrCompare",
+  "intro": "OrCompare è un comparatore indipendente per oro e argento fisici, pensato per acquirenti che vogliono chiarezza su prezzo, provenienza e norme transfrontaliere prima di transare.",
+  "sections": {
+    "mission": {
+      "title": "La nostra missione",
+      "text": "Il mercato dell'oro è strutturalmente opaco. I premi applicati dai rivenditori variano notevolmente e gli obblighi legali legati all'acquisto, all'importazione e alla rivendita differiscono da una giurisdizione all'altra. Riuniamo queste informazioni in un unico luogo, in linguaggio chiaro, per un confronto ad armi pari."
+    },
+    "editorial": {
+      "title": "Indipendenza editoriale",
+      "text": "Non siamo un rivenditore, una banca né un consulente. I nostri confronti e le sintesi normative sono elaborati in modo indipendente e aggiornati con l'evolversi della legislazione, con fonti citate."
+    },
+    "coverage": {
+      "title": "Copertura",
+      "text": "Attualmente copriamo Svizzera, Francia, Germania, Italia e Stati Uniti, con contenuti disponibili in francese, tedesco, italiano e inglese."
+    }
+  },
+  "disclaimer": "OrCompare fornisce contenuti comparativi e informativi soltanto e non sostituisce la consulenza di un professionista finanziario, fiscale o legale abilitato."
+}

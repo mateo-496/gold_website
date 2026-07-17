@@ -11,6 +11,7 @@ import frRevente from "../messages/fr/revente.json";
 import frCountryPage from "../messages/fr/countryPage.json";
 import frFooter from "../messages/fr/footer.json";
 import frGoldPriceChart from "../messages/fr/goldPriceChart.json";
+import frAbout from "../messages/fr/about.json";
 
 import deNav from "../messages/de/nav.json";
 import deCategories from "../messages/de/categories.json";
@@ -20,6 +21,7 @@ import deRevente from "../messages/de/revente.json";
 import deCountryPage from "../messages/de/countryPage.json";
 import deFooter from "../messages/de/footer.json";
 import deGoldPriceChart from "../messages/de/goldPriceChart.json";
+import deAbout from "../messages/de/about.json";
 
 import itNav from "../messages/it/nav.json";
 import itCategories from "../messages/it/categories.json";
@@ -29,6 +31,7 @@ import itRevente from "../messages/it/revente.json";
 import itCountryPage from "../messages/it/countryPage.json";
 import itFooter from "../messages/it/footer.json";
 import itGoldPriceChart from "../messages/it/goldPriceChart.json";
+import itAbout from "../messages/it/about.json";
 
 import enNav from "../messages/en/nav.json";
 import enCategories from "../messages/en/categories.json";
@@ -38,6 +41,7 @@ import enRevente from "../messages/en/revente.json";
 import enCountryPage from "../messages/en/countryPage.json";
 import enFooter from "../messages/en/footer.json";
 import enGoldPriceChart from "../messages/en/goldPriceChart.json";
+import enAbout from "../messages/en/about.json";
 
 // Country profile files
 import frSwitzerland from "../messages/fr/countries/switzerland.json";
@@ -74,6 +78,7 @@ const MESSAGES = {
     countryPage: frCountryPage,
     footer: frFooter,
     goldPriceChart: frGoldPriceChart,
+    about: frAbout,
     countries: {
       switzerland: frSwitzerland,
       france: frFrance,
@@ -91,6 +96,7 @@ const MESSAGES = {
     countryPage: deCountryPage,
     footer: deFooter,
     goldPriceChart: deGoldPriceChart,
+    about: deAbout,
     countries: {
       switzerland: deSwitzerland,
       france: deFrance,
@@ -108,6 +114,7 @@ const MESSAGES = {
     countryPage: itCountryPage,
     footer: itFooter,
     goldPriceChart: itGoldPriceChart,
+    about: itAbout,
     countries: {
       switzerland: itSwitzerland,
       france: itFrance,
@@ -125,6 +132,7 @@ const MESSAGES = {
     countryPage: enCountryPage,
     footer: enFooter,
     goldPriceChart: enGoldPriceChart,
+    about: enAbout,
     countries: {
       switzerland: enSwitzerland,
       france: enFrance,

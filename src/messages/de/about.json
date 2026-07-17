@@ -1,0 +1,20 @@
+{
+  "breadcrumb": "Über uns",
+  "heading": "Über OrCompare",
+  "intro": "OrCompare ist ein unabhängiger Vergleichsdienst für physisches Gold und Silber, entwickelt für Käufer, die vor einer Transaktion Klarheit über Preis, Herkunft und grenzüberschreitende Vorschriften wünschen.",
+  "sections": {
+    "mission": {
+      "title": "Unsere Mission",
+      "text": "Der Goldmarkt ist strukturell intransparent. Händleraufschläge variieren stark, und die rechtlichen Pflichten beim Kauf, der Einfuhr und dem Wiederverkauf unterscheiden sich von Land zu Land. Wir bündeln diese Informationen an einem Ort, in klarer Sprache, damit Sie zu gleichen Bedingungen vergleichen können."
+    },
+    "editorial": {
+      "title": "Redaktionelle Unabhängigkeit",
+      "text": "Wir sind weder Händler noch Bank noch Berater. Unsere Vergleiche und regulatorischen Zusammenfassungen werden unabhängig recherchiert und bei Gesetzesänderungen mit Quellenangaben aktualisiert."
+    },
+    "coverage": {
+      "title": "Abdeckung",
+      "text": "Wir decken derzeit die Schweiz, Frankreich, Deutschland, Italien und die USA ab, mit Inhalten auf Französisch, Deutsch, Italienisch und Englisch."
+    }
+  },
+  "disclaimer": "OrCompare bietet ausschließlich vergleichende und informative Inhalte und ersetzt keine Beratung durch eine zugelassene Finanz-, Steuer- oder Rechtsfachperson."
+}

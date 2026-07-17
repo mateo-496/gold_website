@@ -17,6 +17,7 @@ export function PageNav() {
     { key: "achat", label: tCategories("achat.title"), href: `/${locale}/achat` },
     { key: "export", label: tCategories("export.title"), href: `/${locale}/export` },
     { key: "revente", label: tCategories("revente.title"), href: `/${locale}/revente` },
+    { key: "about", label: tNav("about"), href: `/about` },
   ];
 
   return (

@@ -1,0 +1,20 @@
+{
+  "breadcrumb": "À propos",
+  "heading": "À propos d'OrCompare",
+  "intro": "OrCompare est un comparateur indépendant pour l'or et l'argent physiques, conçu pour les acheteurs qui souhaitent une vision claire des prix, de la provenance et des règles transfrontalières avant de transiger.",
+  "sections": {
+    "mission": {
+      "title": "Notre mission",
+      "text": "Le marché de l'or manque structurellement de transparence. Les primes des négociants varient fortement et les obligations légales liées à l'achat, à l'importation et à la revente diffèrent d'une juridiction à l'autre. Nous réunissons ces informations en un seul endroit, en langage clair, pour permettre une comparaison à armes égales."
+    },
+    "editorial": {
+      "title": "Indépendance éditoriale",
+      "text": "Nous ne sommes ni négociant, ni banque, ni conseiller. Nos comparaisons et synthèses réglementaires sont élaborées de manière indépendante et mises à jour au fil des évolutions législatives, sources à l'appui."
+    },
+    "coverage": {
+      "title": "Couverture",
+      "text": "Nous couvrons actuellement la Suisse, la France, l'Allemagne, l'Italie et les États-Unis, avec un contenu disponible en français, allemand, italien et anglais."
+    }
+  },
+  "disclaimer": "OrCompare fournit un contenu comparatif et informatif uniquement, qui ne remplace pas les conseils d'un professionnel agréé en matière financière, fiscale ou juridique."
+}
