@@ -14,7 +14,28 @@
     "coverage": {
       "title": "Coverage",
       "text": "We currently track Switzerland, France, Germany, Italy, and the United States, with content available in French, German, Italian, and English."
+    },
+    "team": {
+      "title": "Our team",
+      "text": "GoldAlp is built by a small team based in Switzerland. Full profiles are coming soon."
     }
   },
-  "disclaimer": "GoldAlp provides comparative and informational content only. It is not a substitute for advice from a licensed financial, tax, or legal professional."
+  "disclaimer": "GoldAlp provides comparative and informational content only. It is not a substitute for advice from a licensed financial, tax, or legal professional.",
+  "team": {
+    "member1": {
+      "name": "To be announced",
+      "role": "Team member",
+      "initial": "A"
+    },
+    "member2": {
+      "name": "To be announced",
+      "role": "Team member",
+      "initial": "B"
+    },
+    "member3": {
+      "name": "To be announced",
+      "role": "Team member",
+      "initial": "C"
+    }
+  }
 }

@@ -14,7 +14,28 @@
     "coverage": {
       "title": "Copertura",
       "text": "Attualmente copriamo Svizzera, Francia, Germania, Italia e Stati Uniti, con contenuti disponibili in francese, tedesco, italiano e inglese."
+    },
+    "team": {
+      "title": "Il nostro team",
+      "text": "GoldAlp è sviluppato da un piccolo team con sede in Svizzera. I profili completi saranno pubblicati a breve."
     }
   },
-  "disclaimer": "GoldAlp fornisce contenuti comparativi e informativi soltanto e non sostituisce la consulenza di un professionista finanziario, fiscale o legale abilitato."
+  "disclaimer": "GoldAlp fornisce contenuti comparativi e informativi soltanto e non sostituisce la consulenza di un professionista finanziario, fiscale o legale abilitato.",
+  "team": {
+    "member1": {
+      "name": "Da annunciare",
+      "role": "Membro del team",
+      "initial": "A"
+    },
+    "member2": {
+      "name": "Da annunciare",
+      "role": "Membro del team",
+      "initial": "B"
+    },
+    "member3": {
+      "name": "Da annunciare",
+      "role": "Membro del team",
+      "initial": "C"
+    }
+  }
 }
