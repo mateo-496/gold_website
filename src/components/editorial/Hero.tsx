@@ -144,7 +144,7 @@ export function Hero() {
       {/* Company name, centered */}
       <div className="relative z-10 h-full flex items-center justify-center">
         <h1 className="font-serif text-white text-[clamp(2.5rem,8vw,7rem)] tracking-wide">
-          Site
+          GoldAlp.ch
         </h1>
       </div>
 

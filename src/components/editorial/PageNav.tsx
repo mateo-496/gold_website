@@ -13,6 +13,7 @@ export function PageNav() {
   const tCountries = useTranslations("countries");
 
   const links = [
+    { key: "home", label: "Home", href: `/${locale}` },
     { key: "achat", label: tCategories("achat.title"), href: `/${locale}/achat` },
     { key: "export", label: tCategories("export.title"), href: `/${locale}/export` },
     { key: "revente", label: tCategories("revente.title"), href: `/${locale}/revente` },

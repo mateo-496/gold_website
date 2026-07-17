@@ -37,8 +37,8 @@ const ibmPlexSans = IBM_Plex_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "OrCompare",
-  description: "Comparateur de négociants d'or en Suisse",
+  title: "GoldAlp.ch",
+  description: "Comparateur de vendeur d'or en Suisse",
 };
 
 export default async function RootLayout({
