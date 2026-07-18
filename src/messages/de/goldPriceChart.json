@@ -10,5 +10,6 @@
   "to": "Bis",
   "loading": "Wird geladen…",
   "error": "Dieser Zeitraum konnte nicht geladen werden.",
-  "lockedTooltip": "Mindestens ein Rohstoff muss ausgewählt bleiben"
+  "lockedTooltip": "Mindestens ein Rohstoff muss ausgewählt bleiben",
+  "volume": "Volumen"
 }

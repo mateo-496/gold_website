@@ -10,5 +10,6 @@
   "to": "Au",
   "loading": "Chargement…",
   "error": "Impossible de charger cette période.",
-  "lockedTooltip": "Au moins une matière première doit rester sélectionnée"
+  "lockedTooltip": "Au moins une matière première doit rester sélectionnée",
+  "volume": "Volume"
 }

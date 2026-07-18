@@ -10,5 +10,6 @@
   "to": "Al",
   "loading": "Caricamento…",
   "error": "Impossibile caricare questo periodo.",
-  "lockedTooltip": "Almeno una materia prima deve rimanere selezionata"
+  "lockedTooltip": "Almeno una materia prima deve rimanere selezionata",
+  "volume": "Volume"
 }

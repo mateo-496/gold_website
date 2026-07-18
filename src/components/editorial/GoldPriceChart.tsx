@@ -36,6 +36,26 @@ const METAL_FIELD: Record<MetalKey, keyof Omit<PricePoint, "time">> = {
   platinum: "platinumPrice",
 };
 
+const CURRENCIES = ["CHF", "EUR", "USD"] as const;
+type Currency = (typeof CURRENCIES)[number];
+
+function formatPrice(value: number, currency: Currency): string {
+  if (currency === "USD") {
+    return `$${value.toLocaleString("en-US", { maximumFractionDigits: 2 })}`;
+  }
+  if (currency === "EUR") {
+    return `${value.toLocaleString("de-DE", { maximumFractionDigits: 2 })} €`;
+  }
+  return `${value.toLocaleString("de-CH", { maximumFractionDigits: 2 })} CHF`;
+}
+
+/** USD is the base currency the API returns prices in (Yahoo futures are USD-quoted). */
+function rateFor(currency: Currency, usdChf: number | null, usdEur: number | null): number | null {
+  if (currency === "USD") return 1;
+  if (currency === "CHF") return usdChf;
+  return usdEur;
+}
+
 const CHART_MIN_HEIGHT = 420;
 
 const todayISO = () => new Date().toISOString().slice(0, 10);
@@ -86,6 +106,9 @@ function MetalCard({
   onToggle,
   locked,
   lockedTooltip,
+  currency,
+  usdChf,
+  usdEur,
 }: {
   metalKey: MetalKey;
   label: string;
@@ -96,9 +119,14 @@ function MetalCard({
   onToggle: () => void;
   locked: boolean;
   lockedTooltip: string;
+  currency: Currency;
+  usdChf: number | null;
+  usdEur: number | null;
 }) {
   const meta = METAL_META[metalKey];
   if (current?.price == null) return null;
+  const rate = rateFor(currency, usdChf, usdEur);
+  const displayPrice = rate ? current.price * rate : current.price;
 
   return (
     <button
@@ -108,7 +136,7 @@ function MetalCard({
       title={locked ? lockedTooltip : undefined}
       className={`flex flex-col gap-1.5 text-left px-4 py-2.5 rounded-xl border transition-colors ${
         active ? "" : "border-neutral-800 hover:border-neutral-600"
-      } ${locked ? "cursor-not-allowed" : "cursor-pointer"}`}
+      } ${locked ? "cursor-default" : "cursor-pointer"}`}
       style={active ? { borderColor: meta.color } : undefined}
     >
       <div className="flex items-center gap-2">
@@ -124,7 +152,7 @@ function MetalCard({
 
       <div className="flex items-baseline gap-2">
         <span className="font-numeric text-3xl leading-none" style={{ color: meta.color }}>
-          ${current.price.toLocaleString("en-US", { maximumFractionDigits: 2 })}
+          {formatPrice(displayPrice, currency)}
         </span>
         {change !== null && (
           <span className={`font-numeric text-base ${change >= 0 ? "text-emerald-500" : "text-red-500"}`}>
@@ -135,7 +163,7 @@ function MetalCard({
       </div>
 
       {!current.isLive && (
-        <span className="text-[11px] text-neutral-600">
+        <span className="text-[13.5px] text-neutral-600">
           {closedLabel}
           {current.lastTradeTime &&
             ` — ${new Date(current.lastTradeTime).toLocaleString([], {
@@ -175,6 +203,9 @@ export function GoldPriceChart() {
   };
   const [data, setData] = useState<PricePoint[]>([]);
   const [current, setCurrent] = useState<CurrentBoth | null>(null);
+  const [usdChf, setUsdChf] = useState<number | null>(null);
+  const [usdEur, setUsdEur] = useState<number | null>(null);
+  const [currency, setCurrency] = useState<Currency>("CHF");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -194,6 +225,8 @@ export function GoldPriceChart() {
         if (json.error) throw new Error(json.error);
         setData(json.series ?? []);
         setCurrent(json.current ?? null);
+        setUsdChf(json.usdChf ?? null);
+        setUsdEur(json.usdEur ?? null);
       })
       .catch((e) => {
         console.error("Price fetch failed", e);
@@ -230,6 +263,21 @@ export function GoldPriceChart() {
     });
   }, [data, activeKeys, isMultiMetal]);
 
+  // Convert USD-quoted prices to the selected display currency. Only needed for
+  // the raw-price (single metal) view — the multi-metal view above is already
+  // normalized to % change, which is currency-agnostic.
+  const displayData = useMemo(() => {
+    if (isMultiMetal) return chartData;
+    const rate = rateFor(currency, usdChf, usdEur);
+    if (!rate || rate === 1) return chartData;
+    return chartData.map((p) => ({
+      time: p.time,
+      goldPrice: p.goldPrice != null ? p.goldPrice * rate : null,
+      silverPrice: p.silverPrice != null ? p.silverPrice * rate : null,
+      platinumPrice: p.platinumPrice != null ? p.platinumPrice * rate : null,
+    }));
+  }, [chartData, isMultiMetal, currency, usdChf, usdEur]);
+
   return (
     <section data-logo-bg="dark" className="min-h-[100dvh] flex flex-col px-6 pt-24 pb-16 md:pt-32 lg:px-12 snap-start">
       <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-2 shrink-0">
@@ -240,7 +288,7 @@ export function GoldPriceChart() {
               <button
                 type="button"
                 aria-label={t("disclaimer")}
-                className="flex items-center justify-center w-4 h-4 rounded-full border border-neutral-500 text-neutral-500 text-[10px] leading-none hover:border-neutral-300 hover:text-neutral-300 transition-colors cursor-help"
+                className="flex items-center justify-center w-4 h-4 rounded-full border border-neutral-500 text-neutral-500 text-[10px] leading-none hover:border-neutral-300 hover:text-neutral-300 transition-colors cursor-default"
               >
                 i
               </button>
@@ -265,6 +313,9 @@ export function GoldPriceChart() {
                   onToggle={() => toggleMetal(k)}
                   locked={isOnlyOne}
                   lockedTooltip={t("lockedTooltip")}
+                  currency={currency}
+                  usdChf={usdChf}
+                  usdEur={usdEur}
                 />
               );
             })}
@@ -274,6 +325,21 @@ export function GoldPriceChart() {
 
       <div className="mt-6 relative flex-1" style={{ minHeight: CHART_MIN_HEIGHT }}>
         <div className="absolute top-0 right-0 z-10 flex flex-wrap items-center justify-end gap-1.5 max-w-full">
+          <div className="flex items-center gap-0.5 mr-1 rounded-full border border-neutral-800 p-0.5">
+            {CURRENCIES.map((c) => (
+              <button
+                key={c}
+                onClick={() => setCurrency(c)}
+                className={`px-2.5 py-1 text-xs tracking-wide rounded-full transition-colors ${
+                  currency === c
+                    ? "bg-[--color-gold] text-white"
+                    : "text-neutral-500 hover:text-neutral-200"
+                }`}
+              >
+                {c}
+              </button>
+            ))}
+          </div>
           {range === "CUSTOM" && (
             <div className="flex flex-wrap items-center gap-1.5 text-xs text-neutral-500 mr-1">
               <input
@@ -315,7 +381,7 @@ export function GoldPriceChart() {
           <>
             <div className={`absolute inset-0 pt-10 flex justify-center transition-opacity duration-150 ${loading ? "opacity-40" : "opacity-100"}`}>
               <ResponsiveContainer width="92%" height="100%">
-                <LineChart data={chartData} margin={{ top: 8, right: 24, bottom: 12, left: 8 }}>
+                <LineChart data={displayData} margin={{ top: 8, right: 24, bottom: 12, left: 36 }}>
                   <XAxis
                     dataKey="time"
                     minTickGap={40}
@@ -331,14 +397,14 @@ export function GoldPriceChart() {
                     tickMargin={10}
                     width={88}
                     tickFormatter={(v: number) =>
-                      isMultiMetal ? `${v > 0 ? "+" : ""}${v.toFixed(1)}%` : `$${v.toLocaleString()}`
+                      isMultiMetal ? `${v > 0 ? "+" : ""}${v.toFixed(1)}%` : formatPrice(v, currency)
                     }
                   />
                   <Tooltip
                     formatter={(value: number, name: string) => [
                       isMultiMetal
                         ? `${value > 0 ? "+" : ""}${value.toFixed(2)}%`
-                        : `$${value.toLocaleString(undefined, { maximumFractionDigits: 2 })}`,
+                        : formatPrice(value, currency),
                       name,
                     ]}
                     contentStyle={{ background: "#141414", border: "1px solid #2a2a2a", borderRadius: 6 }}

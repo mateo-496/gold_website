@@ -19,8 +19,8 @@ const config: Config = {
       keyframes: {
         scrollHint: {
           "0%": { transform: "translateY(0)", opacity: "1" },
-          "70%": { transform: "translateY(12px)", opacity: "1" },
-          "100%": { transform: "translateY(12px)", opacity: "0" },
+          "70%": { transform: "translateY(48px)", opacity: "1" },
+          "100%": { transform: "translateY(48px)", opacity: "0" },
         }
       },
       animation: {

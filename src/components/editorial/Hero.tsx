@@ -63,9 +63,9 @@ export function Hero() {
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/backgrounds/gold_marble2.png')" }}
+        style={{ backgroundImage: "url('/images/backgrounds/gold_marble3.png')" }}
       />
-      <div className="absolute inset-0 bg-black/10" />
+      <div className="absolute inset-0 bg-black/20" />
 
       {/* Hamburger menu - transparent, top left */}
       <button
@@ -149,10 +149,11 @@ export function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+      <div className="absolute bottom-16 left-0 right-0 z-10 flex justify-center">
         <svg
-          width="24"
-          height="24"
+          className="animate-scrollHint"
+          width="50"
+          height="50"
           viewBox="0 0 24 24"
           fill="none"
           stroke="white"

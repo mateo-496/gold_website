@@ -10,5 +10,6 @@
   "to": "To",
   "loading": "Loading…",
   "error": "Couldn't load this range.",
-  "lockedTooltip": "At least one commodity must stay selected"
+  "lockedTooltip": "At least one commodity must stay selected",
+  "volume": "Volume"
 }

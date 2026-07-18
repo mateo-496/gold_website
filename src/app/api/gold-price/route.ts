@@ -14,7 +14,6 @@ const RANGE_CONFIG: Record<string, { range: string; interval: string }> = {
 type YahooFetchResult = {
   timestamps: number[];
   closes: number[];
-  volumes: number[];
   meta: Record<string, unknown>;
 };
 
@@ -28,7 +27,6 @@ async function fetchYahoo(symbol: string, interval: string, rangeParams: string)
   return {
     timestamps: result?.timestamp ?? [],
     closes: result?.indicators?.quote?.[0]?.close ?? [],
-    volumes: result?.indicators?.quote?.[0]?.close ?? [],
     meta: result?.meta ?? {},
   };
 }
@@ -89,26 +87,44 @@ export async function GET(req: NextRequest) {
       rangeParams = `range=${config.range}`;
     }
 
-    const [goldResult, silverResult, platinumResult] = await Promise.allSettled([
+    const [goldResult, silverResult, platinumResult, fxChfResult, fxEurResult] = await Promise.allSettled([
       fetchYahoo("GC=F", interval, rangeParams),
       fetchYahoo("SI=F", interval, rangeParams),
       fetchYahoo("PL=F", interval, rangeParams),
+      // Current USD/CHF and USD/EUR rates, used to convert the (USD-quoted)
+      // futures prices for CHF/EUR display. Only the latest rate is needed —
+      // see FALLBACK_USD_CHF in src/lib/dealers/pricing.tsx for the same
+      // simplification.
+      fetchYahoo("CHF=X", "1d", "range=1d"),
+      fetchYahoo("EUR=X", "1d", "range=1d"),
     ]);
 
     const empty: YahooFetchResult = { 
       timestamps: [],
       closes: [],
-      volumes: [],
       meta: {},
     }
 
     const gold = goldResult.status === "fulfilled" ? goldResult.value : empty;
     const silver = silverResult.status === "fulfilled" ? silverResult.value : empty;
     const platinum = platinumResult.status === "fulfilled" ? platinumResult.value : empty;
+    const fxChf = fxChfResult.status === "fulfilled" ? fxChfResult.value : empty;
+    const fxEur = fxEurResult.status === "fulfilled" ? fxEurResult.value : empty;
 
     if (goldResult.status === "rejected") console.error("Gold fetch failed", goldResult.reason);
     if (silverResult.status === "rejected") console.error("Silver fetch failed", silverResult.reason);
     if (platinumResult.status === "rejected") console.error("Platinum fetch failed", platinumResult.reason);
+    if (fxChfResult.status === "rejected") console.error("CHF FX fetch failed", fxChfResult.reason);
+    if (fxEurResult.status === "rejected") console.error("EUR FX fetch failed", fxEurResult.reason);
+
+    const usdChf =
+      (fxChf.meta.regularMarketPrice as number | undefined) ??
+      fxChf.closes[fxChf.closes.length - 1] ??
+      null;
+    const usdEur =
+      (fxEur.meta.regularMarketPrice as number | undefined) ??
+      fxEur.closes[fxEur.closes.length - 1] ??
+      null;
 
     const silverByTime = new Map<number, number>();
     silver.timestamps.forEach((t, i) => {
@@ -150,7 +166,7 @@ export async function GET(req: NextRequest) {
       platinum: buildCurrent(platinum.meta, platinum.closes),
     };
 
-    return NextResponse.json({ series, current, source: "yahoo", timestamp: Date.now() });
+    return NextResponse.json({ series, current, usdChf, usdEur, source: "yahoo", timestamp: Date.now() });
   } catch (e) {
     console.error("Price fetch failed", e);
     return NextResponse.json({ error: "Failed to fetch price" }, { status: 502 });
