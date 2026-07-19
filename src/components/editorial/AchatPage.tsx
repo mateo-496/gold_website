@@ -154,25 +154,25 @@ export function AchatPage() {
             <table className="w-full border-collapse">
               <thead>
                 <tr className="border-b border-neutral-300 text-left">
-                  <th className="py-4 pr-6 font-serif font-normal text-sm uppercase tracking-wide text-neutral-500">
+                  <th className="py-4 pr-3 sm:pr-6 font-serif font-normal text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
                     {t("table.dealer")}
                   </th>
-                  <th className="py-4 pr-6 font-serif font-normal text-sm uppercase tracking-wide text-neutral-500">
+                  <th className="py-4 pr-3 sm:pr-6 font-serif font-normal text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
                     {t("table.location")}
                   </th>
                   <th
-                    className="py-4 pr-6 font-serif font-normal text-sm uppercase tracking-wide text-neutral-500 cursor-pointer select-none"
+                    className="py-4 pr-3 sm:pr-6 font-serif font-normal text-xs sm:text-sm uppercase tracking-wide text-neutral-500 cursor-pointer select-none"
                     onClick={() => setSortKey("price")}
                   >
                     {t("table.price")} {sortKey === "price" && "↓"}
                   </th>
                   <th
-                    className="py-4 pr-6 font-serif font-normal text-sm uppercase tracking-wide text-neutral-500 cursor-pointer select-none"
+                    className="py-4 pr-3 sm:pr-6 font-serif font-normal text-xs sm:text-sm uppercase tracking-wide text-neutral-500 cursor-pointer select-none"
                     onClick={() => setSortKey("premium")}
                   >
                     {t("table.premium")} {sortKey === "premium" && "↓"}
                   </th>
-                  <th className="py-4 font-serif font-normal text-sm uppercase tracking-wide text-neutral-500">
+                  <th className="py-4 font-serif font-normal text-xs sm:text-sm uppercase tracking-wide text-neutral-500">
                     {t("table.updated")}
                   </th>
                 </tr>
@@ -180,25 +180,25 @@ export function AchatPage() {
               <tbody>
                 {offers.map((offer) => (
                   <tr key={offer.id} className="border-b border-neutral-200 align-top">
-                    <td className="py-6 pr-6 whitespace-nowrap">
+                    <td className="py-6 pr-3 sm:pr-6 whitespace-normal sm:whitespace-nowrap">
                       {offer.url ? (
                         <a
                           href={offer.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="font-serif italic text-xl hover:text-red-600 transition-colors"
+                          className="font-serif italic text-base sm:text-xl hover:text-red-600 transition-colors"
                         >
                           {offer.dealerName}
                         </a>
                       ) : (
-                        <span className="font-serif italic text-xl">{offer.dealerName}</span>
+                        <span className="font-serif italic text-base sm:text-xl">{offer.dealerName}</span>
                       )}
                     </td>
-                    <td className="py-6 pr-6 text-neutral-600">{offer.location}</td>
-                    <td className="py-6 pr-6 font-serif text-lg text-neutral-900">
+                    <td className="py-6 pr-3 sm:pr-6 text-neutral-600">{offer.location}</td>
+                    <td className="py-6 pr-3 sm:pr-6 font-serif text-base sm:text-lg text-neutral-900">
                       {formatChf(offer.priceChf)}
                     </td>
-                    <td className="py-6 pr-6">
+                    <td className="py-6 pr-3 sm:pr-6">
                       {offer.premium !== null ? (
                         <span className={offer.premium <= 0 ? "text-emerald-700" : "text-red-600"}>
                           {formatPercent(offer.premium)}
@@ -207,7 +207,7 @@ export function AchatPage() {
                         "—"
                       )}
                     </td>
-                    <td className="py-6 text-neutral-500 text-sm whitespace-nowrap">{offer.updatedAt}</td>
+                    <td className="py-6 text-neutral-500 text-sm whitespace-normal sm:whitespace-nowrap">{offer.updatedAt}</td>
                   </tr>
                 ))}
               </tbody>

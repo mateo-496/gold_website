@@ -73,7 +73,7 @@ export function Hero() {
         onClick={toggleMenu}
         aria-label="Open menu"
         aria-expanded={menuOpen}
-        className="absolute top-8 left-8 z-30 flex flex-col gap-1.5 w-8"
+        className="absolute top-6 left-4 md:top-8 md:left-8 z-30 flex flex-col gap-1.5 w-8"
       >
         <span
           className={`h-[1.5px] w-full bg-white transition-transform duration-500 ease-in-out ${

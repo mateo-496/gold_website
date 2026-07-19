@@ -25,7 +25,7 @@ export function PageHero({ imageSrc = "/images/backgrounds/mountain1.jpeg" }: Pa
         style={{ backgroundImage: `url(${imageSrc})` }}
       />
       <div className="hero-v-clip absolute inset-0 bg-black/25" />
-      <div className="absolute top-4 left-4 md:top-8 md:left-10">
+      <div className="absolute top-6 left-4 md:top-8 md:left-8">
         <PageNav />
       </div>
     </section>

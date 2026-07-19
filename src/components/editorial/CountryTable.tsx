@@ -31,22 +31,22 @@ export function CountryTable({
       <table className="w-full border-collapse">
         <thead>
           <tr className="border-b border-neutral-300 text-left">
-            <th className="py-4 pr-6 font-serif font-normal text-sm uppercase tracking-wide text-neutral-600">
+            <th className="py-4 pr-3 sm:pr-6 font-serif font-normal text-xs sm:text-sm uppercase tracking-wide text-neutral-600">
               {headers.country}
             </th>
-            <th className="py-4 pr-6 font-serif font-normal text-sm uppercase tracking-wide text-neutral-600">
+            <th className="py-4 pr-3 sm:pr-6 font-serif font-normal text-xs sm:text-sm uppercase tracking-wide text-neutral-600">
               {headers.threshold}
             </th>
-            <th className="py-4 pr-6 font-serif font-normal text-sm uppercase tracking-wide text-neutral-600">
+            <th className="py-4 pr-3 sm:pr-6 font-serif font-normal text-xs sm:text-sm uppercase tracking-wide text-neutral-600">
               {headers.forms ?? headers.keyPoint}
             </th>
-            <th className="py-4 font-serif font-normal text-sm uppercase tracking-wide text-neutral-600" />
+            <th className="py-4 font-serif font-normal text-xs sm:text-sm uppercase tracking-wide text-neutral-600" />
           </tr>
         </thead>
         <tbody>
           {rows.map((row) => (
             <tr key={row.key} className="border-b border-neutral-200 align-top">
-              <td className="py-6 pr-6 whitespace-nowrap">
+              <td className="py-6 pr-3 sm:pr-6">
                 <Image
                   src={row.emblem}
                   alt=""
@@ -54,10 +54,10 @@ export function CountryTable({
                   height={28}
                   className="inline-block mr-3 align-middle object-contain"
                 />
-                <span className="font-serif italic text-xl text-neutral-800">{row.name}</span>
+                <span className="font-serif italic text-base sm:text-xl text-neutral-800">{row.name}</span>
               </td>
-              <td className="py-6 pr-6 text-neutral-800 max-w-xs">{row.threshold}</td>
-              <td className="py-6 pr-6 max-w-md">
+              <td className="py-6 pr-3 sm:pr-6 text-neutral-800 max-w-xs">{row.threshold}</td>
+              <td className="py-6 pr-3 sm:pr-6 max-w-md">
                 {row.forms ? (
                   <div className="flex flex-col gap-2">
                     {row.forms.map((form, i) => (
@@ -76,7 +76,7 @@ export function CountryTable({
                   <span className="text-neutral-800">{row.keyPoint}</span>
                 )}
               </td>
-              <td className="py-6 whitespace-nowrap">
+              <td className="py-6 whitespace-normal sm:whitespace-nowrap">
                 <Link
                   href={`/${locale}/pays/${row.key}`}
                   className="text-red-600 hover:opacity-70 transition-opacity text-sm"
