@@ -80,20 +80,23 @@ export function Logo() {
 
   useEffect(() => {
     // Home is a single scrolling page: fade the logo out while actively
-    // scrolling and back in once it settles.
+    // scrolling and back in once it settles. The scroll now happens on the
+    // inner .snap-container wrapper, not window.
     if (!isHome) {
       setScrolling(false);
       return;
     }
+    const target = document.querySelector(".snap-container");
+    if (!target) return;
     let timeout: ReturnType<typeof setTimeout>;
     const onScroll = () => {
       setScrolling(true);
       clearTimeout(timeout);
       timeout = setTimeout(() => setScrolling(false), 250);
     };
-    window.addEventListener("scroll", onScroll, { passive: true });
+    target.addEventListener("scroll", onScroll, { passive: true });
     return () => {
-      window.removeEventListener("scroll", onScroll);
+      target.removeEventListener("scroll", onScroll);
       clearTimeout(timeout);
     };
   }, [isHome, pathname]);
@@ -114,7 +117,7 @@ export function Logo() {
   const handleClick = (e: React.MouseEvent) => {
     if (isHome) {
       e.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      document.querySelector(".snap-container")?.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 

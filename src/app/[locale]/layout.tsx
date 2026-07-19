@@ -60,11 +60,12 @@ export default async function RootLayout({
         className={`${fraunces.variable} ${geistMono.variable} ${ibmPlexSans.variable} antialiased`}
       >
         <NextIntlClientProvider>
-          <ScrollSnapController />
           <Logo />
           <LanguageSwitcher />
-          {children}
-          <Footer />
+          <ScrollSnapController>
+            {children}
+            <Footer />
+          </ScrollSnapController>
         </NextIntlClientProvider>
       </body>
     </html>

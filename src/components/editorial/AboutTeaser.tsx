@@ -7,7 +7,7 @@ export function AboutTeaser() {
 
   return (
     <section className="w-full min-h-[100dvh] flex flex-col bg-[#f5f5f5] snap-start">
-      <div data-logo-bg="dark" className="relative w-full aspect-[21/9] md:aspect-[3/1] shrink-0">
+      <div data-logo-bg="dark" className="relative w-full aspect-[4/5] sm:aspect-[21/9] md:aspect-[3/1] shrink-0">
         <Image
           src="/images/backgrounds/mountain1.jpeg"
           alt={t("title")}

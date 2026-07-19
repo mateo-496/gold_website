@@ -2,7 +2,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 const RANGE_CONFIG: Record<string, { range: string; interval: string }> = {
-  "1D": { range: "1d", interval: "15m" },
+  "1D": { range: "5d", interval: "15m" },
   "1W": { range: "5d", interval: "15m" },
   "1M": { range: "1mo", interval: "1d" },
   "3M": { range: "3mo", interval: "1d" },
@@ -105,7 +105,7 @@ export async function GET(req: NextRequest) {
       meta: {},
     }
 
-    const gold = goldResult.status === "fulfilled" ? goldResult.value : empty;
+    let gold = goldResult.status === "fulfilled" ? goldResult.value : empty;
     const silver = silverResult.status === "fulfilled" ? silverResult.value : empty;
     const platinum = platinumResult.status === "fulfilled" ? platinumResult.value : empty;
     const fxChf = fxChfResult.status === "fulfilled" ? fxChfResult.value : empty;
@@ -125,6 +125,25 @@ export async function GET(req: NextRequest) {
       (fxEur.meta.regularMarketPrice as number | undefined) ??
       fxEur.closes[fxEur.closes.length - 1] ??
       null;
+
+    // "1D" (and any single-day CUSTOM span) should show the most recent trading
+    // day, not literally today — when the market's closed (weekend/holiday),
+    // Yahoo's response for a widened window still ends on the last session, so
+    // we just keep whichever UTC calendar day the last data point falls on.
+    if (isSingleDay && gold.timestamps.length > 0) {
+      const lastDayKey = new Date(gold.timestamps[gold.timestamps.length - 1] * 1000)
+        .toISOString()
+        .slice(0, 10);
+      const keepIdx = gold.timestamps
+        .map((ts, i) => ({ ts, i }))
+        .filter(({ ts }) => new Date(ts * 1000).toISOString().slice(0, 10) === lastDayKey)
+        .map(({ i }) => i);
+      gold = {
+        ...gold,
+        timestamps: keepIdx.map((i) => gold.timestamps[i]),
+        closes: keepIdx.map((i) => gold.closes[i]),
+      };
+    }
 
     const silverByTime = new Map<number, number>();
     silver.timestamps.forEach((t, i) => {

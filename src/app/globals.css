@@ -15,6 +15,9 @@
 }
 
 .snap-container {
+  height: 100dvh;
+  overflow-y: auto;
+  overflow-x: clip;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
@@ -38,7 +41,7 @@ body {
 }
 
 .hero-v-clip {
-  clip-path: polygon(0 0, 100% 0, 100% 88%, 50% 100%, 0 88%);
+  clip-path: polygon(0 0, 100% 0, 100% 94%, 50% 100%, 0 94%);
 }
 
 @media (min-width: 768px) {
