@@ -19,7 +19,7 @@ export function Logo() {
   const [overDark, setOverDark] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [pastTop, setPastTop] = useState(false);
-  const [scrolling, setScrolling] = useState(false);
+  const [atAnchor, setAtAnchor] = useState(true);
 
   const segments = pathname.split("/").filter(Boolean);
   const isHome =
@@ -79,33 +79,44 @@ export function Logo() {
   }, [pathname]);
 
   useEffect(() => {
-    // Home is a single scrolling page: fade the logo out while actively
-    // scrolling and back in once it settles. The scroll now happens on the
-    // inner .snap-container wrapper, not window.
+    // Home is a single scrolling page: the logo should only show while
+    // snapped exactly at the top of a section that opts in with
+    // data-logo-anchor="true" (hero, price chart, categories heading).
+    // The anchors are thin (near-zero height) markers at each section's
+    // top edge; a narrow top-of-viewport observation band means even a
+    // small scroll away from the anchor hides the logo immediately.
     if (!isHome) {
-      setScrolling(false);
+      setAtAnchor(true);
       return;
     }
-    const target = document.querySelector(".snap-container");
-    if (!target) return;
-    let timeout: ReturnType<typeof setTimeout>;
-    const onScroll = () => {
-      setScrolling(true);
-      clearTimeout(timeout);
-      timeout = setTimeout(() => setScrolling(false), 250);
-    };
-    target.addEventListener("scroll", onScroll, { passive: true });
-    return () => {
-      target.removeEventListener("scroll", onScroll);
-      clearTimeout(timeout);
-    };
+    const targets = document.querySelectorAll('[data-logo-anchor="true"]');
+    if (targets.length === 0) {
+      setAtAnchor(false);
+      return;
+    }
+
+    setAtAnchor(true); // hero anchor starts at the top, so avoid a flash
+
+    const intersecting = new Set<Element>();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) intersecting.add(entry.target);
+          else intersecting.delete(entry.target);
+        }
+        setAtAnchor(intersecting.size > 0);
+      },
+      { threshold: 0, rootMargin: "0px 0px -96% 0px" }
+    );
+    targets.forEach((target) => observer.observe(target));
+    return () => observer.disconnect();
   }, [isHome, pathname]);
 
   useEffect(() => {
     // The logo only belongs at the very top on non-home pages; once the
     // person starts scrolling there, fade it out and keep it out. On the
-    // home page, visibility at rest is handled entirely by the "scrolling"
-    // state below (fades during motion, reappears once snapped on any section).
+    // home page, visibility at rest is handled entirely by the "atAnchor"
+    // state above (visible only when snapped at an opted-in section top).
     if (isHome) {
       setPastTop(false);
       return;
@@ -128,7 +139,7 @@ export function Logo() {
       href={`/${locale}`}
       onClick={handleClick}
       className={`fixed top-4 md:top-8 left-1/2 -translate-x-1/2 z-40 block transition-opacity ease-out ${
-        hidden || pastTop || scrolling
+        hidden || pastTop || (isHome && !atAnchor)
           ? "duration-300 opacity-0 pointer-events-none"
           : "duration-700 opacity-100"
       }`}

@@ -19,7 +19,8 @@ export function Categories() {
   const t = useTranslations("categories");
 
   return (
-    <section className="min-h-[100dvh] w-full bg-[#f5f5f5] px-6 py-32 flex flex-col justify-center snap-start">
+    <section className="relative min-h-[100dvh] w-full bg-[#f5f5f5] px-6 pt-16 pb-32 md:py-32 flex flex-col justify-center snap-start">
+      <div data-logo-anchor="true" aria-hidden className="absolute top-0 left-0 w-full h-px" />
       <div className="max-w-6xl mx-auto w-full">
         <h2 className="font-serif text-4xl md:text-5xl mb-16 md:mb-20 leading-tight">
           <span className="text-neutral-900">{t("heading")}</span>{" "}

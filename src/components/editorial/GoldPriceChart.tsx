@@ -288,7 +288,8 @@ export function GoldPriceChart() {
   }, [chartData, isMultiMetal, currency, usdChf, usdEur]);
 
   return (
-    <section data-logo-bg="dark" className="min-h-[100dvh] flex flex-col px-6 pt-20 pb-10 md:pt-32 md:pb-16 lg:px-12 snap-start">
+    <section data-logo-bg="dark" className="relative min-h-[100dvh] flex flex-col px-6 pt-20 pb-10 md:pt-32 md:pb-16 lg:px-12 snap-start">
+      <div data-logo-anchor="true" aria-hidden className="absolute top-0 left-0 w-full h-px" />
       <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-2 shrink-0">
         <div>
           <div className="flex items-center gap-2 mb-4">

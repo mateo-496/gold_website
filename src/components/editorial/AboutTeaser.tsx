@@ -6,7 +6,8 @@ export function AboutTeaser() {
   const t = useTranslations("aboutTeaser");
 
   return (
-    <section className="w-full min-h-[100dvh] flex flex-col bg-[#f5f5f5] snap-start">
+    <section className="relative w-full min-h-[100dvh] flex flex-col bg-[#f5f5f5] snap-start">
+      <div data-logo-anchor="true" aria-hidden className="absolute top-0 left-0 w-full h-px" />
       <div data-logo-bg="dark" className="relative w-full aspect-[4/5] sm:aspect-[21/9] md:aspect-[3/1] shrink-0">
         <Image
           src="/images/backgrounds/mountain1.jpeg"

@@ -60,6 +60,7 @@ export function Hero() {
 
   return (
     <section data-logo-bg="dark" className="relative h-[100dvh] w-full overflow-hidden snap-start">
+      <div data-logo-anchor="true" aria-hidden className="absolute top-0 left-0 w-full h-px" />
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
