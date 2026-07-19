@@ -1,30 +1,60 @@
 {
   "name": "Schweiz",
   "flag": "🇨🇭",
-  "intro": "Die Schweiz bietet eines der günstigsten europäischen Rahmenwerke für den Kauf, das Halten und den Wiederverkauf von physischem Gold, mit Mehrwertsteuerbefreiung für Anlagegold und keiner Besteuerung privater Kapitalgewinne.",
+  "intro": "Die Schweiz bietet eines der günstigsten Rahmenwerke Europas für Kauf, Besitz und Wiederverkauf von physischem Gold, mit Mehrwertsteuerbefreiung auf Anlagegold und keiner Besteuerung privater Kapitalgewinne.",
   "stat1Label": "Meldeschwelle",
   "stat1Value": "Keine",
-  "stat2Label": "Besteuerung beim Verkauf",
+  "stat2Label": "Steuer beim Wiederverkauf",
   "stat2Value": "0 % (Privatpersonen)",
-  "overview": "Anlagegold (Barren und zertifizierte Münzen mit Mindestfeingehalt) ist seit 2000 mehrwertsteuerbefreit, seit 1. Januar 2025 bestätigt durch Art. 23 Abs. 12 MWSTG. Kapitalgewinne von Privatpersonen auf privates bewegliches Vermögen, einschließlich physischem Gold, werden auf Bundesebene nicht besteuert.",
-  "exportPoints": [
-    "Keine Ausfuhrgenehmigung für Anlagegold zum privaten Gebrauch erforderlich",
-    "Standardmäßige Zollkontrollen beim Verlassen des Landes",
-    "Meldeschwellen des Ziellandes prüfen"
+  "sectionTitles": {
+    "investmentGold": "Was ist Anlagegold?",
+    "vat": "Mehrwertsteuer auf Gold in der Schweiz",
+    "customs": "Zollanmeldung",
+    "resale": "Wiederverkauf",
+    "faq": "Häufig gestellte Fragen"
+  },
+  "investmentGoldText": "In der Schweiz gilt Gold nach Art. 23 Abs. 12 MWSTG als mehrwertsteuerbefreites Anlagegold, wenn es die Form von Barren oder Plätzchen mit einem Feingehalt von mindestens 995‰ hat, die von den Goldmärkten akzeptiert werden, oder von Münzen mit mindestens 900‰ Feingehalt, die gesetzliches Zahlungsmittel sind oder waren und zu einem Preis gehandelt werden, der eng an ihren Goldgehalt gekoppelt ist. Dies entspricht weitgehend der in der gesamten EU verwendeten Kategorie, sodass in der Schweiz gekauftes Anlagegold seinen mehrwertsteuerfreien Status in der Regel behält, wenn es in ein EU-Land gelangt, sofern es auch die dortigen Kriterien erfüllt. Schmuck, Medaillen und numismatische Münzen außerhalb dieser Definition werden anders besteuert.",
+  "vatText": "Anlagegold (Barren ab 995‰ Feingehalt, anerkannte Münzen) ist in der Schweiz gemäß Art. 23 Abs. 12 MWSTG von der Mehrwertsteuer befreit. Diese Befreiung gilt bereits beim Kauf innerhalb der Schweiz: Es fällt keine zusätzliche Mehrwertsteuer an, unabhängig davon, ob das Gold im Land bleibt oder exportiert wird.",
+  "customsIntro": "Die Schweiz kennt keine systematische Schwelle für eine schriftliche Anmeldung, verlangt aber Auskunft, wenn das Bundesamt für Zoll und Grenzsicherheit (BAZG) danach fragt.",
+  "customsRows": [
+    {
+      "range": "Jeder Betrag",
+      "requirement": "Keine schriftliche Anmeldung an der Grenze erforderlich"
+    },
+    {
+      "range": "CHF 10.000 oder mehr, oder bei Verdacht",
+      "requirement": "Sie müssen Ihre Identität sowie Herkunft und Zweck der Mittel mündlich angeben",
+      "formLabel": "BAZG – Bargeldtransport",
+      "formUrl": "https://www.bazg.admin.ch/fr/transport-argent-liquide-en-suisse"
+    }
   ],
-  "reventePoints": [
-    "Keine Mindesthaltedauer",
-    "Kapitalgewinn für Privatpersonen steuerfrei",
-    "Kaufnachweise für einen einfacheren Wiederverkauf aufbewahren"
+  "resaleIntro": "Für eine Privatperson, die Gold privat hält, wird der Gewinn beim Wiederverkauf auf Bundesebene nicht besteuert. Diese Befreiung setzt eine gewöhnliche private Vermögensverwaltung voraus — häufiger oder umfangreicher Handel kann die Einstufung eines Verkaufs ändern.",
+  "resaleRows": [
+    {
+      "scenario": "Privatperson, gelegentlicher Verkauf",
+      "treatment": "0 % Bundessteuer auf den Kapitalgewinn — vollständige Befreiung, keine Mindesthaltedauer"
+    },
+    {
+      "scenario": "Häufiger oder professionell wirkender Handel",
+      "treatment": "Kantonale Steuerbehörden können Gewinne als Einkommen aus selbständiger Erwerbstätigkeit umqualifizieren, das zum ordentlichen Einkommenssteuersatz besteuert wird"
+    },
+    {
+      "scenario": "Nachweise",
+      "treatment": "Für die Befreiung ist kein Kaufnachweis erforderlich, dessen Aufbewahrung stützt jedoch Ihre Position, falls die Einstufung je infrage gestellt wird"
+    }
   ],
   "faqs": [
     {
-      "q": "Muss ich Mehrwertsteuer auf Anlagegold in der Schweiz zahlen?",
-      "a": "Nein, Anlagegold ist gemäß Art. 23 Abs. 12 MWSTG mehrwertsteuerbefreit."
+      "q": "Zahle ich in der Schweiz Mehrwertsteuer auf Anlagegold?",
+      "a": "Nein, Anlagegold ist gemäß Art. 23 Abs. 12 MWSTG von der Mehrwertsteuer befreit."
     },
     {
       "q": "Wird der Gewinn beim Wiederverkauf besteuert?",
-      "a": "Für eine Privatperson, die das Gold privat hält, nein: Kapitalgewinne auf privates bewegliches Vermögen werden auf Bundesebene nicht besteuert."
+      "a": "Für eine Privatperson, die Gold im Rahmen einer gewöhnlichen privaten Vermögensverwaltung hält, nein: Kapitalgewinne aus privatem beweglichem Vermögen werden auf Bundesebene nicht besteuert."
+    },
+    {
+      "q": "Kann ich diese Steuerbefreiung verlieren?",
+      "a": "Ja. Wenn Ihr Handelsmuster häufig oder umfangreich genug ist, um wie eine professionelle Tätigkeit zu wirken, können kantonale Steuerbehörden die Gewinne als Einkommen aus selbständiger Erwerbstätigkeit umqualifizieren, das zum ordentlichen Satz besteuert wird."
     }
   ]
 }

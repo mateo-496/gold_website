@@ -107,11 +107,19 @@ export function AchatPage() {
             <button
               key={p.id}
               onClick={() => setProductId(p.id)}
-              className={`px-4 py-2 text-sm tracking-wide transition-colors border ${
+              className={`px-4 py-2 text-sm tracking-wide transition-colors border bg-cover bg-center ${
                 product?.id === p.id
-                  ? "border-neutral-900 bg-neutral-900 text-white"
+                  ? "border-neutral-900 text-white"
                   : "border-neutral-300 text-neutral-700 hover:border-neutral-900"
               }`}
+              style={
+                product?.id === p.id
+                  ? {
+                      backgroundImage:
+                        "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/images/backgrounds/gold_dark_marble2_mini.png')",
+                    }
+                  : undefined
+              }
             >
               {p.name}
             </button>

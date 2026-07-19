@@ -1,30 +1,64 @@
 {
   "name": "Francia",
   "flag": "🇫🇷",
-  "intro": "In Francia, la rivendita di oro fisico è soggetta a un'imposta forfettaria, salvo che si conservi una prova d'acquisto che giustifichi il prezzo di costo reale.",
+  "intro": "La Francia tassa la rivendita dell'oro in base al regime predefinito, non alla proprietà — il fattore determinante è se potete produrre una prova d'acquisto. Comprendere le regole IVA all'importazione, la soglia di dichiarazione doganale e i due regimi di rivendita in concorrenza tra loro è ciò che determina il vostro reale ricavato netto.",
   "stat1Label": "Soglia di dichiarazione",
-  "stat1Value": "€ 10.000",
-  "stat2Label": "Imposta alla rivendita",
+  "stat1Value": "10.000 €",
+  "stat2Label": "Tassa sulla rivendita",
   "stat2Value": "11,5% (predefinita)",
-  "overview": "L'oro da investimento è esente da IVA in Francia, in conformità con la direttiva europea. Alla rivendita, il regime predefinito applica un'imposta forfettaria dell'11,5% sul prezzo di vendita. Se è possibile giustificare prezzo e data di acquisizione, si può optare per il regime delle plusvalenze su beni mobili, potenzialmente più vantaggioso dopo diversi anni di detenzione.",
-  "exportPoints": [
-    "Dichiarazione obbligatoria oltre 10.000 € in contanti alla frontiera (regola UE)",
-    "Nessuna autorizzazione specifica per l'oro da investimento ad uso privato",
-    "La ricodifica dell'art. 298 sexdecies A del CGI entra in vigore a settembre 2026"
+  "sectionTitles": {
+    "investmentGold": "Cos'è l'oro da investimento?",
+    "vat": "IVA e importazione in Francia",
+    "customs": "Dichiarazione doganale",
+    "resale": "Rivendita",
+    "faq": "Domande frequenti"
+  },
+  "investmentGoldText": "\"Oro da investimento\" è una categoria giuridica definita, non solo una descrizione della purezza. Ai sensi della direttiva UE 98/80/CE, comprende lingotti e verghe con purezza pari o superiore a 995‰, prodotti da una raffineria accreditata, e monete d'oro con purezza pari o superiore a 900‰, coniate dopo il 1800, che sono o sono state a corso legale nel paese d'origine, e che vengono normalmente vendute a un prezzo non superiore all'80% oltre il valore dell'oro contenuto. La Commissione Europea pubblica ogni anno un elenco delle monete che soddisfano quest'ultima condizione — esempi comuni includono il Vreneli svizzero, il Krugerrand, l'American Eagle e il Napoleone. Solo l'oro che rientra in questa definizione beneficia dell'esenzione IVA e del trattamento all'importazione descritto di seguito; gioielli, monete numismatiche non incluse nell'elenco pubblicato e lingotti sotto i 995‰ non ne beneficiano.",
+  "vatText": "L'oro da investimento — lingotti e verghe con purezza pari o superiore a 995‰, e monete che soddisfano i criteri stabiliti dalla direttiva UE 98/80/CE — è esente da IVA all'importazione in Francia, anche dalla Svizzera. Questa esenzione è recepita nel diritto francese all'art. 298 sexdecies A del CGI. In pratica, non è dovuta alcuna IVA alla frontiera sull'oro conforme: l'esenzione segue il metallo, non la sede del venditore, quindi l'oro acquistato da un commerciante svizzero entra in Francia con lo stesso trattamento esente da IVA dell'oro acquistato sul territorio nazionale, a condizione che soddisfi i criteri dell'oro da investimento.",
+  "customsIntro": "Alla frontiera franco-svizzera, la dogana francese applica la regola europea sui trasferimenti di capitali: l'oro (monete con purezza almeno del 90%, lingotti almeno del 99,5%) è equiparato al contante. L'obbligo di dichiarazione è quindi determinato dal valore trasportato, non da una categorizzazione specifica dell'oro.",
+  "customsRows": [
+    {
+      "range": "Meno di 10.000 €",
+      "requirement": "Nessuna dichiarazione richiesta"
+    },
+    {
+      "range": "10.000 € o più",
+      "requirement": "Dichiarazione obbligatoria prima di attraversare la frontiera",
+      "formLabel": "DALIA (online) / modulo Cerfa n. 13426",
+      "formUrl": "https://www.douane.gouv.fr/demarche/vous-voyagez-avec-de-largent-liquide-especes-instruments-negociables-au-porteur-or-0"
+    }
   ],
-  "reventePoints": [
-    "Senza prova d'acquisto: imposta forfettaria dell'11,5% sul prezzo di vendita",
-    "Con prova d'acquisto: opzione per il regime delle plusvalenze, con abbattimento per durata di detenzione",
-    "Conservare sempre le fatture d'acquisto"
+  "resaleIntro": "La vendita di oro in Francia attiva uno dei due regimi fiscali, e quale si applica è una vostra scelta — ma solo se avete conservato la documentazione. Senza prova d'acquisto, si applica automaticamente la tassa forfettaria dell'11,5% sull'intero prezzo di vendita, indipendentemente da quanto avete effettivamente pagato. Con una fattura d'acquisto che indica prezzo e data, potete invece optare per il regime delle plusvalenze sui beni mobili, che tassa solo il guadagno e include un abbattimento legato al periodo di detenzione che riduce l'importo imponibile col passare del tempo.",
+  "resaleRows": [
+    {
+      "scenario": "Nessuna prova d'acquisto",
+      "treatment": "Tassa forfettaria dell'11,5% sull'intero prezzo di vendita — si applica automaticamente, senza eccezioni"
+    },
+    {
+      "scenario": "Oggetto dissigillato o danneggiato",
+      "treatment": "Se la rottura del sigillo o il danno rende impossibile dimostrare che si tratti dell'oggetto originariamente acquistato, si perde l'opzione per il regime delle plusvalenze e si applica per default la tassa forfettaria dell'11,5%"
+    },
+    {
+      "scenario": "Con prova d'acquisto",
+      "treatment": "Scelta tra la tassa forfettaria dell'11,5% sul prezzo di vendita, oppure il 36,2% sulla plusvalenza — ridotta con un abbattimento del 5% per ogni anno di detenzione oltre il secondo, con esenzione totale dopo 22 anni"
+    }
   ],
   "faqs": [
     {
       "q": "Cosa succede se non ho una fattura d'acquisto?",
-      "a": "Si applica automaticamente il regime predefinito dell'imposta forfettaria dell'11,5% sul prezzo di vendita."
+      "a": "Si applica automaticamente la tassa forfettaria dell'11,5% sull'intero prezzo di vendita — non è possibile ricorrere al regime delle plusvalenze senza una prova documentale di quanto pagato e quando."
     },
     {
-      "q": "Posso evitare l'imposta forfettaria?",
-      "a": "Sì, optando per il regime delle plusvalenze su beni mobili se si dispone di una prova d'acquisto, il che può essere più vantaggioso a seconda della durata di detenzione."
+      "q": "Posso evitare la tassa forfettaria?",
+      "a": "Sì, ma solo optando per il regime delle plusvalenze sui beni mobili, che richiede una prova del prezzo e della data d'acquisto. Se questo regime sia più vantaggioso della tassa forfettaria dipende dal periodo di detenzione e dal guadagno effettivo."
+    },
+    {
+      "q": "Acquistare da un commerciante svizzero cambia qualcosa ai fini fiscali francesi?",
+      "a": "No. Ciò che conta è la residenza fiscale al momento della vendita, non il luogo d'acquisto dell'oro. Un residente fiscale francese che vende oro è tassato secondo le regole francesi, indipendentemente dal fatto che l'oro provenga da un commerciante svizzero, francese o di altro paese."
+    },
+    {
+      "q": "Devo dichiarare automaticamente un acquisto d'oro svizzero alle autorità francesi?",
+      "a": "Nessun meccanismo di segnalazione automatica copre la vendita di oro fisico — lo scambio di informazioni CRS/AEOI non si applica a questo tipo di bene. Questo non elimina l'obbligo: i residenti francesi devono autodichiarare le vendite d'oro imponibili."
     }
   ]
 }

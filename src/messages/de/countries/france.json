@@ -1,30 +1,64 @@
 {
   "name": "Frankreich",
   "flag": "🇫🇷",
-  "intro": "In Frankreich unterliegt der Wiederverkauf von physischem Gold einer Pauschalsteuer, es sei denn, Sie bewahren einen Kaufnachweis auf, der den tatsächlichen Anschaffungspreis belegt.",
+  "intro": "Frankreich besteuert den Wiederverkauf von Gold standardmäßig, unabhängig vom Eigentum — entscheidend ist, ob Sie einen Kaufnachweis vorlegen können. Die Mehrwertsteuerregeln bei der Einfuhr, die Meldeschwelle an der Grenze und die zwei konkurrierenden Besteuerungsregime bei der Weiterveräußerung bestimmen zusammen Ihren tatsächlichen Nettoerlös.",
   "stat1Label": "Meldeschwelle",
-  "stat1Value": "EUR 10.000",
-  "stat2Label": "Steuer beim Verkauf",
+  "stat1Value": "10.000 €",
+  "stat2Label": "Steuer beim Wiederverkauf",
   "stat2Value": "11,5 % (Standard)",
-  "overview": "Anlagegold ist in Frankreich gemäß EU-Richtlinie mehrwertsteuerbefreit. Beim Wiederverkauf gilt standardmäßig eine Pauschalsteuer von 11,5 % auf den Verkaufspreis. Mit Nachweis von Preis und Erwerbsdatum kann die Kapitalgewinnbesteuerung auf bewegliche Güter gewählt werden, die bei längerer Haltedauer vorteilhafter sein kann.",
-  "exportPoints": [
-    "Meldepflicht ab EUR 10.000 in bar an der Grenze (EU-Regel)",
-    "Keine spezielle Genehmigung für Anlagegold zum privaten Gebrauch",
-    "Neukodifizierung von Art. 298 sexdecies A CGI tritt im September 2026 in Kraft"
+  "sectionTitles": {
+    "investmentGold": "Was ist Anlagegold?",
+    "vat": "Mehrwertsteuer und Import nach Frankreich",
+    "customs": "Zollanmeldung",
+    "resale": "Wiederverkauf",
+    "faq": "Häufig gestellte Fragen"
+  },
+  "investmentGoldText": "„Anlagegold“ ist eine klar definierte rechtliche Kategorie, nicht nur eine Frage der Reinheit. Gemäß EU-Richtlinie 98/80/EG umfasst sie Goldbarren mit einem Feingehalt von mindestens 995‰, hergestellt von einem akkreditierten Scheideanstalt, sowie Goldmünzen mit mindestens 900‰ Feingehalt, die nach 1800 geprägt wurden, in ihrem Ursprungsland gesetzliches Zahlungsmittel sind oder waren, und die üblicherweise zu einem Preis verkauft werden, der den Goldwert um höchstens 80 % übersteigt. Die Europäische Kommission veröffentlicht jährlich eine Liste der Münzen, die dieses letzte Kriterium erfüllen — Beispiele sind der Schweizer Vreneli, der Krügerrand, der American Eagle und der Napoléon. Nur Gold, das dieser Definition entspricht, profitiert von der Mehrwertsteuerbefreiung und der unten beschriebenen Einfuhrbehandlung; Schmuck, numismatische Münzen außerhalb der Liste und Barren unter 995‰ tun dies nicht.",
+  "vatText": "Anlagegold — Barren mit mindestens 995‰ Feingehalt sowie Münzen, die die Kriterien der EU-Richtlinie 98/80/EG erfüllen — ist bei der Einfuhr nach Frankreich von der Mehrwertsteuer befreit, auch aus der Schweiz. Diese Befreiung ist im französischen Recht in Art. 298 sexdecies A CGI umgesetzt. In der Praxis wird an der Grenze keine Mehrwertsteuer auf qualifizierendes Gold erhoben: Die Befreiung folgt dem Metall, nicht dem Standort des Verkäufers, sodass Gold, das bei einem Schweizer Händler gekauft wurde, mit derselben mehrwertsteuerfreien Behandlung nach Frankreich gelangt wie im Inland gekauftes Gold, sofern es die Kriterien für Anlagegold erfüllt.",
+  "customsIntro": "Frankreich wendet an der französisch-schweizerischen Grenze die EU-Regel zum Kapitaltransfer an. Gold gilt für diese Zwecke als Bargeld, wenn es eine bestimmte Reinheitsschwelle erreicht — Münzen mindestens 90 %, Barren mindestens 99,5 % — sodass die Meldepflicht durch den Wert ausgelöst wird, nicht durch eine gesonderte Kategorisierung von Gold.",
+  "customsRows": [
+    {
+      "range": "Unter 10.000 €",
+      "requirement": "Keine Anmeldung erforderlich"
+    },
+    {
+      "range": "10.000 € oder mehr",
+      "requirement": "Verpflichtende Anmeldung vor Grenzübertritt",
+      "formLabel": "DALIA (online) / Cerfa-Formular Nr. 13426",
+      "formUrl": "https://www.douane.gouv.fr/demarche/vous-voyagez-avec-de-largent-liquide-especes-instruments-negociables-au-porteur-or-0"
+    }
   ],
-  "reventePoints": [
-    "Ohne Nachweis: Pauschalsteuer von 11,5 % auf den Verkaufspreis",
-    "Mit Nachweis: Option für Kapitalgewinnbesteuerung mit Freibetrag nach Haltedauer",
-    "Kaufbelege stets aufbewahren"
+  "resaleIntro": "Der Verkauf von Gold in Frankreich löst eines von zwei Steuerregimen aus, und welches gilt, entscheiden Sie — allerdings nur, wenn Sie die Unterlagen aufbewahrt haben. Ohne Kaufnachweis gilt automatisch die pauschale Steuer von 11,5 % auf den gesamten Verkaufspreis, unabhängig davon, was Sie tatsächlich bezahlt haben. Mit einer Kaufrechnung, die Preis und Datum ausweist, können Sie stattdessen die Kapitalertragsregelung für bewegliche Vermögenswerte wählen, bei der nur der Gewinn besteuert wird und die einen Freibetrag für die Haltedauer enthält, der den steuerpflichtigen Betrag mit zunehmender Besitzdauer verringert.",
+  "resaleRows": [
+    {
+      "scenario": "Kein Kaufnachweis",
+      "treatment": "Pauschale Steuer von 11,5 % auf den gesamten Verkaufspreis — gilt automatisch, ohne Ausnahme"
+    },
+    {
+      "scenario": "Entsiegeltes oder beschädigtes Stück",
+      "treatment": "Wenn ein gebrochenes Siegel oder eine Beschädigung den Nachweis unmöglich macht, dass es sich um das ursprünglich gekaufte Stück handelt, entfällt die Option der Kapitalertragsregelung, und die pauschale Steuer von 11,5 % gilt als Standard"
+    },
+    {
+      "scenario": "Mit Kaufnachweis",
+      "treatment": "Wahl zwischen der Pauschalsteuer von 11,5 % auf den Verkaufspreis oder 36,2 % auf den Kapitalgewinn — reduziert um einen Freibetrag von 5 % pro Haltejahr ab dem 3. Jahr, mit vollständiger Befreiung nach 22 Jahren"
+    }
   ],
   "faqs": [
     {
-      "q": "Was passiert, wenn ich keinen Kaufbeleg habe?",
-      "a": "Die Standard-Pauschalsteuer von 11,5 % auf den Verkaufspreis gilt automatisch."
+      "q": "Was passiert, wenn ich keine Kaufrechnung habe?",
+      "a": "Die pauschale Steuer von 11,5 % auf den gesamten Verkaufspreis gilt automatisch — ohne dokumentarischen Nachweis von Preis und Kaufdatum gibt es keinen Rückgriff auf die Kapitalertragsregelung."
     },
     {
       "q": "Kann ich die Pauschalsteuer vermeiden?",
-      "a": "Ja, durch die Wahl der Kapitalgewinnbesteuerung auf bewegliche Güter, sofern ein Kaufnachweis vorliegt, was je nach Haltedauer vorteilhafter sein kann."
+      "a": "Ja, aber nur durch die Wahl der Kapitalertragsregelung für bewegliche Vermögenswerte, die einen Nachweis von Kaufpreis und -datum erfordert. Ob dies günstiger ist als die Pauschalsteuer, hängt von Ihrer Haltedauer und Ihrem tatsächlichen Gewinn ab."
+    },
+    {
+      "q": "Ändert der Kauf bei einem Schweizer Händler etwas an der französischen Besteuerung?",
+      "a": "Nein. Entscheidend ist Ihr steuerlicher Wohnsitz zum Zeitpunkt des Verkaufs, nicht der Ort des Goldkaufs. Ein in Frankreich steuerlich ansässiger Verkäufer wird nach französischen Regeln besteuert, unabhängig davon, ob das Gold von einem Schweizer, französischen oder anderen Händler stammt."
+    },
+    {
+      "q": "Muss ich einen Goldkauf in der Schweiz automatisch den französischen Behörden melden?",
+      "a": "Kein automatischer Meldemechanismus erfasst den Verkauf physischen Goldes — der CRS/AEOI-Informationsaustausch gilt hierfür nicht. Das hebt die Pflicht nicht auf: In Frankreich ansässige Personen müssen steuerpflichtige Goldverkäufe selbst deklarieren."
     }
   ]
 }

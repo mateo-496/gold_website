@@ -1,30 +1,66 @@
 {
   "name": "Italien",
   "flag": "🇮🇹",
-  "intro": "Italien befreit Anlagegold von der Mehrwertsteuer, wendet jedoch ein verschärftes Meldesystem an und besteuert den Gewinn ohne verwaltetes Sparregime als sonstiges Einkommen.",
+  "intro": "Italien befreit Anlagegold von der Mehrwertsteuer, wendet jedoch ein strengeres Meldesystem an und besteuert den Gewinn als sonstiges Einkommen, sofern kein verwaltetes Sparregime genutzt wird.",
   "stat1Label": "Meldeschwelle",
-  "stat1Value": "EUR 10.000",
-  "stat2Label": "Besteuerung des Gewinns",
+  "stat1Value": "10.000 €",
+  "stat2Label": "Steuer auf Gewinn",
   "stat2Value": "Sonstiges Einkommen",
-  "overview": "Anlagegold (Barren und zertifizierte Münzen) ist in Italien mehrwertsteuerbefreit. Der Wiederverkauf durch eine Privatperson wird grundsätzlich als sonstiges steuerpflichtiges Einkommen behandelt, es sei denn, die Transaktion erfolgt über ein verwaltetes Sparregime mit günstigerer Behandlung. Die Meldepflicht für Transaktionen mit Edelmetallen ist strenger als anderswo im Euroraum.",
-  "exportPoints": [
-    "Meldepflicht ab EUR 10.000 in bar an der Grenze (EU-Regel)",
-    "Verschärfte Meldepflichten für Transaktionen mit physischem Gold",
-    "Alle Transaktionsbelege aufbewahren"
+  "sectionTitles": {
+    "investmentGold": "Was ist Anlagegold?",
+    "vat": "Mehrwertsteuer und Import nach Italien",
+    "customs": "Zollanmeldung",
+    "resale": "Wiederverkauf",
+    "faq": "Häufig gestellte Fragen"
+  },
+  "investmentGoldText": "Anlagegold ist dieselbe definierte Kategorie, die EU-weit gilt: Barren mit einem Feingehalt von mindestens 995‰, hergestellt von einer akkreditierten Scheideanstalt, sowie Münzen mit mindestens 900‰ Feingehalt, die nach 1800 geprägt wurden, in ihrem Ursprungsland gesetzliches Zahlungsmittel sind oder waren, und die üblicherweise zu einem Preis verkauft werden, der den Goldwert um höchstens 80 % übersteigt. Das italienische Mehrwertsteuerrecht befreit diese Kategorie auf derselben Grundlage wie der Rest der EU. Nur Gold, das dieser Definition entspricht, profitiert von der Mehrwertsteuerbefreiung und der unten beschriebenen Behandlung; Schmuck und Münzen außerhalb der anerkannten Liste werden wie gewöhnliche Waren besteuert.",
+  "vatText": "Anlagegold ist bei der Einfuhr nach Italien von der Mehrwertsteuer befreit, auch aus der Schweiz, gemäß derselben EU-Richtlinie, die im übrigen Block gilt.",
+  "customsIntro": "Italien wendet zusätzlich zur europäischen Standardregel von 10.000 € eine doppelte, goldspezifische Meldepflicht an.",
+  "customsRows": [
+    {
+      "range": "Unter 10.000 €",
+      "requirement": "Keine Anmeldung erforderlich"
+    },
+    {
+      "range": "10.000 € oder mehr (physischer Transport)",
+      "requirement": "Verpflichtende Zollanmeldung",
+      "formLabel": "Agenzia delle Dogane – Bargeldtransfer",
+      "formUrl": "https://www.adm.gov.it/portale/en/dogane/operatore/modulistica/trasferimento-di-denaro-contante"
+    },
+    {
+      "range": "10.000 € oder mehr (Goldtransaktion)",
+      "requirement": "Zusätzliche Meldung an die Finanzaufsichtsbehörde (UIF), unabhängig von der Transferart",
+      "formLabel": "Banca d'Italia UIF – Goldmeldungen",
+      "formUrl": "https://uif.bancaditalia.it/adempimenti-operatori/op-oro/index.html"
+    }
   ],
-  "reventePoints": [
-    "Gewinn als sonstiges Einkommen besteuert, außer bei verwaltetem Sparregime",
-    "Keine Mindesthaltedauer",
-    "Über einen zertifizierten Händler abwickeln, um die Meldung zu vereinfachen"
+  "resaleIntro": "In Italien wird der Gewinn beim Wiederverkauf standardmäßig als sonstiges Einkommen zum progressiven Satz besteuert. Ein Verkauf über ein verwaltetes Sparkonto bei einem zugelassenen Intermediär kann die Art der Steuererhebung ändern.",
+  "resaleRows": [
+    {
+      "scenario": "Standardverkauf, ohne verwaltetes Sparregime",
+      "treatment": "Gewinn wird als sonstiges Einkommen (redditi diversi) zum progressiven Satz besteuert"
+    },
+    {
+      "scenario": "Verkauf über ein verwaltetes Sparregime (risparmio amministrato/gestito)",
+      "treatment": "Der Intermediär wendet in Ihrem Namen eine Ersatzsteuer an — meist einfacher und potenziell günstiger als der progressive Satz"
+    },
+    {
+      "scenario": "Nachweise",
+      "treatment": "Es gilt keine Mindesthaltedauer; die Nutzung eines zertifizierten Händlers vereinfacht die Meldung so oder so"
+    }
   ],
   "faqs": [
     {
-      "q": "Muss ich Mehrwertsteuer auf Anlagegold in Italien zahlen?",
-      "a": "Nein, Anlagegold ist mehrwertsteuerbefreit."
+      "q": "Zahle ich in Italien Mehrwertsteuer auf Anlagegold?",
+      "a": "Nein, Anlagegold ist von der Mehrwertsteuer befreit."
     },
     {
       "q": "Wie wird der Gewinn besteuert?",
-      "a": "In der Regel als sonstiges Einkommen, sofern die Transaktion nicht über ein verwaltetes Sparregime mit anderer Behandlung erfolgt."
+      "a": "Grundsätzlich als sonstiges Einkommen zum progressiven Satz, sofern die Transaktion nicht über ein verwaltetes Sparregime bei einem zugelassenen Intermediär läuft."
+    },
+    {
+      "q": "Gibt es eine Mindesthaltedauer?",
+      "a": "Nein, Italien schreibt keine Mindesthaltedauer vor, damit Gold eine bestimmte steuerliche Behandlung erhält."
     }
   ]
 }

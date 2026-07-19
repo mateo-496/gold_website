@@ -6,8 +6,13 @@ import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import type { CountryKey } from "@/i18n/routing";
 import { PageHero } from "@/components/editorial/PageHero";
+import { CustomsTable } from "@/components/editorial/CustomsTable";
+import { SimpleTable } from "@/components/editorial/SimpleTable";
 
 type Faq = { q: string; a: string };
+type CustomsRow = { range: string; requirement: string; formLabel?: string; formUrl?: string };
+type ResaleRow = { scenario: string; treatment: string };
+type SectionTitles = { investmentGold: string; vat: string; customs: string; resale: string; faq: string };
 
 export function CountryPage({ country }: { country: CountryKey }) {
   const locale = useLocale();
@@ -16,8 +21,43 @@ export function CountryPage({ country }: { country: CountryKey }) {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const faqs = t.raw("faqs") as Faq[];
-  const exportPoints = t.raw("exportPoints") as string[];
-  const reventePoints = t.raw("reventePoints") as string[];
+  const customsRows = t.raw("customsRows") as CustomsRow[];
+
+  // Falls back to the generic countryPage titles if a country hasn't
+  // defined its own sectionTitles yet.
+  let sectionTitles: SectionTitles;
+  try {
+    sectionTitles = t.raw("sectionTitles") as SectionTitles;
+  } catch {
+    sectionTitles = {
+      investmentGold: tPage("investmentGoldTitle"),
+      vat: tPage("vatTitle"),
+      customs: tPage("customsTitle"),
+      resale: tPage("reventeTitle"),
+      faq: tPage("faqTitle"),
+    };
+  }
+
+  let investmentGoldText: string | null = null;
+  try {
+    investmentGoldText = t("investmentGoldText");
+  } catch {
+    investmentGoldText = null;
+  }
+
+  // Resale as a table where available, falling back to the old bullet
+  // list for countries not yet migrated to resaleRows.
+  let resaleRows: ResaleRow[] | null = null;
+  let reventePoints: string[] | null = null;
+  try {
+    resaleRows = t.raw("resaleRows") as ResaleRow[];
+  } catch {
+    try {
+      reventePoints = t.raw("reventePoints") as string[];
+    } catch {
+      reventePoints = [];
+    }
+  }
 
   return (
     <main className="bg-white">
@@ -34,7 +74,7 @@ export function CountryPage({ country }: { country: CountryKey }) {
       />
 
       {/* Hero */}
-      <section className="max-w-4xl mx-auto px-6 pt-6 pb-16">
+      <section className="max-w-4xl mx-auto px-6 pt-6 pb-20">
         <h1 className="font-serif text-5xl md:text-6xl leading-tight mb-6 text-neutral-900 flex items-center">
           <Image
             src={`/images/emblems/${country}.png`}
@@ -45,79 +85,75 @@ export function CountryPage({ country }: { country: CountryKey }) {
           />
           {t("name")}
         </h1>
-        <p className="text-neutral-600 leading-relaxed max-w-2xl text-lg">
+        <p className="text-neutral-600 leading-relaxed max-w-2xl">
           {t("intro")}
         </p>
       </section>
 
-      {/* Stat badges */}
-      <section className="max-w-4xl mx-auto px-6 pb-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-neutral-200">
-          <div className="bg-[#f5f5f5] p-8">
-            <p className="text-sm uppercase tracking-wide text-neutral-500 mb-2">
-              {t("stat1Label")}
-            </p>
-            <p className="font-serif italic text-3xl text-red-600">{t("stat1Value")}</p>
-          </div>
-          <div className="bg-[#f5f5f5] p-8">
-            <p className="text-sm uppercase tracking-wide text-neutral-500 mb-2">
-              {t("stat2Label")}
-            </p>
-            <p className="font-serif italic text-3xl text-red-600">{t("stat2Value")}</p>
-          </div>
+      {/* VAT and import */}
+      <section className="w-full bg-[#f5f5f5] py-20">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="font-serif text-3xl mb-6 text-neutral-900">{sectionTitles.vat}</h2>
+          <p className="text-neutral-800 leading-relaxed max-w-2xl">{t("vatText")}</p>
         </div>
       </section>
 
-      {/* Overview */}
-      <section className="max-w-4xl mx-auto px-6 pb-20">
-        <h2 className="font-serif text-3xl mb-6">{tPage("overview")}</h2>
-        <p className="text-neutral-600 leading-relaxed max-w-2xl">{t("overview")}</p>
-      </section>
-
-      {/* Export points */}
-      <section className="w-full bg-[#f5f5f5] px-6 py-20">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-serif text-3xl mb-8">{tPage("exportTitle")}</h2>
-          <ul className="space-y-4">
-            {exportPoints.map((point, i) => (
-              <li key={i} className="flex gap-4 items-start">
-                <span className="text-red-600 mt-1">—</span>
-                <span className="text-neutral-700 leading-relaxed">{point}</span>
-              </li>
-            ))}
-          </ul>
-          <Link
-            href={`/${locale}/export`}
-            className="inline-block mt-8 text-red-600 hover:opacity-70 transition-opacity text-sm"
-          >
-            {tPage("seeAllExport")}
-          </Link>
-        </div>
-      </section>
-
-      {/* Resale points */}
+      {/* Customs declaration */}
       <section className="max-w-4xl mx-auto px-6 py-20">
-        <h2 className="font-serif text-3xl mb-8">{tPage("reventeTitle")}</h2>
-        <ul className="space-y-4">
-          {reventePoints.map((point, i) => (
-            <li key={i} className="flex gap-4 items-start">
-              <span className="text-red-600 mt-1">—</span>
-              <span className="text-neutral-700 leading-relaxed">{point}</span>
-            </li>
-          ))}
-        </ul>
-        <Link
-          href={`/${locale}/revente`}
-          className="inline-block mt-8 text-red-600 hover:opacity-70 transition-opacity text-sm"
-        >
-          {tPage("seeAllRevente")}
-        </Link>
+        <h2 className="font-serif text-3xl mb-6 text-neutral-900">{sectionTitles.customs}</h2>
+        <p className="text-neutral-800 leading-relaxed max-w-2xl mb-10">{t("customsIntro")}</p>
+        <CustomsTable
+          headers={{
+            range: tPage("customsHeaders.range"),
+            requirement: tPage("customsHeaders.requirement"),
+            form: tPage("customsHeaders.form"),
+          }}
+          rows={customsRows}
+        />
       </section>
+
+      {/* Resale */}
+      <section className="w-full bg-[#f5f5f5] py-20">
+        <div className="max-w-4xl mx-auto px-6">
+
+          <h2 className="font-serif text-3xl mb-6 text-neutral-900">{sectionTitles.resale}</h2>
+          <p className="text-neutral-800 leading-relaxed max-w-2xl mb-10">{t("resaleIntro")}</p>
+          {resaleRows ? (
+            <SimpleTable
+              headers={{
+                left: tPage("resaleHeaders.scenario"),
+                right: tPage("resaleHeaders.treatment"),
+              }}
+              rows={resaleRows.map((r) => ({ left: r.scenario, right: r.treatment }))}
+            />
+          ) : (
+            <ul className="space-y-4">
+              {reventePoints?.map((point, i) => (
+                <li key={i} className="flex gap-4 items-start">
+                  <span className="text-red-600 mt-1">—</span>
+                  <span className="text-neutral-800 leading-relaxed">{point}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+
+        </div>
+      </section>
+
+      {/* What is investment gold */}
+      {investmentGoldText && (
+        <section className="max-w-4xl mx-auto px-6 py-20">
+          <h2 className="font-serif text-3xl mb-6 text-neutral-900">
+            {sectionTitles.investmentGold}
+          </h2>
+          <p className="text-neutral-800 leading-relaxed max-w-2xl">{investmentGoldText}</p>
+        </section>
+      )}
 
       {/* FAQ */}
-      <section className="w-full bg-[#f5f5f5] px-6 py-20">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-serif text-3xl mb-8">{tPage("faqTitle")}</h2>
+      <section className="w-full bg-[#f5f5f5] py-20">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-neutral-800 font-serif text-3xl mb-8">{sectionTitles.faq}</h2>
           <div className="divide-y divide-neutral-300">
             {faqs.map((faq, i) => (
               <div key={i}>
@@ -125,13 +161,13 @@ export function CountryPage({ country }: { country: CountryKey }) {
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
                   className="w-full flex justify-between items-center text-left py-6"
                 >
-                  <span className="font-serif text-lg pr-6">{faq.q}</span>
+                  <span className="text-neutral-800 font-serif text-lg pr-6">{faq.q}</span>
                   <span className="text-red-600 text-xl shrink-0">
                     {openFaq === i ? "−" : "+"}
                   </span>
                 </button>
                 {openFaq === i && (
-                  <p className="text-neutral-600 leading-relaxed pb-6 max-w-2xl">{faq.a}</p>
+                  <p className="text-neutral-800 leading-relaxed pb-6 max-w-2xl">{faq.a}</p>
                 )}
               </div>
             ))}
@@ -139,19 +175,6 @@ export function CountryPage({ country }: { country: CountryKey }) {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="max-w-4xl mx-auto px-6 py-24 text-center">
-        <h2 className="font-serif text-3xl mb-4">{tPage("ctaTitle")}</h2>
-        <p className="text-neutral-600 mb-8">
-          {tPage("ctaText", { country: t("name") })}
-        </p>
-        <Link
-          href={`/${locale}/achat`}
-          className="inline-block bg-neutral-900 text-white px-8 py-3 hover:bg-neutral-700 transition-colors"
-        >
-          {tPage("ctaButton")}
-        </Link>
-      </section>
     </main>
   );
 }

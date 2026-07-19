@@ -1,30 +1,64 @@
 {
   "name": "France",
   "flag": "🇫🇷",
-  "intro": "En France, la revente d'or physique est soumise à une taxe forfaitaire, sauf si vous conservez une preuve d'achat justifiant le prix de revient réel.",
+  "intro": "En France, la fiscalité à la revente de l'or dépend d'abord de vos justificatifs, pas de la propriété elle-même — c'est votre capacité à prouver l'achat qui détermine le régime applicable. Comprendre les règles de TVA à l'importation, le seuil de déclaration en douane et les deux régimes de revente concurrents est ce qui détermine votre produit net réel.",
   "stat1Label": "Seuil de déclaration",
   "stat1Value": "10 000 €",
   "stat2Label": "Taxe à la revente",
   "stat2Value": "11,5 % (par défaut)",
-  "overview": "L'or d'investissement est exonéré de TVA en France, conformément à la directive européenne. À la revente, le régime par défaut applique une taxe forfaitaire de 11,5 % sur le prix de vente. Si vous pouvez justifier du prix et de la date d'acquisition, vous pouvez opter pour le régime des plus-values sur biens meubles, potentiellement plus avantageux après plusieurs années de détention.",
-  "exportPoints": [
-    "Déclaration obligatoire au-delà de 10 000 € en espèces à la frontière (règle UE)",
-    "Aucune autorisation spécifique pour l'or d'investissement à usage privé",
-    "La recodification de l'art. 298 sexdecies A du CGI entre en vigueur en septembre 2026"
+  "sectionTitles": {
+    "investmentGold": "Qu'est-ce que l'or d'investissement ?",
+    "vat": "TVA et importation en France",
+    "customs": "Déclaration en douane",
+    "resale": "Revente",
+    "faq": "Questions fréquentes"
+  },
+  "investmentGoldText": "« L'or d'investissement » est une catégorie juridique définie, pas simplement une question de pureté. En vertu de la directive européenne 98/80/CE, elle couvre les lingots et lingotins titrant au moins 995‰, produits par un raffineur accrédité, ainsi que les pièces d'or titrant au moins 900‰, frappées après 1800, ayant ou ayant eu cours légal dans leur pays d'origine, et normalement vendues à un prix ne dépassant pas de plus de 80 % la valeur de l'or qu'elles contiennent. La Commission européenne publie chaque année une liste des pièces répondant à cette dernière condition — on y trouve par exemple le Vreneli suisse, le Krugerrand, l'American Eagle et le Napoléon. Seul l'or répondant à cette définition bénéficie de l'exonération de TVA et du traitement à l'importation décrits ci-dessous ; les bijoux, les pièces de collection hors liste et les lingots sous 995‰ n'en bénéficient pas.",
+  "vatText": "L'or d'investissement — lingots et lingotins titrant au moins 995‰, ainsi que les pièces répondant aux critères de la directive européenne 98/80/CE — est exonéré de TVA à l'entrée en France, y compris en provenance de Suisse. Cette exonération est transposée en droit français à l'art. 298 sexdecies A du CGI. En pratique, aucune TVA n'est due à la frontière sur l'or éligible : l'exonération suit le métal, pas le lieu de résidence du vendeur, si bien que l'or acheté auprès d'un négociant suisse entre en France avec le même traitement exonéré qu'un or acheté sur le territoire, dès lors qu'il répond aux critères de l'or d'investissement.",
+  "customsIntro": "À la frontière franco-suisse, la douane française applique la règle européenne des transferts de capitaux : l'or (pièces titrant au moins 90 %, lingots titrant au moins 99,5 %) est assimilé à des espèces. L'obligation déclarative est donc déclenchée par la valeur transportée, et non par une catégorie spécifique à l'or.",
+  "customsRows": [
+    {
+      "range": "Moins de 10 000 €",
+      "requirement": "Aucune déclaration requise"
+    },
+    {
+      "range": "10 000 € ou plus",
+      "requirement": "Déclaration obligatoire avant le passage de la frontière",
+      "formLabel": "DALIA (télédéclaration) / Cerfa n°13426",
+      "formUrl": "https://www.douane.gouv.fr/demarche/vous-voyagez-avec-de-largent-liquide-especes-instruments-negociables-au-porteur-or-0"
+    }
   ],
-  "reventePoints": [
-    "Sans justificatif : taxe forfaitaire de 11,5 % sur le prix de vente",
-    "Avec justificatif : option pour le régime des plus-values, avec abattement pour durée de détention",
-    "Conservez systématiquement vos factures d'achat"
+  "resaleIntro": "Vendre de l'or en France déclenche l'un de deux régimes fiscaux, et c'est vous qui choisissez lequel s'applique — à condition d'avoir conservé les justificatifs. Sans preuve d'achat, la taxe forfaitaire de 11,5 % sur le prix de vente s'applique automatiquement, quel que soit le prix réellement payé. Avec une facture d'achat mentionnant le prix et la date, vous pouvez opter pour le régime des plus-values sur biens meubles, qui ne taxe que la plus-value et inclut un abattement pour durée de détention réduisant le montant imposable au fil des ans.",
+  "resaleRows": [
+    {
+      "scenario": "Sans justificatif d'achat",
+      "treatment": "Taxe forfaitaire de 11,5 % sur le prix de vente total — s'applique automatiquement, sans exception"
+    },
+    {
+      "scenario": "Objet descellé ou endommagé",
+      "treatment": "Si le bris du scellé ou l'état de l'objet empêche de prouver qu'il s'agit bien du bien acheté à l'origine, l'option pour les plus-values est perdue et la taxe forfaitaire de 11,5 % s'applique par défaut"
+    },
+    {
+      "scenario": "Avec justificatif d'achat",
+      "treatment": "Choix entre la taxe forfaitaire de 11,5 % sur le prix de vente, ou 36,2 % sur la plus-value — réduite d'un abattement de 5 % par année de détention au-delà de la 2e année, avec exonération totale après 22 ans"
+    }
   ],
   "faqs": [
     {
       "q": "Que se passe-t-il si je n'ai pas de facture d'achat ?",
-      "a": "Le régime par défaut de la taxe forfaitaire de 11,5 % sur le prix de vente s'applique automatiquement."
+      "a": "La taxe forfaitaire de 11,5 % sur le prix de vente total s'applique automatiquement — il n'existe aucun recours vers le régime des plus-values sans justificatif du prix et de la date d'acquisition."
     },
     {
       "q": "Puis-je éviter la taxe forfaitaire ?",
-      "a": "Oui, en optant pour le régime des plus-values sur biens meubles si vous disposez d'un justificatif d'achat, ce qui peut être plus avantageux selon la durée de détention."
+      "a": "Oui, mais uniquement en optant pour le régime des plus-values sur biens meubles, qui nécessite un justificatif du prix et de la date d'achat. Le fait que ce régime soit plus avantageux que la taxe forfaitaire dépend de votre durée de détention et de votre plus-value réelle."
+    },
+    {
+      "q": "Le fait d'acheter auprès d'un négociant suisse change-t-il quelque chose pour la fiscalité française ?",
+      "a": "Non. Ce qui compte, c'est votre résidence fiscale au moment de la vente, pas le lieu d'achat de l'or. Un résident fiscal français vendant de l'or est imposé selon les règles françaises, que l'or provienne d'un négociant suisse, français ou autre."
+    },
+    {
+      "q": "Dois-je déclarer automatiquement un achat d'or suisse aux autorités françaises ?",
+      "a": "Aucun mécanisme de déclaration automatique ne couvre la vente d'or physique — l'échange d'informations CRS/EAI ne s'applique pas à ce type de bien. Cela ne supprime pas l'obligation : les résidents français doivent déclarer eux-mêmes leurs ventes d'or imposables."
     }
   ]
 }

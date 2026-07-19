@@ -1,8 +1,20 @@
 {
   "breadcrumbExport": "Export",
   "overview": "Überblick",
+  "investmentGoldTitle": "Was ist Anlagegold?",
+  "vatTitle": "Mehrwertsteuer & Import aus der Schweiz",
   "exportTitle": "Export",
+  "customsTitle": "Zollanmeldung",
+  "customsHeaders": {
+    "range": "Betrag",
+    "requirement": "Pflicht",
+    "form": "Formular"
+  },
   "reventeTitle": "Wiederverkauf",
+  "resaleHeaders": {
+    "scenario": "Fallkonstellation",
+    "treatment": "Steuerliche Behandlung"
+  },
   "seeAllExport": "Alle Exportregeln ansehen →",
   "seeAllRevente": "Alle Wiederverkaufsregeln ansehen →",
   "faqTitle": "Häufig gestellte Fragen",

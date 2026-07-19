@@ -1,30 +1,60 @@
 {
   "name": "Allemagne",
   "flag": "🇩🇪",
-  "intro": "L'Allemagne offre l'une des sorties fiscales les plus intéressantes d'Europe : après un an de détention, la plus-value sur l'or physique est totalement exonérée d'impôt.",
+  "intro": "L'Allemagne offre l'une des sorties fiscales les plus attractives d'Europe : après un an de détention, la plus-value sur l'or physique est totalement exonérée d'impôt.",
   "stat1Label": "Seuil de déclaration",
   "stat1Value": "10 000 €",
-  "stat2Label": "Imposition après 1 an",
+  "stat2Label": "Taxe après 1 an",
   "stat2Value": "0 %",
-  "overview": "L'or d'investissement est exonéré de TVA en Allemagne (§25c UStG). Pour la fiscalité sur la revente, l'article §23 EStG prévoit une exonération totale de la plus-value dès lors que l'or a été détenu plus d'un an. En dessous d'un an, la plus-value est imposée au taux marginal, avec une franchise annuelle modeste.",
-  "exportPoints": [
-    "Déclaration obligatoire au-delà de 10 000 € en espèces à la frontière (règle UE)",
-    "Aucune autorisation spécifique pour l'or d'investissement à usage privé",
-    "TVA exonérée sur l'or d'investissement (§25c UStG)"
+  "sectionTitles": {
+    "investmentGold": "Qu'est-ce que l'or d'investissement ?",
+    "vat": "TVA et importation en Allemagne",
+    "customs": "Déclaration en douane",
+    "resale": "Revente",
+    "faq": "Questions fréquentes"
+  },
+  "investmentGoldText": "Selon le §25c UStG, l'or d'investissement couvre les lingots et lingotins titrant au moins 995‰, ainsi que les pièces titrant au moins 900‰, frappées après 1800, ayant ou ayant eu cours légal dans leur pays d'origine, et normalement vendues à un prix ne dépassant pas de plus de 80 % la valeur de l'or qu'elles contiennent — la même norme utilisée dans toute l'UE en vertu de la directive 98/80/CE. La Commission européenne publie chaque année une liste des pièces répondant à cette dernière condition, notamment le Krugerrand, le Vreneli et l'American Eagle. Seul l'or répondant à cette définition bénéficie de l'exonération de TVA décrite ci-dessous ; les bijoux et les pièces hors liste sont taxés comme des biens ordinaires.",
+  "vatText": "L'or d'investissement (lingots ≥995‰, pièces éligibles) est exonéré de TVA allemande (§25c UStG) à l'importation, y compris en provenance de Suisse, dans les mêmes conditions que dans le reste de l'UE.",
+  "customsIntro": "La frontière germano-suisse est une frontière extérieure de l'UE : l'or non monnayé titrant au moins 99,5 % est assimilé à des espèces par la douane allemande (Zoll).",
+  "customsRows": [
+    {
+      "range": "Moins de 10 000 €",
+      "requirement": "Aucune déclaration requise"
+    },
+    {
+      "range": "10 000 € ou plus",
+      "requirement": "Déclaration écrite requise via le portail douanier avant le passage de la frontière",
+      "formLabel": "Portail Zoll – déclaration de transport d'espèces (formulaire 040000_1)",
+      "formUrl": "https://www.zoll.de/DE/Privatpersonen/Reisen/Rueckkehr-aus-einem-Nicht-EU-Staat/Einschraenkungen/Barmittel/barmittel.html"
+    }
   ],
-  "reventePoints": [
-    "Détention de plus d'un an : plus-value totalement exonérée (§23 EStG)",
-    "Détention de moins d'un an : plus-value imposée au taux marginal",
-    "Conservez la date d'achat comme preuve de la durée de détention"
+  "resaleIntro": "En Allemagne, la plus-value à la revente est totalement exonérée d'impôt dès lors que vous avez détenu l'or plus d'un an (§23 EStG). Vendez avant ce délai, et la plus-value est imposée à votre taux marginal.",
+  "resaleRows": [
+    {
+      "scenario": "Détention de plus d'1 an",
+      "treatment": "0 % — plus-value totalement exonérée en vertu du §23 EStG"
+    },
+    {
+      "scenario": "Détention de moins d'1 an",
+      "treatment": "Imposée à votre taux marginal d'imposition sur le revenu ; un modeste abattement annuel (Freigrenze) peut s'appliquer aux petites ventes privées"
+    },
+    {
+      "scenario": "Justificatifs",
+      "treatment": "Conservez la date d'achat comme preuve de la durée de détention — c'est elle qui détermine le régime applicable"
+    }
   ],
   "faqs": [
     {
       "q": "Quand ma plus-value devient-elle exonérée d'impôt ?",
-      "a": "Après une durée de détention d'un an, conformément au §23 EStG."
+      "a": "Après un an de détention, en vertu du §23 EStG."
     },
     {
-      "q": "Dois-je payer la TVA à l'achat ?",
+      "q": "Est-ce que je paie la TVA à l'achat ?",
       "a": "Non, l'or d'investissement est exonéré de TVA en vertu du §25c UStG."
+    },
+    {
+      "q": "Que se passe-t-il si je vends avant le seuil d'un an ?",
+      "a": "La plus-value est imposée à votre taux marginal d'imposition sur le revenu, bien qu'un modeste abattement annuel puisse s'appliquer aux petites ventes privées."
     }
   ]
 }

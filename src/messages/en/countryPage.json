@@ -1,8 +1,20 @@
 {
   "breadcrumbExport": "Export",
   "overview": "Overview",
+  "investmentGoldTitle": "What is investment gold?",
+  "vatTitle": "VAT & importing from Switzerland",
   "exportTitle": "Export",
+  "customsTitle": "Customs declaration",
+  "customsHeaders": {
+    "range": "Amount",
+    "requirement": "Requirement",
+    "form": "Form"
+  },
   "reventeTitle": "Resale",
+  "resaleHeaders": {
+    "scenario": "Scenario",
+    "treatment": "Tax treatment"
+  },
   "seeAllExport": "See all export rules →",
   "seeAllRevente": "See all resale rules →",
   "faqTitle": "Frequently asked questions",

@@ -5,34 +5,45 @@
   "headers": {
     "country": "Pays",
     "threshold": "Seuil de déclaration",
-    "keyPoint": "Point clé",
+    "forms": "Formulaires",
     "more": "En savoir plus"
   },
   "countries": {
     "switzerland": {
       "name": "Suisse",
       "threshold": "Aucun seuil de déclaration à l'exportation",
-      "keyPoint": "Exonération de TVA pour l'or d'investissement (art. 23 al. 12 LTVA)"
+      "forms": [
+        { "label": "OFDF – transport d'espèces", "url": "https://www.bazg.admin.ch/fr/transport-argent-liquide-en-suisse" }
+      ]
     },
     "france": {
       "name": "France",
       "threshold": "EUR 10 000 en espèces (obligation déclarative UE)",
-      "keyPoint": "Taxe forfaitaire de 11,5 % à la revente, sauf justificatif d'achat conservé"
+      "forms": [
+        { "label": "DALIA (télédéclaration) / Cerfa n°13426", "url": "https://www.douane.gouv.fr/demarche/vous-voyagez-avec-de-largent-liquide-especes-instruments-negociables-au-porteur-or-0" }
+      ]
     },
     "germany": {
       "name": "Allemagne",
       "threshold": "EUR 10 000 en espèces (obligation déclarative UE)",
-      "keyPoint": "Exonération de plus-value après un an de détention (§23 EStG)"
+      "forms": [
+        { "label": "Portail Zoll – déclaration de transport d'espèces (formulaire 040000_1)", "url": "https://www.zoll.de/DE/Privatpersonen/Reisen/Rueckkehr-aus-einem-Nicht-EU-Staat/Einschraenkungen/Barmittel/barmittel.html" }
+      ]
     },
     "italy": {
       "name": "Italie",
       "threshold": "EUR 10 000 en espèces (obligation déclarative UE)",
-      "keyPoint": "TVA exonérée sur l'or d'investissement, régime de déclaration renforcé"
+      "forms": [
+        { "label": "Agenzia delle Dogane – transfert d'espèces", "url": "https://www.adm.gov.it/portale/en/dogane/operatore/modulistica/trasferimento-di-denaro-contante" },
+        { "label": "Banca d'Italia UIF – déclarations sur l'or", "url": "https://uif.bancaditalia.it/adempimenti-operatori/op-oro/index.html" }
+      ]
     },
     "usa": {
       "name": "États-Unis",
       "threshold": "USD 10 000 en espèces (déclaration FinCEN)",
-      "keyPoint": "Pas de TVA fédérale ; fiscalité sur plus-value variable selon l'État"
+      "forms": [
+        { "label": "CBP – Argent et instruments monétaires", "url": "https://www.cbp.gov/travel/international-visitors/money-monetary-instruments" }
+      ]
     }
   }
 }

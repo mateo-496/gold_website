@@ -1,30 +1,60 @@
 {
   "name": "Stati Uniti",
   "flag": "🇺🇸",
-  "intro": "Negli Stati Uniti, l'oro fisico è classificato come oggetto da collezione, il che comporta un'aliquota fiscale federale sulla plusvalenza fino al 28%, distinta dalle aliquote abituali sulle azioni.",
+  "intro": "Negli Stati Uniti, l'oro fisico è classificato come oggetto da collezione, il che comporta un'aliquota fiscale federale sul guadagno fino al 28%, distinta dalle aliquote abituali sulle azioni.",
   "stat1Label": "Soglia di dichiarazione",
-  "stat1Value": "$ 10.000",
-  "stat2Label": "Tassazione federale max.",
+  "stat1Value": "10.000 $",
+  "stat2Label": "Tassa federale max.",
   "stat2Value": "28%",
-  "overview": "Non esiste un'IVA federale negli Stati Uniti, ma alcuni Stati applicano un'imposta sulle vendite a seconda del tipo di transazione. L'oro fisico è classificato come «collectible» dall'IRS: la plusvalenza a lungo termine (detenzione oltre un anno) è tassata fino al 28% a livello federale, contro un'aliquota generalmente più bassa per le azioni. La tassazione varia anche in base allo Stato di residenza.",
-  "exportPoints": [
-    "Dichiarazione obbligatoria (modulo FinCEN 105) oltre 10.000 $ in contanti",
-    "Nessuna autorizzazione all'esportazione specifica per l'oro ad uso privato",
-    "Verificare le regole sull'imposta sulle vendite del proprio Stato"
+  "sectionTitles": {
+    "investmentGold": "Cosa si intende per oro da investimento?",
+    "vat": "Importazione e dichiarazione doganale del valore",
+    "customs": "Dichiarazione doganale",
+    "resale": "Rivendita",
+    "faq": "Domande frequenti"
+  },
+  "investmentGoldText": "Gli Stati Uniti non applicano un'IVA federale, quindi non esiste un equivalente della categoria giuridica \"oro da investimento\". Ciò che conta invece è come l'IRS classifica l'oro fisico a fini fiscali: lingotti, tondelli e monete sono trattati come \"oggetti da collezione\" ai sensi dell'IRC §408(m), indipendentemente dalla purezza, il che spiega perché il trattamento delle plusvalenze descritto di seguito differisce da quello delle azioni ordinarie. Separatamente, se l'oro è detenuto in un conto pensionistico, solo i lingotti e le monete che soddisfano requisiti specifici di purezza e di raffineria — generalmente purezza pari o superiore a 995‰, oltre a un breve elenco di monete nominate come l'American Gold Eagle — sono ammissibili per un IRA ai sensi del §408(m)(3). Questa regola di ammissibilità riguarda la struttura del conto, non il trattamento fiscale della rivendita qui trattato.",
+  "vatText": "Gli Stati Uniti non applicano un'IVA federale. L'oro importato dalla Svizzera è generalmente esente da dazi doganali, ma il suo valore deve essere dichiarato alla U.S. Customs and Border Protection (CBP) una volta raggiunta la soglia di dichiarazione indicata di seguito. Alcuni stati applicano una propria imposta sulle vendite a seconda del tipo di transazione e della residenza dell'acquirente.",
+  "customsIntro": "L'oro fisico non è uno \"strumento monetario\" ai fini del modulo FinCEN 105, ma il suo valore deve comunque essere dichiarato alla CBP una volta raggiunti i 10.000 $.",
+  "customsRows": [
+    {
+      "range": "Meno di 10.000 $",
+      "requirement": "Solo dichiarazione doganale standard delle merci"
+    },
+    {
+      "range": "10.000 $ o più",
+      "requirement": "Dichiarazione di valore obbligatoria alla CBP; può essere richiesto anche il modulo FinCEN 105",
+      "formLabel": "CBP – Denaro e strumenti monetari",
+      "formUrl": "https://www.cbp.gov/travel/international-visitors/money-monetary-instruments"
+    }
   ],
-  "reventePoints": [
-    "Distinzione breve/lungo termine in base alla durata di detenzione (1 anno)",
-    "Aliquota federale massima del 28% sulle plusvalenze a lungo termine (oggetto da collezione)",
-    "La tassazione varia in base allo Stato di residenza"
+  "resaleIntro": "Negli Stati Uniti, l'oro fisico è trattato come un \"oggetto da collezione\" anziché come un normale bene patrimoniale, il che limita l'aliquota federale a lungo termine al 28%, invece delle aliquote più basse applicate alle azioni.",
+  "resaleRows": [
+    {
+      "scenario": "Detenuto per oltre 1 anno (lungo termine)",
+      "treatment": "Tassato come oggetto da collezione all'aliquota sulle plusvalenze, limitata al 28% a livello federale"
+    },
+    {
+      "scenario": "Detenuto per meno di 1 anno (breve termine)",
+      "treatment": "Tassato come reddito ordinario alla vostra aliquota federale marginale"
+    },
+    {
+      "scenario": "Imposte statali",
+      "treatment": "Molti stati aggiungono una propria imposta sulle plusvalenze o sul reddito oltre all'aliquota federale — verificate il vostro stato di residenza"
+    }
   ],
   "faqs": [
     {
       "q": "L'oro fisico è trattato come un'azione ai fini fiscali?",
-      "a": "No, l'IRS lo classifica come oggetto da collezione, con un'aliquota federale massima del 28% sulla plusvalenza a lungo termine."
+      "a": "No, l'IRS lo classifica come oggetto da collezione, con un'aliquota federale massima del 28% sul guadagno a lungo termine, anziché le aliquote standard sulle plusvalenze."
     },
     {
-      "q": "Esiste un'IVA federale sull'oro negli Stati Uniti?",
-      "a": "No, ma alcuni Stati applicano un'imposta sulle vendite a seconda della transazione."
+      "q": "C'è un'IVA federale sull'oro negli Stati Uniti?",
+      "a": "No, ma alcuni stati applicano un'imposta sulle vendite a seconda della transazione."
+    },
+    {
+      "q": "Il periodo di detenzione è importante?",
+      "a": "Sì. L'oro detenuto per oltre un anno riceve il trattamento a lungo termine da oggetto da collezione (fino al 28% a livello federale); detenuto per meno di un anno, è tassato come reddito ordinario alla vostra aliquota marginale."
     }
   ]
 }

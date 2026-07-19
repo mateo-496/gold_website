@@ -6,16 +6,48 @@
   "stat1Value": "€10,000",
   "stat2Label": "Tax on gain",
   "stat2Value": "Miscellaneous income",
-  "overview": "Investment gold (bars and certified coins) is VAT-exempt in Italy. Resale by an individual is generally treated as taxable miscellaneous income, unless the transaction goes through a managed savings regime offering more favorable treatment. The declaration regime for precious metals transactions is stricter than elsewhere in the eurozone.",
-  "exportPoints": [
-    "Declaration mandatory above €10,000 in cash at the border (EU rule)",
-    "Stricter reporting obligations for physical gold transactions",
-    "Keep all transaction records"
+  "sectionTitles": {
+    "investmentGold": "What is investment gold?",
+    "vat": "VAT and import to Italy",
+    "customs": "Customs declaration",
+    "resale": "Resale",
+    "faq": "Frequently asked questions"
+  },
+  "investmentGoldText": "Investment gold is the same defined category used across the EU: bars and ingots of at least 995‰ purity produced by an accredited refiner, and coins that are at least 900‰ pure, minted after 1800, are or have been legal tender in their country of origin, and are normally sold at no more than 80% above the value of the gold they contain. Italian VAT law exempts this category on the same basis as the rest of the bloc. Only gold that fits this definition qualifies for the VAT exemption and the treatment described below; jewelry and coins outside the recognized list are taxed as ordinary goods.",
+  "vatText": "Investment gold is VAT-exempt on import into Italy, including from Switzerland, under the same EU directive applied across the rest of the bloc.",
+  "customsIntro": "Italy applies a dual declaration requirement specific to gold, on top of the standard European €10,000 rule.",
+  "customsRows": [
+    {
+      "range": "Under €10,000",
+      "requirement": "No declaration required"
+    },
+    {
+      "range": "€10,000 or more (physical transport)",
+      "requirement": "Mandatory customs declaration",
+      "formLabel": "Agenzia delle Dogane – cash transfer",
+      "formUrl": "https://www.adm.gov.it/portale/en/dogane/operatore/modulistica/trasferimento-di-denaro-contante"
+    },
+    {
+      "range": "€10,000 or more (gold transaction)",
+      "requirement": "Separate declaration to the Financial Intelligence Unit (UIF), regardless of transfer method",
+      "formLabel": "Banca d'Italia UIF – gold declarations",
+      "formUrl": "https://uif.bancaditalia.it/adempimenti-operatori/op-oro/index.html"
+    }
   ],
-  "reventePoints": [
-    "Gain taxed as miscellaneous income, unless under a managed savings regime",
-    "No minimum holding period",
-    "Go through a certified dealer to simplify reporting"
+  "resaleIntro": "In Italy, the resale gain is taxed as miscellaneous income at progressive rates by default. Selling through a managed savings account with an authorized intermediary can change how that tax is collected.",
+  "resaleRows": [
+    {
+      "scenario": "Standard sale, no managed savings regime",
+      "treatment": "Gain taxed as miscellaneous income (redditi diversi) at progressive rates"
+    },
+    {
+      "scenario": "Sale through a managed savings regime (risparmio amministrato/gestito)",
+      "treatment": "The intermediary applies a substitute tax on your behalf, generally simpler and potentially more favorable than progressive rates"
+    },
+    {
+      "scenario": "Documentation",
+      "treatment": "No minimum holding period applies; using a certified dealer simplifies reporting either way"
+    }
   ],
   "faqs": [
     {
@@ -24,7 +56,11 @@
     },
     {
       "q": "How is the gain taxed?",
-      "a": "Generally as miscellaneous income, unless the transaction goes through a managed savings regime with different treatment."
+      "a": "Generally as miscellaneous income at progressive rates, unless the transaction goes through a managed savings regime with an authorized intermediary."
+    },
+    {
+      "q": "Is there a minimum holding period?",
+      "a": "No, Italy does not impose a minimum holding period for gold to qualify for any particular tax treatment."
     }
   ]
 }

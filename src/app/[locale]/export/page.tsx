@@ -3,14 +3,15 @@ import { CountryTable } from "@/components/editorial/CountryTable";
 import { PageHero } from "@/components/editorial/PageHero";
 
 const COUNTRY_EMBLEMS: Record<string, string> = {
-  switzerland: "/images/emblems/switzerland.png",
   france: "/images/emblems/france.png",
   germany: "/images/emblems/germany.png",
   italy: "/images/emblems/italy.png",
   usa: "/images/emblems/usa.png",
 };
 
-const COUNTRY_ORDER = ["switzerland", "france", "germany", "italy", "usa"] as const;
+const COUNTRY_ORDER = ["france", "germany", "italy", "usa"] as const;
+
+type FormLink = { label: string; url: string };
 
 export default function ExportPage() {
   const t = useTranslations("export");
@@ -20,7 +21,7 @@ export default function ExportPage() {
     emblem: COUNTRY_EMBLEMS[key],
     name: t(`countries.${key}.name`),
     threshold: t(`countries.${key}.threshold`),
-    keyPoint: t(`countries.${key}.keyPoint`),
+    forms: t.raw(`countries.${key}.forms`) as FormLink[],
   }));
 
   return (
@@ -32,7 +33,7 @@ export default function ExportPage() {
           <h1 className="font-serif text-4xl md:text-5xl mb-6 leading-tight text-neutral-900">
             {t("heading")}
           </h1>
-          <p className="text-neutral-600 leading-relaxed max-w-2xl mb-16">
+          <p className="text-neutral-700 leading-relaxed max-w-2xl mb-16">
             {t("intro")}
           </p>
 
@@ -40,7 +41,7 @@ export default function ExportPage() {
             headers={{
               country: t("headers.country"),
               threshold: t("headers.threshold"),
-              keyPoint: t("headers.keyPoint"),
+              forms: t("headers.forms"),
               more: t("headers.more"),
             }}
             moreLabel={t("headers.more")}

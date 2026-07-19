@@ -5,34 +5,45 @@
   "headers": {
     "country": "Land",
     "threshold": "Meldeschwelle",
-    "keyPoint": "Wichtigster Punkt",
+    "forms": "Formulare",
     "more": "Mehr erfahren"
   },
   "countries": {
     "switzerland": {
       "name": "Schweiz",
       "threshold": "Keine Meldeschwelle bei der Ausfuhr",
-      "keyPoint": "Mehrwertsteuerbefreiung für Anlagegold (Art. 23 Abs. 12 MWSTG)"
+      "forms": [
+        { "label": "BAZG – Bargeldtransport", "url": "https://www.bazg.admin.ch/fr/transport-argent-liquide-en-suisse" }
+      ]
     },
     "france": {
       "name": "Frankreich",
       "threshold": "EUR 10.000 in bar (EU-Meldepflicht)",
-      "keyPoint": "Pauschalsteuer von 11,5 % beim Wiederverkauf, außer bei aufbewahrtem Kaufnachweis"
+      "forms": [
+        { "label": "DALIA (online) / Cerfa-Formular Nr. 13426", "url": "https://www.douane.gouv.fr/demarche/vous-voyagez-avec-de-largent-liquide-especes-instruments-negociables-au-porteur-or-0" }
+      ]
     },
     "germany": {
       "name": "Deutschland",
       "threshold": "EUR 10.000 in bar (EU-Meldepflicht)",
-      "keyPoint": "Steuerfreier Gewinn nach einjähriger Haltedauer (§23 EStG)"
+      "forms": [
+        { "label": "Zoll-Portal – Barmittelanmeldeerklärung (Formular 040000_1)", "url": "https://www.zoll.de/DE/Privatpersonen/Reisen/Rueckkehr-aus-einem-Nicht-EU-Staat/Einschraenkungen/Barmittel/barmittel.html" }
+      ]
     },
     "italy": {
       "name": "Italien",
       "threshold": "EUR 10.000 in bar (EU-Meldepflicht)",
-      "keyPoint": "Mehrwertsteuerbefreit auf Anlagegold, verschärfte Meldepflichten"
+      "forms": [
+        { "label": "Agenzia delle Dogane – Bargeldtransfer", "url": "https://www.adm.gov.it/portale/en/dogane/operatore/modulistica/trasferimento-di-denaro-contante" },
+        { "label": "Banca d'Italia UIF – Goldmeldungen", "url": "https://uif.bancaditalia.it/adempimenti-operatori/op-oro/index.html" }
+      ]
     },
     "usa": {
       "name": "USA",
       "threshold": "USD 10.000 in bar (FinCEN-Meldung)",
-      "keyPoint": "Keine Bundes-Mehrwertsteuer; Kapitalertragsteuer variiert je nach Bundesstaat"
+      "forms": [
+        { "label": "CBP – Geld & monetäre Instrumente", "url": "https://www.cbp.gov/travel/international-visitors/money-monetary-instruments" }
+      ]
     }
   }
 }

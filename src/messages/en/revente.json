@@ -16,12 +16,12 @@
     },
     "france": {
       "name": "France",
-      "threshold": "No minimum period, proof of purchase recommended",
-      "keyPoint": "11.5% flat tax on sale price, unless proof of purchase is retained"
+      "taxRate": "11.5% / 36.2%",
+      "keyPoint": "Flat tax on sale price, unless proof of purchase is retained"
     },
     "germany": {
       "name": "Germany",
-      "threshold": "1-year holding period",
+      "taxRate": "1-year holding period",
       "keyPoint": "Gain fully tax-exempt after a one-year holding period (§23 EStG)"
     },
     "italy": {

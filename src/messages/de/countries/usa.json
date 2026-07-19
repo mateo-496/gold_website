@@ -1,30 +1,60 @@
 {
   "name": "USA",
   "flag": "🇺🇸",
-  "intro": "In den USA wird physisches Gold als Sammlerstück eingestuft, was zu einem föderalen Steuersatz auf den Gewinn von bis zu 28 % führt, abweichend von den üblichen Aktiensätzen.",
+  "intro": "In den USA wird physisches Gold als Sammlerstück eingestuft, was zu einem föderalen Steuersatz auf den Gewinn von bis zu 28 % führt — anders als bei den üblichen Aktienraten.",
   "stat1Label": "Meldeschwelle",
-  "stat1Value": "USD 10.000",
+  "stat1Value": "10.000 $",
   "stat2Label": "Max. Bundessteuer",
   "stat2Value": "28 %",
-  "overview": "Es gibt keine föderale Mehrwertsteuer in den USA, aber einige Bundesstaaten erheben je nach Transaktionsart eine Verkaufssteuer. Physisches Gold wird vom IRS als „Collectible” eingestuft: der langfristige Gewinn (Haltedauer über einem Jahr) wird auf Bundesebene mit bis zu 28 % besteuert, gegenüber einem in der Regel niedrigeren Satz für Aktien. Die Besteuerung variiert zudem je nach Wohnsitzstaat.",
-  "exportPoints": [
-    "Meldepflicht (FinCEN-Formular 105) ab USD 10.000 in bar",
-    "Keine spezielle Ausfuhrgenehmigung für Gold zum privaten Gebrauch",
-    "Verkaufssteuerregeln des jeweiligen Bundesstaats prüfen"
+  "sectionTitles": {
+    "investmentGold": "Was gilt als anlagefähiges Gold?",
+    "vat": "Import und Zollwertanmeldung",
+    "customs": "Zollanmeldung",
+    "resale": "Wiederverkauf",
+    "faq": "Häufig gestellte Fragen"
+  },
+  "investmentGoldText": "In den USA gibt es keine föderale Mehrwertsteuer und damit auch kein Äquivalent zur rechtlichen Kategorie „Anlagegold\". Entscheidend ist stattdessen, wie der IRS physisches Gold steuerlich einstuft: Barren, Rounds und Münzen gelten unabhängig von ihrer Reinheit als „Sammlerstück\" (Collectible) gemäß IRC §408(m), weshalb die unten beschriebene Kapitalertragsbehandlung von der gewöhnlicher Aktien abweicht. Wird Gold hingegen in einem Altersvorsorgekonto gehalten, sind nur Barren und Münzen, die bestimmte Feingehalts- und Scheideanstalt-Anforderungen erfüllen — im Allgemeinen mindestens 995‰ sowie eine kurze Liste namentlich genannter Münzen wie der American Gold Eagle — nach §408(m)(3) IRA-fähig. Diese Eignungsregel betrifft die Kontostruktur, nicht die hier behandelte steuerliche Behandlung beim Wiederverkauf.",
+  "vatText": "Die Vereinigten Staaten erheben keine föderale Mehrwertsteuer. Aus der Schweiz eingeführtes Gold ist in der Regel zollfrei, sein Wert muss jedoch beim U.S. Customs and Border Protection (CBP) angemeldet werden, sobald die untenstehende Meldeschwelle erreicht wird. Einige Bundesstaaten erheben je nach Art des Geschäfts und Wohnsitz des Käufers eine eigene Verkaufssteuer.",
+  "customsIntro": "Physisches Gold gilt nicht als „monetäres Instrument\" im Sinne des FinCEN-Formulars 105, sein Wert muss aber dennoch dem CBP gemeldet werden, sobald er 10.000 $ erreicht.",
+  "customsRows": [
+    {
+      "range": "Unter 10.000 $",
+      "requirement": "Nur normale Warenanmeldung"
+    },
+    {
+      "range": "10.000 $ oder mehr",
+      "requirement": "Verpflichtende Wertanmeldung beim CBP; das FinCEN-Formular 105 kann zusätzlich verlangt werden",
+      "formLabel": "CBP – Geld & monetäre Instrumente",
+      "formUrl": "https://www.cbp.gov/travel/international-visitors/money-monetary-instruments"
+    }
   ],
-  "reventePoints": [
-    "Unterscheidung kurz-/langfristig je nach Haltedauer (1 Jahr)",
-    "Maximaler Bundessteuersatz von 28 % auf langfristige Gewinne (Sammlerstück)",
-    "Besteuerung variiert je nach Wohnsitzstaat"
+  "resaleIntro": "In den USA wird physisches Gold als „Sammlerstück\" behandelt statt als gewöhnliches Kapitalvermögen, wodurch der föderale Langfristsatz bei 28 % gedeckelt ist, statt der niedrigeren Sätze, die für Aktien gelten.",
+  "resaleRows": [
+    {
+      "scenario": "Haltedauer über 1 Jahr (langfristig)",
+      "treatment": "Besteuerung als Sammlerstück zum Kapitalertragssatz, auf Bundesebene gedeckelt bei 28 %"
+    },
+    {
+      "scenario": "Haltedauer unter 1 Jahr (kurzfristig)",
+      "treatment": "Besteuerung als gewöhnliches Einkommen zu Ihrem persönlichen Bundessteuersatz"
+    },
+    {
+      "scenario": "Bundesstaatliche Steuern",
+      "treatment": "Viele Bundesstaaten erheben zusätzlich zum Bundessatz eine eigene Kapitalertrags- oder Einkommensteuer — prüfen Sie Ihren Wohnsitzstaat"
+    }
   ],
   "faqs": [
     {
       "q": "Wird physisches Gold steuerlich wie eine Aktie behandelt?",
-      "a": "Nein, der IRS stuft es als Sammlerstück ein, mit einem maximalen Bundessteuersatz von 28 % auf den langfristigen Gewinn."
+      "a": "Nein, der IRS stuft es als Sammlerstück ein, mit einem maximalen Bundessatz von 28 % auf den langfristigen Gewinn, statt der üblichen Kapitalertragssätze."
     },
     {
       "q": "Gibt es eine föderale Mehrwertsteuer auf Gold in den USA?",
-      "a": "Nein, aber einige Bundesstaaten erheben je nach Transaktion eine Verkaufssteuer."
+      "a": "Nein, aber einige Bundesstaaten erheben je nach Geschäft eine Verkaufssteuer."
+    },
+    {
+      "q": "Spielt die Haltedauer eine Rolle?",
+      "a": "Ja. Gold, das länger als ein Jahr gehalten wird, erhält die langfristige Sammlerstück-Behandlung (bis zu 28 % auf Bundesebene); wird es unter einem Jahr gehalten, wird es als gewöhnliches Einkommen zu Ihrem persönlichen Steuersatz besteuert."
     }
   ]
 }

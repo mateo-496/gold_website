@@ -1,30 +1,60 @@
 {
   "name": "Deutschland",
   "flag": "🇩🇪",
-  "intro": "Deutschland bietet einen der attraktivsten steuerlichen Ausstiege Europas: Nach einjähriger Haltedauer ist der Gewinn aus physischem Gold vollständig steuerfrei.",
+  "intro": "Deutschland bietet einen der attraktivsten Steuerausgänge Europas: Nach einer Haltedauer von einem Jahr ist der Gewinn aus physischem Gold vollständig steuerfrei.",
   "stat1Label": "Meldeschwelle",
-  "stat1Value": "EUR 10.000",
-  "stat2Label": "Besteuerung nach 1 Jahr",
+  "stat1Value": "10.000 €",
+  "stat2Label": "Steuer nach 1 Jahr",
   "stat2Value": "0 %",
-  "overview": "Anlagegold ist in Deutschland mehrwertsteuerbefreit (§25c UStG). Für die Besteuerung beim Wiederverkauf sieht §23 EStG eine vollständige Befreiung des Gewinns vor, sofern das Gold länger als ein Jahr gehalten wurde. Bei einer Haltedauer unter einem Jahr wird der Gewinn zum persönlichen Steuersatz besteuert, mit einer geringfügigen jährlichen Freigrenze.",
-  "exportPoints": [
-    "Meldepflicht ab EUR 10.000 in bar an der Grenze (EU-Regel)",
-    "Keine spezielle Genehmigung für Anlagegold zum privaten Gebrauch",
-    "Mehrwertsteuerbefreit auf Anlagegold (§25c UStG)"
+  "sectionTitles": {
+    "investmentGold": "Was ist Anlagegold?",
+    "vat": "Mehrwertsteuer und Import nach Deutschland",
+    "customs": "Zollanmeldung",
+    "resale": "Wiederverkauf",
+    "faq": "Häufig gestellte Fragen"
+  },
+  "investmentGoldText": "Nach §25c UStG umfasst Anlagegold Barren mit einem Feingehalt von mindestens 995‰ sowie Münzen mit mindestens 900‰ Feingehalt, die nach 1800 geprägt wurden, in ihrem Ursprungsland gesetzliches Zahlungsmittel sind oder waren, und die üblicherweise zu einem Preis verkauft werden, der den Goldwert um höchstens 80 % übersteigt — derselbe Standard, der gemäß Richtlinie 98/80/EG EU-weit gilt. Die Europäische Kommission veröffentlicht jährlich eine Liste der Münzen, die diese letzte Bedingung erfüllen, darunter der Krügerrand, der Vreneli und der American Eagle. Nur Gold, das dieser Definition entspricht, profitiert von der unten beschriebenen Mehrwertsteuerbefreiung; Schmuck und Münzen außerhalb der veröffentlichten Liste werden wie gewöhnliche Waren besteuert.",
+  "vatText": "Anlagegold (Barren ≥995‰, förderfähige Münzen) ist bei der Einfuhr nach Deutschland von der deutschen Mehrwertsteuer befreit (§25c UStG), auch aus der Schweiz, unter denselben Bedingungen wie im übrigen EU-Gebiet.",
+  "customsIntro": "Die deutsch-schweizerische Grenze ist eine EU-Außengrenze: unverarbeitetes Gold mit einem Feingehalt von mindestens 99,5 % wird vom deutschen Zoll als Bargeld eingestuft.",
+  "customsRows": [
+    {
+      "range": "Unter 10.000 €",
+      "requirement": "Keine Anmeldung erforderlich"
+    },
+    {
+      "range": "10.000 € oder mehr",
+      "requirement": "Schriftliche Anmeldung über das Zollportal vor Grenzübertritt erforderlich",
+      "formLabel": "Zoll-Portal – Barmittelanmeldeerklärung (Formular 040000_1)",
+      "formUrl": "https://www.zoll.de/DE/Privatpersonen/Reisen/Rueckkehr-aus-einem-Nicht-EU-Staat/Einschraenkungen/Barmittel/barmittel.html"
+    }
   ],
-  "reventePoints": [
-    "Haltedauer über einem Jahr: Gewinn vollständig steuerfrei (§23 EStG)",
-    "Haltedauer unter einem Jahr: Gewinn wird zum persönlichen Steuersatz besteuert",
-    "Kaufdatum als Nachweis der Haltedauer aufbewahren"
+  "resaleIntro": "In Deutschland ist der Gewinn beim Wiederverkauf vollständig steuerfrei, sobald Sie das Gold länger als ein Jahr gehalten haben (§23 EStG). Verkaufen Sie davor, wird der Gewinn stattdessen zu Ihrem persönlichen Grenzsteuersatz besteuert.",
+  "resaleRows": [
+    {
+      "scenario": "Haltedauer über 1 Jahr",
+      "treatment": "0 % — Gewinn nach §23 EStG vollständig steuerfrei"
+    },
+    {
+      "scenario": "Haltedauer unter 1 Jahr",
+      "treatment": "Besteuerung zu Ihrem persönlichen Grenzsteuersatz; für geringfügige private Verkäufe kann eine bescheidene jährliche Freigrenze gelten"
+    },
+    {
+      "scenario": "Nachweise",
+      "treatment": "Bewahren Sie das Kaufdatum als Nachweis Ihrer Haltedauer auf — es entscheidet darüber, welches Regime gilt"
+    }
   ],
   "faqs": [
     {
       "q": "Wann wird mein Gewinn steuerfrei?",
-      "a": "Nach einer Haltedauer von einem Jahr gemäß §23 EStG."
+      "a": "Nach einer Haltedauer von einem Jahr, gemäß §23 EStG."
     },
     {
-      "q": "Muss ich beim Kauf Mehrwertsteuer zahlen?",
-      "a": "Nein, Anlagegold ist gemäß §25c UStG mehrwertsteuerbefreit."
+      "q": "Zahle ich beim Kauf Mehrwertsteuer?",
+      "a": "Nein, Anlagegold ist gemäß §25c UStG von der Mehrwertsteuer befreit."
+    },
+    {
+      "q": "Was passiert, wenn ich vor Ablauf eines Jahres verkaufe?",
+      "a": "Der Gewinn wird zu Ihrem persönlichen Grenzsteuersatz besteuert, wobei für geringfügige private Verkäufe eine bescheidene jährliche Freigrenze gelten kann."
     }
   ]
 }

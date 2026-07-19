@@ -1,8 +1,20 @@
 {
   "breadcrumbExport": "Export",
   "overview": "Vue d'ensemble",
+  "investmentGoldTitle": "Qu'est-ce que l'or d'investissement ?",
+  "vatTitle": "TVA et importation depuis la Suisse",
   "exportTitle": "Export",
+  "customsTitle": "Déclaration en douane",
+  "customsHeaders": {
+    "range": "Montant",
+    "requirement": "Obligation",
+    "form": "Formulaire"
+  },
   "reventeTitle": "Revente",
+  "resaleHeaders": {
+    "scenario": "Cas de figure",
+    "treatment": "Traitement fiscal"
+  },
   "seeAllExport": "Voir toutes les règles d'export →",
   "seeAllRevente": "Voir toutes les règles de revente →",
   "faqTitle": "Questions fréquentes",

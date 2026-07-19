@@ -1,21 +1,53 @@
 {
   "name": "Italie",
   "flag": "🇮🇹",
-  "intro": "L'Italie exonère l'or d'investissement de TVA, mais applique un régime de déclaration renforcé et impose la plus-value comme revenu divers en l'absence de régime géré.",
+  "intro": "L'Italie exonère l'or d'investissement de TVA, mais applique un régime de déclaration plus strict et taxe la plus-value en tant que revenu divers, en l'absence d'un régime d'épargne géré.",
   "stat1Label": "Seuil de déclaration",
   "stat1Value": "10 000 €",
-  "stat2Label": "Imposition de la plus-value",
+  "stat2Label": "Taxe sur le gain",
   "stat2Value": "Revenu divers",
-  "overview": "L'or d'investissement (lingots et pièces certifiées) est exonéré de TVA en Italie. La revente par un particulier est en principe traitée comme un revenu divers imposable, sauf si l'opération transite par un régime d'épargne géré offrant un traitement plus favorable. Le régime de déclaration pour les transactions sur métaux précieux est plus strict qu'ailleurs en zone euro.",
-  "exportPoints": [
-    "Déclaration obligatoire au-delà de 10 000 € en espèces à la frontière (règle UE)",
-    "Obligations de déclaration renforcées pour les transactions sur or physique",
-    "Conservez tous les justificatifs de transaction"
+  "sectionTitles": {
+    "investmentGold": "Qu'est-ce que l'or d'investissement ?",
+    "vat": "TVA et importation en Italie",
+    "customs": "Déclaration en douane",
+    "resale": "Revente",
+    "faq": "Questions fréquentes"
+  },
+  "investmentGoldText": "L'or d'investissement est la même catégorie définie dans toute l'UE : lingots et lingotins titrant au moins 995‰, produits par un raffineur accrédité, et pièces titrant au moins 900‰, frappées après 1800, ayant ou ayant eu cours légal dans leur pays d'origine, et normalement vendues à un prix ne dépassant pas de plus de 80 % la valeur de l'or qu'elles contiennent. Le droit italien de la TVA exonère cette catégorie sur la même base que le reste du bloc. Seul l'or répondant à cette définition bénéficie de l'exonération de TVA et du traitement décrits ci-dessous ; les bijoux et les pièces hors liste reconnue sont taxés comme des biens ordinaires.",
+  "vatText": "L'or d'investissement est exonéré de TVA à l'importation en Italie, y compris en provenance de Suisse, en vertu de la même directive européenne appliquée dans le reste du bloc.",
+  "customsIntro": "L'Italie applique une double obligation de déclaration spécifique à l'or, en plus de la règle européenne standard de 10 000 €.",
+  "customsRows": [
+    {
+      "range": "Moins de 10 000 €",
+      "requirement": "Aucune déclaration requise"
+    },
+    {
+      "range": "10 000 € ou plus (transport physique)",
+      "requirement": "Déclaration en douane obligatoire",
+      "formLabel": "Agenzia delle Dogane – transfert d'espèces",
+      "formUrl": "https://www.adm.gov.it/portale/en/dogane/operatore/modulistica/trasferimento-di-denaro-contante"
+    },
+    {
+      "range": "10 000 € ou plus (transaction sur l'or)",
+      "requirement": "Déclaration distincte auprès de l'Unité d'information financière (UIF), quel que soit le mode de transfert",
+      "formLabel": "Banca d'Italia UIF – déclarations sur l'or",
+      "formUrl": "https://uif.bancaditalia.it/adempimenti-operatori/op-oro/index.html"
+    }
   ],
-  "reventePoints": [
-    "Plus-value imposée comme revenu divers, sauf régime d'épargne géré",
-    "Aucune durée minimale de détention",
-    "Passez par un négociant certifié pour simplifier la déclaration"
+  "resaleIntro": "En Italie, la plus-value à la revente est taxée comme un revenu divers au taux progressif par défaut. La vendre via un compte d'épargne géré auprès d'un intermédiaire agréé peut modifier la manière dont cette taxe est collectée.",
+  "resaleRows": [
+    {
+      "scenario": "Vente standard, sans régime d'épargne géré",
+      "treatment": "Plus-value taxée comme revenu divers (redditi diversi) au taux progressif"
+    },
+    {
+      "scenario": "Vente via un régime d'épargne géré (risparmio amministrato/gestito)",
+      "treatment": "L'intermédiaire applique un impôt de substitution en votre nom, généralement plus simple et potentiellement plus avantageux que le taux progressif"
+    },
+    {
+      "scenario": "Justificatifs",
+      "treatment": "Aucune durée minimale de détention ne s'applique ; passer par un négociant agréé simplifie la déclaration dans tous les cas"
+    }
   ],
   "faqs": [
     {
@@ -23,8 +55,12 @@
       "a": "Non, l'or d'investissement est exonéré de TVA."
     },
     {
-      "q": "Comment la plus-value est-elle imposée ?",
-      "a": "En règle générale comme un revenu divers, sauf si la transaction passe par un régime d'épargne géré offrant un traitement différent."
+      "q": "Comment le gain est-il imposé ?",
+      "a": "Généralement comme un revenu divers au taux progressif, sauf si la transaction passe par un régime d'épargne géré auprès d'un intermédiaire agréé."
+    },
+    {
+      "q": "Existe-t-il une durée minimale de détention ?",
+      "a": "Non, l'Italie n'impose aucune durée minimale de détention pour que l'or bénéficie d'un traitement fiscal particulier."
     }
   ]
 }

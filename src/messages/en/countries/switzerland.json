@@ -6,16 +6,42 @@
   "stat1Value": "None",
   "stat2Label": "Tax on resale",
   "stat2Value": "0% (individuals)",
-  "overview": "Investment gold (bars and certified coins of minimum fineness) has been VAT-exempt in Switzerland since 2000, confirmed by Art. 23 para. 12 of the VAT Act as of January 1, 2025. Capital gains realized by individuals on private movable assets, including physical gold, are not taxed at the federal level.",
-  "exportPoints": [
-    "No export authorization required for investment gold for private use",
-    "Standard customs checks when leaving the territory",
-    "Check the declaration thresholds of the destination country"
+  "sectionTitles": {
+    "investmentGold": "What is investment gold?",
+    "vat": "VAT on gold in Switzerland",
+    "customs": "Customs declaration",
+    "resale": "Resale",
+    "faq": "Frequently asked questions"
+  },
+  "investmentGoldText": "In Switzerland, gold qualifies as VAT-exempt investment gold under Art. 23 para. 12 of the VAT Act when it takes the form of bars or wafers of at least 995‰ fineness accepted by the bullion markets, or coins of at least 900‰ fineness that are or were legal tender and trade at a price closely tied to their gold content. This is broadly the same category used across the EU, so investment gold bought in Switzerland generally keeps its VAT-exempt status when it enters an EU country, provided it also meets that country's own criteria. Jewelry, medals, and numismatic coins outside this definition are taxed differently.",
+  "vatText": "Investment gold (bars from 995‰ fineness, recognized coins) is VAT-exempt in Switzerland under Art. 23 para. 12 of the VAT Act. This exemption already applies on purchase within Switzerland: no additional VAT is due on this gold, whether it stays in the country or is exported.",
+  "customsIntro": "Switzerland does not set a systematic written-declaration threshold, but requires you to provide information if asked by the Federal Office for Customs and Border Security (FOCBS).",
+  "customsRows": [
+    {
+      "range": "Any amount",
+      "requirement": "No written declaration required at the border"
+    },
+    {
+      "range": "CHF 10,000 or more, or on suspicion",
+      "requirement": "You must state your identity and the origin and purpose of the funds orally",
+      "formLabel": "FOCBS – transporting cash",
+      "formUrl": "https://www.bazg.admin.ch/fr/transport-argent-liquide-en-suisse"
+    }
   ],
-  "reventePoints": [
-    "No minimum holding period",
-    "Capital gain tax-exempt for individuals",
-    "Keep proof of purchase to facilitate resale"
+  "resaleIntro": "For an individual holding gold privately, the gain on resale is not taxed at the federal level. This exemption assumes ordinary private wealth management — frequent or large-scale trading can change how a sale is classified.",
+  "resaleRows": [
+    {
+      "scenario": "Private individual, occasional sale",
+      "treatment": "0% federal tax on the capital gain — full exemption, no minimum holding period"
+    },
+    {
+      "scenario": "Frequent or professional-style trading",
+      "treatment": "Cantonal authorities may reclassify gains as self-employment income, taxable at ordinary income rates"
+    },
+    {
+      "scenario": "Documentation",
+      "treatment": "No proof of purchase is required for the exemption, but keeping it supports your position if classification is ever questioned"
+    }
   ],
   "faqs": [
     {
@@ -24,7 +50,11 @@
     },
     {
       "q": "Is the gain on resale taxed?",
-      "a": "For an individual holding gold privately, no: capital gains on private movable assets are not taxed at the federal level."
+      "a": "For an individual holding gold privately as part of ordinary wealth management, no: capital gains on private movable assets are not taxed at the federal level."
+    },
+    {
+      "q": "Can I lose this tax-free treatment?",
+      "a": "Yes. If your trading pattern is frequent or large enough to look like a professional activity, cantonal tax authorities can reclassify the gains as self-employment income, which is taxed at ordinary rates."
     }
   ]
 }

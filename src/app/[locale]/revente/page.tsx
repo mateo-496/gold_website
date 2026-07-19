@@ -32,7 +32,7 @@ export default function RevantePage() {
           <h1 className="font-serif text-4xl md:text-5xl mb-6 leading-tight text-neutral-900">
             {t("heading")}
           </h1>
-          <p className="text-neutral-600 leading-relaxed max-w-2xl mb-16">
+          <p className="text-neutral-700 leading-relaxed max-w-2xl mb-16">
             {t("intro")}
           </p>
 

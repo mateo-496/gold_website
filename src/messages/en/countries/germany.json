@@ -6,16 +6,42 @@
   "stat1Value": "€10,000",
   "stat2Label": "Tax after 1 year",
   "stat2Value": "0%",
-  "overview": "Investment gold is VAT-exempt in Germany (§25c UStG). For resale taxation, §23 EStG provides full exemption of the gain once the gold has been held for more than one year. Below one year, the gain is taxed at the marginal rate, with a modest annual allowance.",
-  "exportPoints": [
-    "Declaration mandatory above €10,000 in cash at the border (EU rule)",
-    "No specific authorization for investment gold for private use",
-    "VAT-exempt on investment gold (§25c UStG)"
+  "sectionTitles": {
+    "investmentGold": "What is investment gold?",
+    "vat": "VAT and import to Germany",
+    "customs": "Customs declaration",
+    "resale": "Resale",
+    "faq": "Frequently asked questions"
+  },
+  "investmentGoldText": "Under §25c UStG, investment gold covers bars and ingots of at least 995‰ purity, and coins that are at least 900‰ pure, minted after 1800, are or have been legal tender in their country of origin, and are normally sold at no more than 80% above the value of the gold they contain — the same standard used across the EU under Directive 98/80/EC. The European Commission publishes an annual list of coins meeting this last condition, including the Krugerrand, the Vreneli, and the American Eagle. Only gold that fits this definition qualifies for the VAT exemption described below; jewelry and coins outside the published list are taxed as ordinary goods.",
+  "vatText": "Investment gold (bars ≥995‰, eligible coins) is exempt from German VAT (§25c UStG) on import, including from Switzerland, under the same conditions as the rest of the EU.",
+  "customsIntro": "The German-Swiss border is an external EU border: unminted gold of at least 99.5% fineness is treated as cash by German customs (Zoll).",
+  "customsRows": [
+    {
+      "range": "Under €10,000",
+      "requirement": "No declaration required"
+    },
+    {
+      "range": "€10,000 or more",
+      "requirement": "Written declaration required via the customs portal before crossing",
+      "formLabel": "Zoll-Portal – Barmittelanmeldeerklärung (form 040000_1)",
+      "formUrl": "https://www.zoll.de/DE/Privatpersonen/Reisen/Rueckkehr-aus-einem-Nicht-EU-Staat/Einschraenkungen/Barmittel/barmittel.html"
+    }
   ],
-  "reventePoints": [
-    "Holding period over one year: gain fully tax-exempt (§23 EStG)",
-    "Holding period under one year: gain taxed at marginal rate",
-    "Keep the purchase date as proof of holding period"
+  "resaleIntro": "In Germany, the resale gain is fully tax-exempt once you've held the gold for more than one year (§23 EStG). Sell before that, and the gain is taxed at your marginal rate instead.",
+  "resaleRows": [
+    {
+      "scenario": "Held over 1 year",
+      "treatment": "0% — gain fully exempt under §23 EStG"
+    },
+    {
+      "scenario": "Held under 1 year",
+      "treatment": "Taxed at your personal marginal income tax rate; a modest annual allowance (Freigrenze) may apply to minor private sales"
+    },
+    {
+      "scenario": "Documentation",
+      "treatment": "Keep the purchase date as your proof of holding period — it's what determines which regime applies"
+    }
   ],
   "faqs": [
     {
@@ -25,6 +51,10 @@
     {
       "q": "Do I pay VAT on purchase?",
       "a": "No, investment gold is VAT-exempt under §25c UStG."
+    },
+    {
+      "q": "What happens if I sell before the one-year mark?",
+      "a": "The gain is taxed at your personal marginal income tax rate, though a modest annual allowance may apply to minor private sales."
     }
   ]
 }

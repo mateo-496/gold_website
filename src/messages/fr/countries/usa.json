@@ -1,30 +1,60 @@
 {
   "name": "États-Unis",
   "flag": "🇺🇸",
-  "intro": "Aux États-Unis, l'or physique est classé comme bien de collection, ce qui entraîne un taux d'imposition fédéral sur la plus-value pouvant atteindre 28 %, distinct des taux habituels sur les actions.",
+  "intro": "Aux États-Unis, l'or physique est classé comme objet de collection, ce qui entraîne un taux d'imposition fédéral sur la plus-value pouvant atteindre 28 %, distinct des taux habituels sur les actions.",
   "stat1Label": "Seuil de déclaration",
   "stat1Value": "10 000 $",
-  "stat2Label": "Imposition fédérale max.",
+  "stat2Label": "Taxe fédérale max.",
   "stat2Value": "28 %",
-  "overview": "Il n'existe pas de TVA fédérale aux États-Unis, mais certains États appliquent une taxe sur les ventes selon le type de transaction. L'or physique est classifié comme « collectible » par l'IRS : la plus-value à long terme (détention de plus d'un an) est imposée jusqu'à 28 % au niveau fédéral, contre un taux généralement plus bas pour les actions. La fiscalité varie aussi selon l'État de résidence.",
-  "exportPoints": [
-    "Déclaration obligatoire (formulaire FinCEN 105) au-delà de 10 000 $ en espèces",
-    "Aucune autorisation d'exportation spécifique pour l'or à usage privé",
-    "Vérifiez les règles de taxe sur les ventes de votre État"
+  "sectionTitles": {
+    "investmentGold": "Qu'est-ce que l'or d'investissement ?",
+    "vat": "Importation et déclaration de valeur en douane",
+    "customs": "Déclaration en douane",
+    "resale": "Revente",
+    "faq": "Questions fréquentes"
+  },
+  "investmentGoldText": "Les États-Unis n'appliquent pas de TVA fédérale, il n'existe donc pas d'équivalent à la catégorie juridique « or d'investissement ». Ce qui compte, c'est la manière dont l'IRS classe l'or physique à des fins fiscales : lingots, ronds et pièces sont traités comme des « objets de collection » en vertu de l'IRC §408(m), quelle que soit leur pureté, ce qui explique pourquoi le régime des plus-values décrit ci-dessous diffère de celui des actions ordinaires. Par ailleurs, si l'or est détenu dans un compte de retraite, seuls les lingots et pièces répondant à des exigences précises de pureté et de raffineur — généralement au moins 995‰, ainsi qu'une liste restreinte de pièces nommées comme l'American Gold Eagle — sont éligibles à l'IRA en vertu du §408(m)(3). Cette règle d'éligibilité concerne la structuration du compte, pas le régime fiscal de la revente traité ici.",
+  "vatText": "Les États-Unis ne perçoivent aucune TVA fédérale. L'or importé de Suisse est généralement exempté de droits de douane, mais sa valeur doit être déclarée au Service des douanes et de la protection des frontières (CBP) dès qu'elle atteint le seuil de déclaration ci-dessous. Certains États appliquent leur propre taxe de vente selon le type de transaction et la résidence de l'acheteur.",
+  "customsIntro": "L'or physique n'est pas un « instrument monétaire » au sens du formulaire FinCEN 105, mais sa valeur doit néanmoins être déclarée au CBP dès qu'elle atteint 10 000 $.",
+  "customsRows": [
+    {
+      "range": "Moins de 10 000 $",
+      "requirement": "Simple déclaration de marchandises"
+    },
+    {
+      "range": "10 000 $ ou plus",
+      "requirement": "Déclaration de valeur obligatoire au CBP ; le formulaire FinCEN 105 peut également être demandé",
+      "formLabel": "CBP – Argent et instruments monétaires",
+      "formUrl": "https://www.cbp.gov/travel/international-visitors/money-monetary-instruments"
+    }
   ],
-  "reventePoints": [
-    "Distinction court terme / long terme selon la durée de détention (1 an)",
-    "Taux fédéral maximal de 28 % sur les gains à long terme (bien de collection)",
-    "La fiscalité varie selon l'État de résidence"
+  "resaleIntro": "Aux États-Unis, l'or physique est traité comme un « objet de collection » plutôt que comme un actif en capital standard, ce qui plafonne le taux fédéral à long terme à 28 % au lieu des taux plus bas applicables aux actions.",
+  "resaleRows": [
+    {
+      "scenario": "Détention de plus d'1 an (long terme)",
+      "treatment": "Imposé comme un objet de collection au taux des plus-values, plafonné à 28 % au niveau fédéral"
+    },
+    {
+      "scenario": "Détention de moins d'1 an (court terme)",
+      "treatment": "Imposé comme un revenu ordinaire à votre taux marginal fédéral"
+    },
+    {
+      "scenario": "Taxes d'État",
+      "treatment": "De nombreux États ajoutent leur propre taxe sur les plus-values ou l'impôt sur le revenu en plus du taux fédéral — vérifiez votre État de résidence"
+    }
   ],
   "faqs": [
     {
-      "q": "L'or physique est-il traité comme une action pour l'imposition ?",
-      "a": "Non, l'IRS le classe comme bien de collection, avec un taux fédéral maximal de 28 % sur la plus-value à long terme."
+      "q": "L'or physique est-il traité comme une action à des fins fiscales ?",
+      "a": "Non, l'IRS le classe comme un objet de collection, avec un taux fédéral maximal de 28 % sur la plus-value à long terme, au lieu des taux standards sur les plus-values."
     },
     {
-      "q": "Existe-t-il une TVA fédérale sur l'or aux États-Unis ?",
-      "a": "Non, mais certains États appliquent une taxe sur les ventes selon la transaction."
+      "q": "Y a-t-il une TVA fédérale sur l'or aux États-Unis ?",
+      "a": "Non, mais certains États appliquent une taxe de vente selon la transaction."
+    },
+    {
+      "q": "La durée de détention a-t-elle une importance ?",
+      "a": "Oui. L'or détenu plus d'un an bénéficie du traitement des objets de collection à long terme (jusqu'à 28 % au niveau fédéral) ; détenu moins d'un an, il est imposé comme un revenu ordinaire à votre taux marginal."
     }
   ]
 }

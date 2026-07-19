@@ -1,21 +1,47 @@
 {
   "name": "Suisse",
   "flag": "🇨🇭",
-  "intro": "La Suisse offre l'un des cadres les plus favorables d'Europe pour l'achat, la détention et la revente d'or physique, avec une exonération de TVA sur l'or d'investissement et aucune imposition sur les gains en capital privés.",
+  "intro": "La Suisse offre l'un des cadres les plus favorables d'Europe pour acheter, détenir et revendre de l'or physique, avec une exonération de TVA sur l'or d'investissement et aucune imposition des plus-values privées.",
   "stat1Label": "Seuil de déclaration",
   "stat1Value": "Aucun",
-  "stat2Label": "Imposition à la revente",
+  "stat2Label": "Taxe à la revente",
   "stat2Value": "0 % (particuliers)",
-  "overview": "L'or d'investissement (barres et pièces certifiées à un titre minimal) est exonéré de TVA en Suisse depuis 2000, confirmé par l'art. 23 al. 12 LTVA depuis le 1er janvier 2025. Les gains en capital réalisés par des particuliers sur des biens mobiliers privés, dont l'or physique, ne sont pas imposés au niveau fédéral.",
-  "exportPoints": [
-    "Aucune autorisation d'exportation requise pour l'or d'investissement à usage privé",
-    "Contrôles douaniers standards à la sortie du territoire",
-    "Vérifiez les seuils de déclaration du pays de destination"
+  "sectionTitles": {
+    "investmentGold": "Qu'est-ce que l'or d'investissement ?",
+    "vat": "TVA sur l'or en Suisse",
+    "customs": "Déclaration en douane",
+    "resale": "Revente",
+    "faq": "Questions fréquentes"
+  },
+  "investmentGoldText": "En Suisse, l'or est qualifié d'or d'investissement exonéré de TVA en vertu de l'art. 23 al. 12 LTVA lorsqu'il se présente sous forme de lingots ou de lingotins titrant au moins 995‰, acceptés par les marchés de l'or, ou de pièces titrant au moins 900‰ ayant ou ayant eu cours légal et négociées à un prix étroitement lié à leur teneur en or. Il s'agit globalement de la même catégorie utilisée dans toute l'UE, si bien que l'or d'investissement acheté en Suisse conserve généralement son statut exonéré de TVA lorsqu'il entre dans un pays de l'UE, à condition de répondre aussi aux critères propres à ce pays. Les bijoux, médailles et pièces de collection hors de cette définition sont taxés différemment.",
+  "vatText": "L'or d'investissement (lingots à partir de 995‰, pièces reconnues) est exonéré de TVA en Suisse en vertu de l'art. 23 al. 12 LTVA. Cette exonération s'applique déjà lors de l'achat en Suisse : aucune TVA supplémentaire n'est due sur cet or, qu'il reste dans le pays ou soit exporté.",
+  "customsIntro": "La Suisse ne fixe pas de seuil systématique de déclaration écrite, mais exige de fournir des informations si l'Office fédéral de la douane et de la sécurité des frontières (OFDF) le demande.",
+  "customsRows": [
+    {
+      "range": "Tout montant",
+      "requirement": "Aucune déclaration écrite requise à la frontière"
+    },
+    {
+      "range": "CHF 10 000 ou plus, ou en cas de soupçon",
+      "requirement": "Vous devez indiquer oralement votre identité ainsi que l'origine et la destination des fonds",
+      "formLabel": "OFDF – transport d'espèces",
+      "formUrl": "https://www.bazg.admin.ch/fr/transport-argent-liquide-en-suisse"
+    }
   ],
-  "reventePoints": [
-    "Aucune durée minimale de détention",
-    "Gain en capital exonéré pour les particuliers",
-    "Conservez vos justificatifs d'achat pour faciliter la revente"
+  "resaleIntro": "Pour un particulier détenant de l'or à titre privé, la plus-value à la revente n'est pas imposée au niveau fédéral. Cette exonération suppose une gestion de fortune privée ordinaire — un négoce fréquent ou à grande échelle peut modifier la manière dont une vente est qualifiée.",
+  "resaleRows": [
+    {
+      "scenario": "Particulier, vente occasionnelle",
+      "treatment": "0 % d'impôt fédéral sur la plus-value — exonération totale, aucune durée de détention minimale"
+    },
+    {
+      "scenario": "Négoce fréquent ou de type professionnel",
+      "treatment": "Les autorités fiscales cantonales peuvent requalifier les gains en revenu d'activité indépendante, imposable au taux ordinaire"
+    },
+    {
+      "scenario": "Justificatifs",
+      "treatment": "Aucune preuve d'achat n'est requise pour l'exonération, mais la conserver renforce votre position en cas de contestation de la qualification"
+    }
   ],
   "faqs": [
     {
@@ -24,7 +50,11 @@
     },
     {
       "q": "La plus-value à la revente est-elle imposée ?",
-      "a": "Pour un particulier détenant l'or à titre privé, non : les gains en capital sur biens mobiliers privés ne sont pas imposés au niveau fédéral."
+      "a": "Pour un particulier détenant de l'or à titre privé dans le cadre d'une gestion de fortune ordinaire, non : les plus-values sur biens mobiliers privés ne sont pas imposées au niveau fédéral."
+    },
+    {
+      "q": "Puis-je perdre ce traitement fiscal avantageux ?",
+      "a": "Oui. Si votre activité de négoce est suffisamment fréquente ou importante pour ressembler à une activité professionnelle, les autorités fiscales cantonales peuvent requalifier les gains en revenu d'activité indépendante, imposé au taux ordinaire."
     }
   ]
 }

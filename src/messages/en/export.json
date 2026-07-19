@@ -1,38 +1,42 @@
 {
   "breadcrumb": "Export",
-  "heading": "Export your gold",
+  "heading": "Export your gold from Switzerland",
   "intro": "Each country applies its own rules for reporting, taxation, and VAT on investment gold. Here's an overview of the main markets we cover.",
   "headers": {
     "country": "Country",
-    "threshold": "Declaration threshold",
-    "keyPoint": "Key point",
+    "threshold": "Customs Declaration",
+    "forms": "Forms",
     "more": "Learn more"
   },
   "countries": {
-    "switzerland": {
-      "name": "Switzerland",
-      "threshold": "No declaration threshold on export",
-      "keyPoint": "VAT exemption for investment gold (Art. 23 para. 12 VAT Act)"
-    },
     "france": {
       "name": "France",
       "threshold": "EUR 10,000 in cash (EU declaration requirement)",
-      "keyPoint": "11.5% flat tax on resale, unless proof of purchase is retained"
+      "forms": [
+        { "label": "DALIA (online) / Cerfa form no. 13426", "url": "https://www.douane.gouv.fr/demarche/vous-voyagez-avec-de-largent-liquide-especes-instruments-negociables-au-porteur-or-0" }
+      ]
     },
     "germany": {
       "name": "Germany",
       "threshold": "EUR 10,000 in cash (EU declaration requirement)",
-      "keyPoint": "Tax-free gain after a one-year holding period (§23 EStG)"
+      "forms": [
+        { "label": "Zoll-Portal – Barmittelanmeldeerklärung (form 040000_1)", "url": "https://www.zoll.de/DE/Privatpersonen/Reisen/Rueckkehr-aus-einem-Nicht-EU-Staat/Einschraenkungen/Barmittel/barmittel.html" }
+      ]
     },
     "italy": {
       "name": "Italy",
       "threshold": "EUR 10,000 in cash (EU declaration requirement)",
-      "keyPoint": "VAT-exempt on investment gold, stricter reporting regime"
+      "forms": [
+        { "label": "Agenzia delle Dogane – cash transfer", "url": "https://www.adm.gov.it/portale/en/dogane/operatore/modulistica/trasferimento-di-denaro-contante" },
+        { "label": "Banca d'Italia UIF – gold declarations", "url": "https://uif.bancaditalia.it/adempimenti-operatori/op-oro/index.html" }
+      ]
     },
     "usa": {
       "name": "United States",
       "threshold": "USD 10,000 in cash (FinCEN declaration)",
-      "keyPoint": "No federal VAT; capital gains tax varies by state"
+      "forms": [
+        { "label": "CBP – Money & Monetary Instruments", "url": "https://www.cbp.gov/travel/international-visitors/money-monetary-instruments" }
+      ]
     }
   }
 }

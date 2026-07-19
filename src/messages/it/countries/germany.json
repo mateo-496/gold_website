@@ -1,30 +1,60 @@
 {
   "name": "Germania",
   "flag": "🇩🇪",
-  "intro": "La Germania offre una delle uscite fiscali più interessanti d'Europa: dopo un anno di detenzione, la plusvalenza sull'oro fisico è totalmente esente da imposta.",
+  "intro": "La Germania offre una delle vie fiscali più vantaggiose d'Europa: dopo un anno di detenzione, il guadagno sull'oro fisico è completamente esente da imposte.",
   "stat1Label": "Soglia di dichiarazione",
-  "stat1Value": "€ 10.000",
-  "stat2Label": "Tassazione dopo 1 anno",
+  "stat1Value": "10.000 €",
+  "stat2Label": "Tassa dopo 1 anno",
   "stat2Value": "0%",
-  "overview": "L'oro da investimento è esente da IVA in Germania (§25c UStG). Per la tassazione alla rivendita, l'articolo §23 EStG prevede un'esenzione totale della plusvalenza se l'oro è stato detenuto per più di un anno. Sotto l'anno, la plusvalenza è tassata all'aliquota marginale, con una franchigia annuale modesta.",
-  "exportPoints": [
-    "Dichiarazione obbligatoria oltre 10.000 € in contanti alla frontiera (regola UE)",
-    "Nessuna autorizzazione specifica per l'oro da investimento ad uso privato",
-    "IVA esente sull'oro da investimento (§25c UStG)"
+  "sectionTitles": {
+    "investmentGold": "Cos'è l'oro da investimento?",
+    "vat": "IVA e importazione in Germania",
+    "customs": "Dichiarazione doganale",
+    "resale": "Rivendita",
+    "faq": "Domande frequenti"
+  },
+  "investmentGoldText": "Ai sensi del §25c UStG, l'oro da investimento comprende lingotti con purezza pari o superiore a 995‰ e monete con purezza pari o superiore a 900‰, coniate dopo il 1800, che sono o sono state a corso legale nel paese d'origine, e normalmente vendute a un prezzo non superiore all'80% oltre il valore dell'oro contenuto — lo stesso standard applicato in tutta l'UE ai sensi della direttiva 98/80/CE. La Commissione Europea pubblica ogni anno un elenco delle monete che soddisfano quest'ultima condizione, tra cui il Krugerrand, il Vreneli e l'American Eagle. Solo l'oro conforme a questa definizione beneficia dell'esenzione IVA descritta di seguito; gioielli e monete non incluse nell'elenco pubblicato sono tassati come beni ordinari.",
+  "vatText": "L'oro da investimento (lingotti ≥995‰, monete idonee) è esente dall'IVA tedesca (§25c UStG) all'importazione in Germania, anche dalla Svizzera, alle stesse condizioni del resto dell'UE.",
+  "customsIntro": "Il confine tedesco-svizzero è un confine esterno dell'UE: l'oro non coniato con purezza pari o superiore al 99,5% è equiparato al contante dalla dogana tedesca (Zoll).",
+  "customsRows": [
+    {
+      "range": "Meno di 10.000 €",
+      "requirement": "Nessuna dichiarazione richiesta"
+    },
+    {
+      "range": "10.000 € o più",
+      "requirement": "Dichiarazione scritta obbligatoria tramite il portale doganale prima di attraversare il confine",
+      "formLabel": "Portale Zoll – dichiarazione di trasporto contante (modulo 040000_1)",
+      "formUrl": "https://www.zoll.de/DE/Privatpersonen/Reisen/Rueckkehr-aus-einem-Nicht-EU-Staat/Einschraenkungen/Barmittel/barmittel.html"
+    }
   ],
-  "reventePoints": [
-    "Detenzione oltre un anno: plusvalenza totalmente esente (§23 EStG)",
-    "Detenzione sotto un anno: plusvalenza tassata all'aliquota marginale",
-    "Conservare la data di acquisto come prova del periodo di detenzione"
+  "resaleIntro": "In Germania, il guadagno alla rivendita è completamente esente da imposte una volta detenuto l'oro per più di un anno (§23 EStG). Vendendo prima, il guadagno viene invece tassato alla vostra aliquota marginale.",
+  "resaleRows": [
+    {
+      "scenario": "Detenuto per oltre 1 anno",
+      "treatment": "0% — guadagno completamente esente ai sensi del §23 EStG"
+    },
+    {
+      "scenario": "Detenuto per meno di 1 anno",
+      "treatment": "Tassato alla vostra aliquota marginale sul reddito personale; può applicarsi una modesta franchigia annuale (Freigrenze) per le piccole vendite private"
+    },
+    {
+      "scenario": "Documentazione",
+      "treatment": "Conservate la data d'acquisto come prova del periodo di detenzione — è ciò che determina quale regime si applica"
+    }
   ],
   "faqs": [
     {
-      "q": "Quando la mia plusvalenza diventa esente da imposta?",
+      "q": "Quando diventa esente da imposte il mio guadagno?",
       "a": "Dopo un periodo di detenzione di un anno, ai sensi del §23 EStG."
     },
     {
-      "q": "Devo pagare l'IVA all'acquisto?",
+      "q": "Pago l'IVA all'acquisto?",
       "a": "No, l'oro da investimento è esente da IVA ai sensi del §25c UStG."
+    },
+    {
+      "q": "Cosa succede se vendo prima della soglia di un anno?",
+      "a": "Il guadagno viene tassato alla vostra aliquota marginale sul reddito personale, sebbene possa applicarsi una modesta franchigia annuale per le piccole vendite private."
     }
   ]
 }

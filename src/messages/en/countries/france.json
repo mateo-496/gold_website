@@ -1,30 +1,64 @@
 {
   "name": "France",
   "flag": "🇫🇷",
-  "intro": "In France, reselling physical gold is subject to a flat tax, unless you keep proof of purchase supporting the actual cost price.",
+  "intro": "France taxes gold resale by default, not by ownership — the deciding factor is whether you can produce proof of purchase. Understanding the VAT rules on import, the border declaration threshold, and the two competing resale regimes is what determines your real net proceeds.",
   "stat1Label": "Declaration threshold",
   "stat1Value": "€10,000",
   "stat2Label": "Tax on resale",
   "stat2Value": "11.5% (default)",
-  "overview": "Investment gold is VAT-exempt in France under EU directive. On resale, the default regime applies an 11.5% flat tax on the sale price. If you can prove the price and date of acquisition, you can opt for the capital gains regime on movable property, potentially more favorable after several years of holding.",
-  "exportPoints": [
-    "Declaration mandatory above €10,000 in cash at the border (EU rule)",
-    "No specific authorization for investment gold for private use",
-    "Recodification of CGI Art. 298 sexdecies A takes effect September 2026"
+  "sectionTitles": {
+    "investmentGold": "What is investment gold?",
+    "vat": "VAT and import to France",
+    "customs": "Customs declaration",
+    "resale": "Resale",
+    "faq": "Frequently asked questions"
+  },
+  "investmentGoldText": "\"Investment gold\" is a defined legal category, not just a description of purity. Under EU Directive 98/80/EC, it covers gold bars and ingots of at least 995‰ purity produced by an accredited refiner, and gold coins that are at least 900‰ pure, minted after 1800, are or have been legal tender in their country of origin, and are normally sold at no more than 80% above the value of the gold they contain. The European Commission publishes an annual list of coins meeting this last condition — common examples include the Swiss Vreneli, the Krugerrand, the American Eagle, and the Napoléon. Only gold that fits this definition qualifies for the VAT exemption and the import treatment described below; jewelry, numismatic coins outside the published list, and bars below 995‰ do not.",
+  "vatText": "Investment gold — bars and ingots of at least 995‰ purity, and coins meeting the criteria set out in EU Directive 98/80/EC — is exempt from VAT when brought into France, including from Switzerland. This exemption is transposed into French law at CGI Art. 298 sexdecies A. In practice, no VAT is charged at the border on qualifying gold: the exemption follows the metal, not the seller's location, so gold purchased from a Swiss dealer enters France with the same VAT-free treatment as gold bought domestically, provided it meets the investment-gold criteria.",
+  "customsIntro": "France applies the EU's capital-transfer rule at the Franco-Swiss border. Gold is treated as cash for these purposes when it meets a purity threshold — coins at least 90% pure, bars at least 99.5% pure — so the reporting obligation is triggered by value, not by declaring gold specifically as a special category.",
+  "customsRows": [
+    {
+      "range": "Under €10,000",
+      "requirement": "No declaration required"
+    },
+    {
+      "range": "€10,000 or more",
+      "requirement": "Mandatory declaration before crossing the border",
+      "formLabel": "DALIA (online) / Cerfa form no. 13426",
+      "formUrl": "https://www.douane.gouv.fr/demarche/vous-voyagez-avec-de-largent-liquide-especes-instruments-negociables-au-porteur-or-0"
+    }
   ],
-  "reventePoints": [
-    "Without proof: 11.5% flat tax on the sale price",
-    "With proof: option for the capital gains regime, with a holding-period allowance",
-    "Always keep your purchase invoices"
+  "resaleIntro": "Selling gold in France triggers one of two tax regimes, and which one applies is your choice — but only if you kept the paperwork. Without proof of purchase, the default 11.5% flat tax on the full sale price applies automatically, regardless of what you actually paid. With a purchase invoice showing price and date, you can instead opt for the capital gains regime on movable property, which taxes only the gain and includes a holding-period allowance that reduces the taxable amount the longer you've owned the gold.",
+  "resaleRows": [
+    {
+      "scenario": "No proof of purchase",
+      "treatment": "11.5% flat tax on the full sale price — applies automatically, no exceptions"
+    },
+    {
+      "scenario": "Unsealed or damaged item",
+      "treatment": "If breaking the seal or damage makes it impossible to prove the item is the one originally purchased, the capital gains option is lost and the 11.5% flat tax applies by default"
+    },
+    {
+      "scenario": "With proof of purchase",
+      "treatment": "Choice between the 11.5% flat tax on the full sale price, or 36.2% on the capital gain — reduced by a 5% allowance per year of holding beyond year 2, with full exemption after 22 years"
+    }
   ],
   "faqs": [
     {
       "q": "What happens if I don't have a purchase invoice?",
-      "a": "The default 11.5% flat tax on the sale price applies automatically."
+      "a": "The 11.5% flat tax on the full sale price applies automatically — there is no fallback to the capital gains regime without documentary proof of what you paid and when."
     },
     {
       "q": "Can I avoid the flat tax?",
-      "a": "Yes, by opting for the capital gains regime on movable property if you have proof of purchase, which can be more favorable depending on the holding period."
+      "a": "Yes, but only by opting for the capital gains regime on movable property, which requires proof of the purchase price and date. Whether this is more favorable than the flat tax depends on your holding period and your actual gain."
+    },
+    {
+      "q": "Does buying from a Swiss dealer change anything for French tax purposes?",
+      "a": "No. What matters is your tax residency at the time of sale, not where the gold was purchased. A French resident selling gold is taxed under French rules regardless of whether the gold came from a Swiss, French, or other dealer."
+    },
+    {
+      "q": "Do I need to declare a Swiss gold purchase to French authorities automatically?",
+      "a": "No automatic reporting mechanism covers physical gold sales — CRS/AEOI information exchange does not apply to it. This does not remove the obligation: French residents must self-declare taxable gold sales themselves."
     }
   ]
 }

@@ -6,25 +6,55 @@
   "stat1Value": "$10,000",
   "stat2Label": "Max. federal tax",
   "stat2Value": "28%",
-  "overview": "There is no federal VAT in the United States, but some states apply a sales tax depending on the type of transaction. Physical gold is classified as a \"collectible\" by the IRS: the long-term gain (holding period over one year) is taxed up to 28% at the federal level, versus a generally lower rate for stocks. Taxation also varies by state of residence.",
-  "exportPoints": [
-    "Declaration mandatory (FinCEN Form 105) above $10,000 in cash",
-    "No specific export authorization for gold for private use",
-    "Check your state's sales tax rules"
+  "sectionTitles": {
+    "investmentGold": "What counts as investment-grade gold?",
+    "vat": "Import and customs value declaration",
+    "customs": "Customs declaration",
+    "resale": "Resale",
+    "faq": "Frequently asked questions"
+  },
+  "investmentGoldText": "The United States has no federal VAT, so there's no equivalent legal category of \"investment gold.\" What matters instead is how the IRS classifies physical gold for tax purposes: bars, rounds, and coins are treated as a \"collectible\" under IRC §408(m), regardless of purity, which is why the capital-gains treatment described below differs from ordinary stocks. Separately, if gold is held inside a retirement account, only bars and coins meeting specific fineness and refiner requirements — generally .995 fine or better, plus a short list of named coins such as the American Gold Eagle — are IRA-eligible under §408(m)(3). That eligibility rule affects account structuring, not the resale tax treatment covered here.",
+  "vatText": "The United States levies no federal VAT. Gold imported from Switzerland is generally free of customs duty, but its value must be declared to U.S. Customs and Border Protection (CBP) once it reaches the reporting threshold below. Some states apply their own sales tax depending on the type of transaction and the buyer's residence.",
+  "customsIntro": "Physical gold is not a \"monetary instrument\" for FinCEN Form 105 purposes, but its value must still be declared to CBP once it reaches $10,000.",
+  "customsRows": [
+    {
+      "range": "Under $10,000",
+      "requirement": "Standard goods declaration only"
+    },
+    {
+      "range": "$10,000 or more",
+      "requirement": "Mandatory value declaration to CBP; FinCEN Form 105 may also be requested",
+      "formLabel": "CBP – Money & Monetary Instruments",
+      "formUrl": "https://www.cbp.gov/travel/international-visitors/money-monetary-instruments"
+    }
   ],
-  "reventePoints": [
-    "Short/long-term distinction based on holding period (1 year)",
-    "Maximum federal rate of 28% on long-term gains (collectible)",
-    "Taxation varies by state of residence"
+  "resaleIntro": "In the U.S., physical gold is treated as a \"collectible\" rather than a standard capital asset, which caps the federal long-term rate at 28% instead of the lower rates that apply to stocks.",
+  "resaleRows": [
+    {
+      "scenario": "Held over 1 year (long-term)",
+      "treatment": "Taxed as a collectible at your capital gains rate, capped at 28% federally"
+    },
+    {
+      "scenario": "Held under 1 year (short-term)",
+      "treatment": "Taxed as ordinary income at your marginal federal rate"
+    },
+    {
+      "scenario": "State taxes",
+      "treatment": "Many states add their own capital gains or income tax on top of the federal rate — check your state of residence"
+    }
   ],
   "faqs": [
     {
       "q": "Is physical gold treated like a stock for tax purposes?",
-      "a": "No, the IRS classifies it as a collectible, with a maximum federal rate of 28% on long-term gain."
+      "a": "No, the IRS classifies it as a collectible, with a maximum federal rate of 28% on long-term gain instead of standard capital gains rates."
     },
     {
       "q": "Is there a federal VAT on gold in the US?",
       "a": "No, but some states apply a sales tax depending on the transaction."
+    },
+    {
+      "q": "Does holding period matter?",
+      "a": "Yes. Gold held over one year gets long-term collectible treatment (up to 28% federal); gold held under one year is taxed as ordinary income at your marginal rate."
     }
   ]
 }

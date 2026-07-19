@@ -1,30 +1,60 @@
 {
   "name": "Svizzera",
   "flag": "🇨🇭",
-  "intro": "La Svizzera offre uno dei quadri più favorevoli d'Europa per l'acquisto, la detenzione e la rivendita di oro fisico, con esenzione IVA sull'oro da investimento e nessuna tassazione sulle plusvalenze private.",
+  "intro": "La Svizzera offre uno dei quadri normativi più favorevoli d'Europa per acquistare, detenere e rivendere oro fisico, con esenzione IVA sull'oro da investimento e nessuna tassazione delle plusvalenze private.",
   "stat1Label": "Soglia di dichiarazione",
   "stat1Value": "Nessuna",
-  "stat2Label": "Tassazione alla rivendita",
+  "stat2Label": "Tassa sulla rivendita",
   "stat2Value": "0% (privati)",
-  "overview": "L'oro da investimento (lingotti e monete certificate con titolo minimo) è esente da IVA in Svizzera dal 2000, confermato dall'art. 23 cpv. 12 LIVA dal 1° gennaio 2025. Le plusvalenze realizzate da privati su beni mobili privati, incluso l'oro fisico, non sono tassate a livello federale.",
-  "exportPoints": [
-    "Nessuna autorizzazione all'esportazione richiesta per l'oro da investimento ad uso privato",
-    "Controlli doganali standard in uscita dal territorio",
-    "Verificare le soglie di dichiarazione del paese di destinazione"
+  "sectionTitles": {
+    "investmentGold": "Cos'è l'oro da investimento?",
+    "vat": "IVA sull'oro in Svizzera",
+    "customs": "Dichiarazione doganale",
+    "resale": "Rivendita",
+    "faq": "Domande frequenti"
+  },
+  "investmentGoldText": "In Svizzera, l'oro è qualificato come oro da investimento esente da IVA ai sensi dell'art. 23 cpv. 12 LIVA quando si presenta sotto forma di lingotti o placchette con purezza pari o superiore a 995‰, accettati dai mercati dell'oro, oppure monete con purezza pari o superiore a 900‰ che sono o sono state a corso legale e vengono scambiate a un prezzo strettamente legato al loro contenuto d'oro. Si tratta sostanzialmente della stessa categoria utilizzata in tutta l'UE, quindi l'oro da investimento acquistato in Svizzera generalmente conserva il suo status di esenzione IVA quando entra in un paese UE, a condizione che soddisfi anche i criteri di quel paese. Gioielli, medaglie e monete numismatiche al di fuori di questa definizione sono tassati diversamente.",
+  "vatText": "L'oro da investimento (lingotti con purezza dai 995‰ in su, monete riconosciute) è esente da IVA in Svizzera ai sensi dell'art. 23 cpv. 12 LIVA. Questa esenzione si applica già all'acquisto in Svizzera: non è dovuta alcuna IVA aggiuntiva su questo oro, sia che rimanga nel paese sia che venga esportato.",
+  "customsIntro": "La Svizzera non fissa una soglia sistematica per la dichiarazione scritta, ma richiede di fornire informazioni se richiesto dall'Ufficio federale della dogana e della sicurezza dei confini (UDSC).",
+  "customsRows": [
+    {
+      "range": "Qualsiasi importo",
+      "requirement": "Nessuna dichiarazione scritta richiesta alla frontiera"
+    },
+    {
+      "range": "CHF 10.000 o più, o in caso di sospetto",
+      "requirement": "Dovete dichiarare oralmente la vostra identità e l'origine e la destinazione dei fondi",
+      "formLabel": "UDSC – trasporto di contante",
+      "formUrl": "https://www.bazg.admin.ch/fr/transport-argent-liquide-en-suisse"
+    }
   ],
-  "reventePoints": [
-    "Nessun periodo minimo di detenzione",
-    "Plusvalenza esente per i privati",
-    "Conservare le prove d'acquisto per facilitare la rivendita"
+  "resaleIntro": "Per un privato che detiene oro a titolo personale, il guadagno alla rivendita non è tassato a livello federale. Questa esenzione presuppone una gestione patrimoniale privata ordinaria — un'attività di negoziazione frequente o su larga scala può modificare la qualificazione di una vendita.",
+  "resaleRows": [
+    {
+      "scenario": "Privato, vendita occasionale",
+      "treatment": "0% di imposta federale sulla plusvalenza — esenzione totale, nessun periodo minimo di detenzione"
+    },
+    {
+      "scenario": "Negoziazione frequente o di tipo professionale",
+      "treatment": "Le autorità fiscali cantonali possono riqualificare i guadagni come reddito da attività indipendente, tassabile alle aliquote ordinarie"
+    },
+    {
+      "scenario": "Documentazione",
+      "treatment": "Per l'esenzione non è richiesta alcuna prova d'acquisto, ma conservarla rafforza la vostra posizione qualora la qualificazione venga mai messa in discussione"
+    }
   ],
   "faqs": [
     {
-      "q": "Devo pagare l'IVA sull'oro da investimento in Svizzera?",
+      "q": "Pago l'IVA sull'oro da investimento in Svizzera?",
       "a": "No, l'oro da investimento è esente da IVA ai sensi dell'art. 23 cpv. 12 LIVA."
     },
     {
-      "q": "La plusvalenza alla rivendita è tassata?",
-      "a": "Per un privato che detiene l'oro a titolo privato, no: le plusvalenze su beni mobili privati non sono tassate a livello federale."
+      "q": "Il guadagno alla rivendita è tassato?",
+      "a": "Per un privato che detiene oro a titolo personale nell'ambito di una gestione patrimoniale ordinaria, no: le plusvalenze su beni mobili privati non sono tassate a livello federale."
+    },
+    {
+      "q": "Posso perdere questo trattamento fiscale vantaggioso?",
+      "a": "Sì. Se il vostro andamento di negoziazione è abbastanza frequente o consistente da assomigliare a un'attività professionale, le autorità fiscali cantonali possono riqualificare i guadagni come reddito da attività indipendente, tassato alle aliquote ordinarie."
     }
   ]
 }

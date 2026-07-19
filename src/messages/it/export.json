@@ -5,34 +5,45 @@
   "headers": {
     "country": "Paese",
     "threshold": "Soglia di dichiarazione",
-    "keyPoint": "Punto chiave",
+    "forms": "Moduli",
     "more": "Scopri di più"
   },
   "countries": {
     "switzerland": {
       "name": "Svizzera",
       "threshold": "Nessuna soglia di dichiarazione all'esportazione",
-      "keyPoint": "Esenzione IVA per l'oro da investimento (art. 23 cpv. 12 LIVA)"
+      "forms": [
+        { "label": "UDSC – trasporto di contante", "url": "https://www.bazg.admin.ch/fr/transport-argent-liquide-en-suisse" }
+      ]
     },
     "france": {
       "name": "Francia",
       "threshold": "EUR 10.000 in contanti (obbligo dichiarativo UE)",
-      "keyPoint": "Imposta forfettaria dell'11,5% alla rivendita, salvo prova d'acquisto conservata"
+      "forms": [
+        { "label": "DALIA (online) / modulo Cerfa n. 13426", "url": "https://www.douane.gouv.fr/demarche/vous-voyagez-avec-de-largent-liquide-especes-instruments-negociables-au-porteur-or-0" }
+      ]
     },
     "germany": {
       "name": "Germania",
       "threshold": "EUR 10.000 in contanti (obbligo dichiarativo UE)",
-      "keyPoint": "Esenzione plusvalenza dopo un anno di detenzione (§23 EStG)"
+      "forms": [
+        { "label": "Portale Zoll – dichiarazione di trasporto contante (modulo 040000_1)", "url": "https://www.zoll.de/DE/Privatpersonen/Reisen/Rueckkehr-aus-einem-Nicht-EU-Staat/Einschraenkungen/Barmittel/barmittel.html" }
+      ]
     },
     "italy": {
       "name": "Italia",
       "threshold": "EUR 10.000 in contanti (obbligo dichiarativo UE)",
-      "keyPoint": "IVA esente sull'oro da investimento, regime dichiarativo rafforzato"
+      "forms": [
+        { "label": "Agenzia delle Dogane – trasferimento di denaro contante", "url": "https://www.adm.gov.it/portale/en/dogane/operatore/modulistica/trasferimento-di-denaro-contante" },
+        { "label": "Banca d'Italia UIF – dichiarazioni sull'oro", "url": "https://uif.bancaditalia.it/adempimenti-operatori/op-oro/index.html" }
+      ]
     },
     "usa": {
       "name": "Stati Uniti",
       "threshold": "USD 10.000 in contanti (dichiarazione FinCEN)",
-      "keyPoint": "Nessuna IVA federale; tassazione sulla plusvalenza variabile per Stato"
+      "forms": [
+        { "label": "CBP – Denaro e strumenti monetari", "url": "https://www.cbp.gov/travel/international-visitors/money-monetary-instruments" }
+      ]
     }
   }
 }
