@@ -20,10 +20,10 @@ export function Footer() {
         >
             <div className="mx-auto max-w-2xl px-6 flex flex-col items-center gap-4">
                 <a
-                    href="mailto:contact@GoldAlp.com"
+                    href="mailto:contact@goldalp.ch"
                     className="font-serif text-sm text-neutral-500 hover:text-neutral-900 transition-colors"            
                 >
-                    contact@GoldAlp.com
+                    contact@goldalp.ch
                 </a>
                 <p className="text-xs text-neutral-400 text-center max-w-2xl">
                     {t('disclaimer')}

@@ -19,6 +19,12 @@
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  overflow-x: clip;
+  max-width: 100vw;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
@@ -28,6 +34,16 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+.hero-v-clip {
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 50% 100%, 0 88%);
+}
+
+@media (min-width: 768px) {
+  .hero-v-clip {
+    clip-path: polygon(0 0, 100% 0, 100% 62%, 50% 100%, 0 62%);
   }
 }
 
