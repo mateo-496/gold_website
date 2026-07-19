@@ -102,8 +102,10 @@ export function Logo() {
   }, [isHome, pathname]);
 
   useEffect(() => {
-    // Other pages: the logo only belongs at the very top; once the person
-    // starts scrolling, fade it out and keep it out (no flicker back in).
+    // The logo only belongs at the very top on non-home pages; once the
+    // person starts scrolling there, fade it out and keep it out. On the
+    // home page, visibility at rest is handled entirely by the "scrolling"
+    // state below (fades during motion, reappears once snapped on any section).
     if (isHome) {
       setPastTop(false);
       return;

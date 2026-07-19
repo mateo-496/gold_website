@@ -9,6 +9,13 @@
     "more": "Learn more"
   },
   "countries": {
+    "switzerland": {
+      "name": "Switzerland",
+      "threshold": "No declaration threshold on export",
+      "forms": [
+        { "label": "FOCBS – transporting cash", "url": "https://www.bazg.admin.ch/fr/transport-argent-liquide-en-suisse" }
+      ]
+    },
     "france": {
       "name": "France",
       "threshold": "EUR 10,000 in cash (EU declaration requirement)",

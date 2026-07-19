@@ -21,16 +21,10 @@ export function PageHero({ imageSrc = "/images/backgrounds/mountain1.jpeg" }: Pa
       data-logo-bg="dark"
     >
       <div
-        className="absolute inset-0 bg-neutral-900 bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${imageSrc})`,
-          clipPath: "polygon(0 0, 100% 0, 100% 62%, 50% 100%, 0 62%)",
-        }}
+        className="hero-v-clip absolute inset-0 bg-neutral-900 bg-cover bg-center"
+        style={{ backgroundImage: `url(${imageSrc})` }}
       />
-      <div
-        className="absolute inset-0 bg-black/25"
-        style={{ clipPath: "polygon(0 0, 100% 0, 100% 62%, 50% 100%, 0 62%)" }}
-      />
+      <div className="hero-v-clip absolute inset-0 bg-black/25" />
       <div className="absolute top-4 left-4 md:top-8 md:left-10">
         <PageNav />
       </div>
