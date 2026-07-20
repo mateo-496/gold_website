@@ -1,22 +1,17 @@
 import { CountryPage } from "@/components/editorial/CountryPage";
-import { COUNTRIES, routing, type CountryKey } from "@/i18n/routing";
-import { setRequestLocale } from "next-intl/server";
+import { COUNTRIES, type CountryKey } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
-  return routing.locales.flatMap((locale) =>
-    COUNTRIES.map((country) => ({ locale, country }))
-  );
+  return COUNTRIES.map((country) => ({ country }));
 }
 
 export default async function Page({
   params,
 }: {
-  params: Promise<{ locale: string; country: string }>;
+  params: Promise<{ country: string }>;
 }) {
-  const { locale, country } = await params;
-
-  setRequestLocale(locale);
+  const { country } = await params;
 
   if (!COUNTRIES.includes(country as CountryKey)) {
     notFound();
