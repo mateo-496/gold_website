@@ -2,10 +2,6 @@ import { CountryPage } from "@/components/editorial/CountryPage";
 import { COUNTRIES, type CountryKey } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 
-export function generateStaticParams() {
-  return COUNTRIES.map((country) => ({ country }));
-}
-
 export default async function Page({
   params,
 }: {
